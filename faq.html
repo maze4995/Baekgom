@@ -161,7 +161,7 @@
         <div class="max-w-container-max mx-auto px-gutter">
             <div class="flex overflow-x-auto no-scrollbar py-4 gap-8">
                 <a class="whitespace-nowrap font-label-md text-label-md text-primary flex items-center gap-2 hover:opacity-80 transition-opacity" href="#booking">
-                    <span class="material-symbols-outlined" style="font-size: 20px;">payments</span> 예약 및 결제
+                    <span class="material-symbols-outlined" style="font-size: 20px;">request_quote</span> 견적 및 예약
                 </a>
                 <a class="whitespace-nowrap font-label-md text-label-md text-on-surface-variant flex items-center gap-2 hover:text-primary transition-colors" href="#cleaning">
                     <span class="material-symbols-outlined" style="font-size: 20px;">vacuum</span> 청소 프로세스
@@ -217,43 +217,65 @@
 
             <!-- Right Content: Accordion Sections -->
             <div class="lg:col-span-8 space-y-16">
-                <!-- Section: Booking & Payment -->
+                <!-- Section: Estimate & Booking -->
                 <section class="scroll-mt-40" id="booking">
                     <h2 class="font-headline-lg text-headline-lg text-primary mb-8 flex items-center gap-3">
                         <span class="w-1.5 h-8 bg-secondary rounded-full"></span>
-                        예약 및 결제
+                        견적 및 예약
                     </h2>
                     <div class="space-y-4">
                         <div class="faq-accordion-item border border-outline-variant bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
                             <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)" type="button">
-                                <span class="font-headline-md text-headline-md text-on-surface">청소 서비스 예약은 어떻게 하나요?</span>
+                                <span class="font-headline-md text-headline-md text-on-surface">공급면적과 전용면적은 뭔가요?</span>
                                 <span class="material-symbols-outlined faq-icon transition-transform text-outline">expand_more</span>
                             </button>
                             <div class="faq-accordion-content px-6">
                                 <p class="font-body-md text-body-md text-on-surface-variant">
-                                    웹사이트의 '상담 예약' 버튼을 통해 간편하게 예약하실 수 있습니다. 서비스 유형을 선택하고 희망하시는 날짜와 시간을 지정한 후 주소를 입력해 주세요. 예약 완료 즉시 알림톡이나 이메일로 확정 안내가 발송됩니다.
+                                    공급면적은 전용면적에 복도, 계단, 엘리베이터 등 공용부분까지 포함한 면적이고, 전용면적은 세대 내부에서 실제로 사용하는 면적입니다. 청소 견적은 실제 작업 범위인 전용면적을 기준으로 산정되니, 등기부등본이나 분양 계약서에서 두 면적을 확인해 함께 알려주시면 더 정확한 견적이 가능합니다.
                                 </p>
                             </div>
                         </div>
                         <div class="faq-accordion-item border border-outline-variant bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
                             <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)" type="button">
-                                <span class="font-headline-md text-headline-md text-on-surface">어떤 결제 수단을 사용할 수 있나요?</span>
+                                <span class="font-headline-md text-headline-md text-on-surface">신축/구축은 무엇이고 인테리어 여부에는 무엇을 적으면 되나요?</span>
                                 <span class="material-symbols-outlined faq-icon transition-transform text-outline">expand_more</span>
                             </button>
                             <div class="faq-accordion-content px-6">
                                 <p class="font-body-md text-body-md text-on-surface-variant">
-                                    모든 주요 신용/체크카드, 계좌이체는 물론 카카오페이, 네이버페이와 같은 간편 결제 서비스를 이용하실 수 있습니다. 결제는 예약 시점에 안전하게 처리됩니다.
+                                    신축은 준공 후 첫 입주 전 상태, 구축은 준공된 지 오래되어 기존 거주 흔적이 있는 상태를 의미합니다. 도배·바닥·타일 등 리모델링 공사를 새로 진행하셨다면 '인테리어 완료'를 선택해 주세요. 시공 분진 정도와 필요한 장비가 달라지기 때문에 정확히 기재해 주시면 맞춤 견적에 도움이 됩니다.
                                 </p>
                             </div>
                         </div>
                         <div class="faq-accordion-item border border-outline-variant bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
                             <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)" type="button">
-                                <span class="font-headline-md text-headline-md text-on-surface">예약 취소나 일정 변경이 가능한가요?</span>
+                                <span class="font-headline-md text-headline-md text-on-surface">일정 변경이나 환불 규정은 어떻게 되나요?</span>
                                 <span class="material-symbols-outlined faq-icon transition-transform text-outline">expand_more</span>
                             </button>
                             <div class="faq-accordion-content px-6">
                                 <p class="font-body-md text-body-md text-on-surface-variant">
-                                    네, 방문 24시간 전까지는 위약금 없이 일정 변경 및 취소가 가능합니다. 방문 24시간 이내의 취소 시에는 소정의 서비스 수수료가 발생할 수 있습니다.
+                                    방문 24시간 전까지는 위약금 없이 일정 변경 및 취소가 가능합니다. 방문 24시간 이내 취소 시에는 매니저 배정과 이동에 이미 비용이 발생한 상태라 소정의 수수료가 발생할 수 있으며, 서비스 시작 후 취소는 진행된 작업 범위에 따라 부분 환불로 안내드립니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-accordion-item border border-outline-variant bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                            <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)" type="button">
+                                <span class="font-headline-md text-headline-md text-on-surface">가격은 어떻게 책정되나요? (평수 기준인지, 방/화장실 개수 영향)</span>
+                                <span class="material-symbols-outlined faq-icon transition-transform text-outline">expand_more</span>
+                            </button>
+                            <div class="faq-accordion-content px-6">
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    기본적으로 전용면적(평수)을 기준으로 책정되며, 방과 화장실 개수, 베란다 유무, 오염도, 신축/구축 여부에 따라 추가로 조정됩니다. 동일 평수라도 화장실이 많거나 베란다가 넓으면 작업 시간이 늘어나 견적에 반영될 수 있습니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-accordion-item border border-outline-variant bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                            <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)" type="button">
+                                <span class="font-headline-md text-headline-md text-on-surface">견적 외에 추가 요금이 붙는 경우가 있나요?</span>
+                                <span class="material-symbols-outlined faq-icon transition-transform text-outline">expand_more</span>
+                            </button>
+                            <div class="faq-accordion-content px-6">
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    기본 견적은 사전에 안내해 주신 정보(평수, 방/화장실 개수, 건물 상태 등)를 기준으로 산정됩니다. 현장에서 사전 고지 없이 오염도가 현저히 다르거나 마루 코팅, 컬비, 에어컨 분해청소 등 옵션 서비스를 추가하실 경우에만 별도 협의 후 추가 요금이 발생하며, 고객님의 사전 동의 없이 임의로 청구하지 않습니다.
                                 </p>
                             </div>
                         </div>
@@ -269,34 +291,100 @@
                     <div class="space-y-4">
                         <div class="faq-accordion-item border border-outline-variant bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
                             <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)" type="button">
-                                <span class="font-headline-md text-headline-md text-on-surface">표준 청소 서비스에는 무엇이 포함되나요?</span>
+                                <span class="font-headline-md text-headline-md text-on-surface">청소 범위는 어떻게 되나요?</span>
                                 <span class="material-symbols-outlined faq-icon transition-transform text-outline">expand_more</span>
                             </button>
                             <div class="faq-accordion-content px-6">
                                 <p class="font-body-md text-body-md text-on-surface-variant">
-                                    표준 청소에는 모든 표면의 먼지 제거, 바닥 살균 청소, 욕실 소독 및 주방 표면 세척이 포함됩니다. 상세한 항목은 메인 메뉴의 '청소안내' 섹션을 참고해 주세요.
+                                    거실, 방, 주방, 화장실 등 모든 실내 공간의 바닥·벽·천장 먼지 제거, 창틀 및 유리 세정, 수납장 내부, 스위치·문고리 등 손잡이류 살균을 기본으로 진행합니다. 서비스 유형(입주/이사/거주청소)에 따라 세부 범위는 청소안내 페이지를 참고해 주세요.
                                 </p>
                             </div>
                         </div>
                         <div class="faq-accordion-item border border-outline-variant bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
                             <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)" type="button">
-                                <span class="font-headline-md text-headline-md text-on-surface">청소 시간은 얼마나 걸리나요?</span>
+                                <span class="font-headline-md text-headline-md text-on-surface">이사청소와 입주청소는 뭐가 다른가요?</span>
                                 <span class="material-symbols-outlined faq-icon transition-transform text-outline">expand_more</span>
                             </button>
                             <div class="faq-accordion-content px-6">
                                 <p class="font-body-md text-body-md text-on-surface-variant">
-                                    평수와 오염도에 따라 다르지만, 24평 기준으로 입주청소는 4~5시간, 이사청소는 5~6시간 정도 소요됩니다. 정확한 소요 시간은 상담 시 안내해 드립니다.
+                                    입주청소는 신축 건물에 남은 미세 공사 분진과 시공 잔여물을 제거하는 데 초점을 맞추고, 이사청소는 기존 거주자의 생활 오염(기름때, 물때, 곰팡이, 냄새 등)을 완벽히 제거해 새집처럼 만드는 데 중점을 둡니다. 건물 상태와 거주 이력에 따라 적합한 서비스를 안내해 드립니다.
                                 </p>
                             </div>
                         </div>
                         <div class="faq-accordion-item border border-outline-variant bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
                             <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)" type="button">
-                                <span class="font-headline-md text-headline-md text-on-surface">청소 장비를 직접 준비해 오시나요?</span>
+                                <span class="font-headline-md text-headline-md text-on-surface">창틀/방충망도 청소해주나요?</span>
                                 <span class="material-symbols-outlined faq-icon transition-transform text-outline">expand_more</span>
                             </button>
                             <div class="faq-accordion-content px-6">
                                 <p class="font-body-md text-body-md text-on-surface-variant">
-                                    물론입니다. 저희 전문 팀은 고성능 진공 청소기, 스팀 살균기, 그리고 각 자재에 맞는 친환경 세제를 모두 구비하여 방문합니다.
+                                    네, 기본 서비스에 창틀과 유리 세정이 포함되어 있습니다. 방충망은 탈거가 가능한 구조인 경우 물세척 및 건조까지 진행해 드리며, 구조상 탈거가 어려운 경우 현장에서 매니저가 확인 후 안내드립니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-accordion-item border border-outline-variant bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                            <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)" type="button">
+                                <span class="font-headline-md text-headline-md text-on-surface">에어컨, 후드, 냉장고 등 가전 내부 청소도 포함인가요?</span>
+                                <span class="material-symbols-outlined faq-icon transition-transform text-outline">expand_more</span>
+                            </button>
+                            <div class="faq-accordion-content px-6">
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    기본 청소에는 가전 외부 먼지 제거만 포함되며, 에어컨 필터·냉각핀 세척, 후드 내부 기름때 제거, 냉장고 내부 세척 등은 옵션 서비스로 별도 추가하실 수 있습니다. 상담 시 필요한 항목을 말씀해 주시면 패키지로 할인 안내해 드립니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-accordion-item border border-outline-variant bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                            <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)" type="button">
+                                <span class="font-headline-md text-headline-md text-on-surface">거주 중에도 청소가 가능한가요?</span>
+                                <span class="material-symbols-outlined faq-icon transition-transform text-outline">expand_more</span>
+                            </button>
+                            <div class="faq-accordion-content px-6">
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    네, 가능합니다. 거주청소 서비스는 짐이 있는 상태에서도 가구를 안전하게 보호하며 진행하도록 설계되어 있습니다. 다만 가구 이동이 필요한 구역은 사전에 안내해 주시면 더 원활하게 작업할 수 있습니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-accordion-item border border-outline-variant bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                            <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)" type="button">
+                                <span class="font-headline-md text-headline-md text-on-surface">컬비가 무엇인가요?</span>
+                                <span class="material-symbols-outlined faq-icon transition-transform text-outline">expand_more</span>
+                            </button>
+                            <div class="faq-accordion-content px-6">
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    컬비(Kirby)는 미국의 프리미엄 진공청소기 브랜드로, 강력한 흡입력으로 매트리스, 소파, 카펫 등 일반 청소기로 제거하기 힘든 깊숙한 먼지와 진드기까지 흡입하는 전문 장비입니다. 침구류·패브릭 위생 관리가 필요하실 때 옵션으로 신청하실 수 있습니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-accordion-item border border-outline-variant bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                            <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)" type="button">
+                                <span class="font-headline-md text-headline-md text-on-surface">에어컨청소 일반청소랑 분해청소는 무엇이 다른가요?</span>
+                                <span class="material-symbols-outlined faq-icon transition-transform text-outline">expand_more</span>
+                            </button>
+                            <div class="faq-accordion-content px-6">
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    일반청소는 필터와 겉면 먼지를 제거하는 수준이며, 분해청소는 에어컨 커버를 완전히 분리해 내부 냉각핀과 송풍팬까지 고압 세척 및 살균하는 작업입니다. 곰팡이 냄새가 나거나 오랫동안 청소하지 않은 에어컨은 분해청소를 권장해 드립니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-accordion-item border border-outline-variant bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                            <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)" type="button">
+                                <span class="font-headline-md text-headline-md text-on-surface">청소가 끝나면 당일 짐을 넣을 수 있나요?</span>
+                                <span class="material-symbols-outlined faq-icon transition-transform text-outline">expand_more</span>
+                            </button>
+                            <div class="faq-accordion-content px-6">
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    네, 청소 완료 직후 바로 짐을 옮기셔도 됩니다. 다만 물청소나 왁스 코팅 등 건조 시간이 필요한 작업을 함께 진행하신 경우, 매니저가 완료 시점에 안전하게 짐을 들여도 되는 시점을 안내해 드립니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-accordion-item border border-outline-variant bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                            <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)" type="button">
+                                <span class="font-headline-md text-headline-md text-on-surface">몇 명이 오고, 시간은 얼마나 걸리나요?</span>
+                                <span class="material-symbols-outlined faq-icon transition-transform text-outline">expand_more</span>
+                            </button>
+                            <div class="faq-accordion-content px-6">
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    평형과 서비스 종류에 따라 다르며, 통상 24평 기준 2~3인 팀이 방문해 입주청소는 4~5시간, 이사청소는 5~6시간 정도 소요됩니다. 정확한 인원과 소요 시간은 상담 시 안내해 드립니다.
                                 </p>
                             </div>
                         </div>
@@ -321,12 +409,12 @@
                     <div class="space-y-4">
                         <div class="faq-accordion-item border border-outline-variant bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
                             <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)" type="button">
-                                <span class="font-headline-md text-headline-md text-on-surface">재청소는 어떻게 요청하나요?</span>
+                                <span class="font-headline-md text-headline-md text-on-surface">청소가 미흡하면 AS되나요?</span>
                                 <span class="material-symbols-outlined faq-icon transition-transform text-outline">expand_more</span>
                             </button>
                             <div class="faq-accordion-content px-6">
                                 <p class="font-body-md text-body-md text-on-surface-variant">
-                                    고객센터 전화나 카카오톡 채널을 통해 접수해 주시면, 담당 팀이 확인 후 24시간 이내 무상 재방문 일정을 잡아드립니다.
+                                    서비스 완료 후 24시간 이내에 접수해 주시면 담당 팀이 확인 후 48시간 이내 무상으로 재방문하여 보완 작업을 진행해 드립니다. 고객센터 전화나 카카오톡 채널을 통해 편하게 접수해 주세요.
                                 </p>
                             </div>
                         </div>
@@ -342,23 +430,34 @@
                     <div class="space-y-4">
                         <div class="faq-accordion-item border border-outline-variant bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
                             <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)" type="button">
-                                <span class="font-headline-md text-headline-md text-on-surface">청소 전문가분들은 보험에 가입되어 있나요?</span>
+                                <span class="font-headline-md text-headline-md text-on-surface">청소 당일 제가 꼭 집에 있어야 하나요?</span>
                                 <span class="material-symbols-outlined faq-icon transition-transform text-outline">expand_more</span>
                             </button>
                             <div class="faq-accordion-content px-6">
                                 <p class="font-body-md text-body-md text-on-surface-variant">
-                                    네, 모든 BG SOLUTION 전문가는 책임 보험에 가입되어 있습니다. 철저한 신원 확인과 지속적인 전문 교육을 통해 가장 높은 수준의 안전과 신뢰를 보장합니다.
+                                    고객님의 선택에 달려 있습니다. 도어락 비밀번호나 경비실 안내를 통해 부재중에도 서비스를 받으실 수 있으며, 첫 이용이시라면 특이사항 전달을 위해 초반 10분 정도만 계셔도 충분합니다.
                                 </p>
                             </div>
                         </div>
                         <div class="faq-accordion-item border border-outline-variant bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
                             <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)" type="button">
-                                <span class="font-headline-md text-headline-md text-on-surface">서비스 진행 중에 꼭 집에 있어야 하나요?</span>
+                                <span class="font-headline-md text-headline-md text-on-surface">반려동물이나 아이가 있어도 괜찮나요?</span>
                                 <span class="material-symbols-outlined faq-icon transition-transform text-outline">expand_more</span>
                             </button>
                             <div class="faq-accordion-content px-6">
                                 <p class="font-body-md text-body-md text-on-surface-variant">
-                                    고객님의 선택에 달려 있습니다. 많은 정기 고객분들이 도어락 비밀번호나 경비실을 통해 출입 방법을 안내해 주시고 부재중에 서비스를 받으십니다. 첫 서비스의 경우 팀에게 안내 사항을 전달하기 위해 가급적 계시는 것을 추천드립니다.
+                                    네, 안전합니다. 저희가 사용하는 세제는 1등급 생분해성 친환경 인증 제품으로, 영유아나 반려동물이 있는 공간에서도 안심하고 사용하실 수 있습니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-accordion-item border border-outline-variant bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                            <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)" type="button">
+                                <span class="font-headline-md text-headline-md text-on-surface">청소 인원에 외국인도 있나요?</span>
+                                <span class="material-symbols-outlined faq-icon transition-transform text-outline">expand_more</span>
+                            </button>
+                            <div class="faq-accordion-content px-6">
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    저희 매니저는 국적과 무관하게 모두 동일한 기준의 신원 확인과 100시간 전문 교육을 이수한 정규 인력으로 구성되어 있습니다. 인력 구성과 관련해 우려되는 부분이 있으시면 상담 시 편하게 말씀해 주세요.
                                 </p>
                             </div>
                         </div>
