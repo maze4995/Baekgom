@@ -1,387 +1,457 @@
 <!DOCTYPE html>
+
 <html class="light" lang="ko"><head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>회사소개 | 백곰 홈케어</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-    <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                "primary": "#0A1A3B",
-                "on-primary": "#FFFFFF",
-                "primary-container": "#13264D",
-                "on-primary-container": "#FFFFFF",
-                "secondary": "#B8860B",
-                "on-secondary": "#FFFFFF",
-                "secondary-container": "#F5E9CE",
-                "on-secondary-container": "#8A6508",
-                "tertiary": "#1A1A1A",
-                "on-tertiary": "#FFFFFF",
-                "tertiary-container": "#F1F3F5",
-                "on-tertiary-container": "#1A1A1A",
-                "surface": "#FFFFFF",
-                "on-surface": "#1A1A1A",
-                "surface-variant": "#F1F3F5",
-                "on-surface-variant": "#4B5563",
-                "surface-container-lowest": "#FFFFFF",
-                "surface-container-low": "#F8F9FA",
-                "surface-container": "#F1F3F5",
-                "surface-container-high": "#E9ECEF",
-                "surface-container-highest": "#DEE2E6",
-                "surface-dim": "#E5E7EB",
-                "surface-bright": "#FFFFFF",
-                "surface-tint": "#0A1A3B",
-                "inverse-surface": "#1A1A1A",
-                "inverse-on-surface": "#FFFFFF",
-                "inverse-primary": "#B8860B",
-                "background": "#F8F9FA",
-                "on-background": "#1A1A1A",
-                "outline": "#D1D5DB",
-                "outline-variant": "#1A1A1A",
-                "error": "#B3261E",
-                "on-error": "#FFFFFF",
-                "error-container": "#F9DEDC",
-                "on-error-container": "#410E0B",
-                "primary-fixed": "#13264D",
-                "primary-fixed-dim": "#0A1A3B",
-                "on-primary-fixed": "#FFFFFF",
-                "on-primary-fixed-variant": "#FFFFFF",
-                "secondary-fixed": "#F5E9CE",
-                "secondary-fixed-dim": "#E8D6A6",
-                "on-secondary-fixed": "#8A6508",
-                "on-secondary-fixed-variant": "#8A6508",
-                "tertiary-fixed": "#F1F3F5",
-                "tertiary-fixed-dim": "#DEE2E6",
-                "on-tertiary-fixed": "#1A1A1A",
-                "on-tertiary-fixed-variant": "#1A1A1A"
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>홈 | BG SOLUTION</title>
+<link href="images/logo.png" rel="icon" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#0c4b6c",
+                        "on-background": "#111c2c",
+                        "on-secondary-container": "#285f80",
+                        "tertiary-fixed": "#e1e3e4",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#dee8ff",
+                        "inverse-surface": "#263142",
+                        "secondary-fixed-dim": "#9accf3",
+                        "inverse-primary": "#b6c6f0",
+                        "background": "#f9f9ff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#d8e3fa",
+                        "surface-container-highest": "#d8e3fa",
+                        "secondary-container": "#a5d8ff",
+                        "outline-variant": "#c5c6cf",
+                        "on-primary-fixed": "#071b3b",
+                        "on-primary": "#ffffff",
+                        "secondary": "#2e6385",
+                        "tertiary": "#151819",
+                        "primary-fixed": "#d8e2ff",
+                        "outline": "#75777f",
+                        "inverse-on-surface": "#ebf1ff",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#c9e6ff",
+                        "tertiary-container": "#292c2d",
+                        "on-tertiary-fixed": "#191c1d",
+                        "surface-dim": "#cfdaf1",
+                        "surface-container-low": "#f0f3ff",
+                        "on-tertiary-container": "#919394",
+                        "primary": "#031636",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#001e2f",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#c5c7c8",
+                        "surface": "#f9f9ff",
+                        "on-tertiary-fixed-variant": "#454748",
+                        "on-surface-variant": "#44474e",
+                        "surface-bright": "#f9f9ff",
+                        "primary-container": "#1a2b4c",
+                        "surface-container": "#e7eeff",
+                        "on-primary-container": "#8293ba",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#b6c6f0",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#364669",
+                        "on-surface": "#111c2c",
+                        "surface-tint": "#4e5e82"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "lg": "48px",
+                        "sm": "12px",
+                        "xs": "4px",
+                        "xl": "80px",
+                        "container-max": "1200px",
+                        "md": "24px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "label-md": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "label-sm": ["Manrope"],
+                        "headline-lg-mobile": ["Manrope"],
+                        "headline-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                },
             },
-            "borderRadius": {
-                    "DEFAULT": "0px",
-                    "lg": "2px",
-                    "xl": "4px",
-                    "2xl": "4px",
-                    "3xl": "6px",
-                    "full": "9999px"
-            },
-            "spacing": {
-                    "xs": "4px",
-                    "sm": "12px",
-                    "xl": "80px",
-                    "gutter": "24px",
-                    "margin-mobile": "16px",
-                    "lg": "48px",
-                    "container-max": "1200px",
-                    "base": "8px",
-                    "md": "24px"
-            },
-            "fontFamily": {
-                    "headline-xl": ["Manrope"],
-                    "headline-lg": ["Manrope"],
-                    "headline-lg-mobile": ["Manrope"],
-                    "headline-md": ["Manrope"],
-                    "body-lg": ["Manrope"],
-                    "body-md": ["Manrope"],
-                    "label-md": ["Manrope"],
-                    "label-sm": ["Manrope"]
-            },
-            "fontSize": {
-                    "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "800"}],
-                    "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                    "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
-                    "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
-                    "body-lg": ["20px", {"lineHeight": "1.7", "fontWeight": "400"}],
-                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "700"}],
-                    "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}]
-            }
-          },
-        },
-      }
+        }
     </script>
-    <style>
-        html {
-            zoom: 0.875;
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .premium-border {
-            border: 1px solid #1A1A1A;
-        }
-        .gold-accent {
-            color: #B8860B;
-        }
-        .text-shadow-strong {
-            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .authority-stripe {
-            height: 4px;
-            background: #B8860B;
-            width: 60px;
-        }
+<style>
+        .premium-border { border: 1px solid rgba(117, 119, 127, 0.2); }
+        .authority-stripe { width: 40px; height: 4px; background-color: #2e6385; }
     </style>
 </head>
 <body class="bg-background text-on-background font-body-md overflow-x-hidden">
 <!-- Top Navigation Bar -->
-<nav class="fixed top-0 w-full z-50 bg-white border-b-2 border-primary">
-    <div class="flex justify-between items-center h-24 px-gutter max-w-container-max mx-auto">
-        <div class="flex items-center gap-2">
-            <a href="index.html" class="font-headline-md text-headline-md font-extrabold text-primary tracking-tighter uppercase">백곰 홈케어</a>
-        </div>
-        <div class="hidden md:flex items-center gap-10">
-            <a class="text-primary font-extrabold border-b-4 border-secondary py-1 tracking-tight" href="index.html">회사소개</a>
-            <a class="text-on-surface/60 font-bold hover:text-primary transition-colors tracking-tight" href="cleaning.html">청소안내</a>
-            <a class="text-on-surface/60 font-bold hover:text-primary transition-colors tracking-tight" href="reviews.html">이용후기</a>
-            <a class="text-on-surface/60 font-bold hover:text-primary transition-colors tracking-tight" href="contact.html">상담문의</a>
-        </div>
-        <div class="flex items-center gap-6">
-            <button class="hidden md:block text-primary font-bold tracking-tight">로그인</button>
-            <a href="contact.html" class="bg-primary text-on-primary px-8 py-3 font-extrabold tracking-widest uppercase hover:bg-on-surface transition-colors inline-block">상담 예약</a>
-        </div>
-    </div>
+<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-outline-variant/20 shadow-sm">
+<div class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto">
+<a href="index.html" class="text-2xl font-extrabold text-primary tracking-tight">BG솔루션</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1" href="index.html">홈</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="cleaning.html">청소안내</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="reviews.html">이용후기</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="contact.html">상담문의</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="faq.html">FAQ</a>
+</div>
+<a href="contact.html" class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all inline-block">상담 예약</a>
+</div>
 </nav>
-
-<!-- Main Content Canvas -->
-<main class="pt-24">
-    <!-- Hero Section (Premium Service Manifesto) -->
-    <section class="relative min-h-[800px] flex items-center overflow-hidden bg-primary text-white">
-        <!-- Background Elements -->
-        <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent z-10"></div>
-            <img class="absolute right-0 top-0 h-full w-full object-cover object-center opacity-40 grayscale" alt="럭셔리 인테리어의 세부를 살피는 남색 유니폼 차림의 홈케어 전문가" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCcsgZuIGlowhF9kNyTDLK6-bm8NlNo_qSjeyiXpDM2wwZASuNBh5Rvh0CHSz1DHj9UyZ97-z3U1azMW944JtGPNAZXVSZzBw1klDQ0I3JKum7xDk4h1X0OPIWy7xEwzjo-7pC-CITEZ0D1danMLn3Jh18eOMBcU4md2hzu7hK35VnI0FVpjAlLLDm088g0VCNKrfygoCER36hr4GrjiP5QS30tiPkLpDh6cztEr9CDKmFIbhcKEEqPQ">
-        </div>
-
-        <div class="relative z-20 w-full px-gutter max-w-container-max mx-auto py-xl">
-            <div class="max-w-3xl">
-                <!-- Authority Badge -->
-                <div class="inline-flex items-center gap-3 mb-8">
-                    <div class="authority-stripe"></div>
-                    <span class="text-label-md font-label-md uppercase tracking-[0.2em] text-secondary">Premium Professional Standards</span>
-                </div>
-
-                <!-- Hero Headlines -->
-                <h1 class="font-headline-xl text-headline-xl mb-8 leading-[1.05] tracking-tighter">
-                    공간의 가치를 지키는<br>
-                    <span class="text-secondary">절대적인 신뢰의 원칙</span>
-                </h1>
-
-                <p class="font-body-lg text-body-lg text-white/80 mb-12 max-w-xl border-l-2 border-secondary pl-6">
-                    백곰 홈케어는 단순한 청소를 넘어섭니다. 우리는 업계 표준을 선도하는 정밀 장비와 엄격한 인증 절차를 통해 당신의 공간이 지닌 본연의 품격을 복원합니다.
+<main class="pt-20">
+<!-- 1. HERO SECTION -->
+<section class="relative min-h-[700px] flex items-center overflow-hidden bg-primary text-white">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/85 to-transparent z-10"></div>
+<img alt="Professional cleaning service" class="absolute right-0 top-0 h-full w-full object-cover opacity-40 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABPgX7XZ8_jeHfFLt-SI7WOSubc1Z9FFyV7FZMKFDyYIDf_rLjTPNrUcbL9RnVP-p67WWHJfN934BqwclM8FJNr786SO8RIBoIrCH2Ua84Kwqi7mLI2-M_ZFYQaoUYSpOcTcYCi3ZxqqELtqpDEbcyjBCVYL5DnCpepqwhA7XAzAWcUUCh2d_9J2FunMFGeGd8Q4nSEmF8wB_Bcfe6lS__YfWMoAubXbJj6_MosRZJH_CFAopOV0KtNQ"/>
+</div>
+<div class="relative z-20 w-full px-gutter max-w-container-max mx-auto py-xl">
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-3 mb-6">
+<div class="authority-stripe"></div>
+<span class="text-label-md font-label-md uppercase tracking-[0.2em] text-secondary-fixed-dim">Premium Professional Standards</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl mb-6 leading-[1.1] tracking-tight">
+                    공간의 가치를 지키는<br/>
+<span class="text-secondary-fixed-dim">절대적인 신뢰의 원칙</span>
+</h1>
+<p class="font-body-lg text-body-lg text-white/80 mb-10 max-w-xl border-l-2 border-secondary pl-6">
+                    BG 솔루션은 단순한 청소를 넘어섭니다. 정밀 장비와 엄격한 인증 절차를 통해 당신의 공간이 지닌 본연의 품격을 복원합니다.
                 </p>
-
-                <!-- CTA Group -->
-                <div class="flex flex-wrap gap-6 items-center">
-                    <a href="contact.html" class="bg-secondary text-white px-12 py-5 font-extrabold text-lg hover:bg-white hover:text-primary transition-all duration-300 uppercase tracking-widest inline-block">
+<div class="flex flex-wrap gap-4 items-center">
+<a href="contact.html" class="bg-secondary text-white px-10 py-4 rounded-xl font-extrabold text-lg hover:bg-white hover:text-primary transition-all duration-300 inline-block">
                         지금 예약하기
                     </a>
-                    <a href="cleaning.html" class="bg-transparent border border-white/30 text-white px-10 py-5 font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center gap-2">
-                        서비스 매니페스토
-                        <span class="material-symbols-outlined">arrow_right_alt</span>
-                    </a>
-                </div>
-
-                <!-- Quick Stats -->
-                <div class="grid grid-cols-3 gap-12 mt-20 pt-12 border-t border-white/10">
-                    <div>
-                        <div class="text-secondary font-headline-md text-headline-md font-extrabold">98%</div>
-                        <div class="text-white/60 text-label-md uppercase tracking-wider">Retention Rate</div>
-                    </div>
-                    <div>
-                        <div class="text-secondary font-headline-md text-headline-md font-extrabold">15,000+</div>
-                        <div class="text-white/60 text-label-md uppercase tracking-wider">Certified Cases</div>
-                    </div>
-                    <div>
-                        <div class="text-secondary font-headline-md text-headline-md font-extrabold">ISO-9001</div>
-                        <div class="text-white/60 text-label-md uppercase tracking-wider">Quality Management</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trust Section (Industrial Leader Vibe) -->
-    <section class="py-xl bg-white border-b-8 border-primary">
-        <div class="px-gutter max-w-container-max mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-                <div class="max-w-2xl">
-                    <div class="authority-stripe mb-6"></div>
-                    <h2 class="font-headline-lg text-headline-lg text-primary mb-4 uppercase tracking-tighter">The Industry Standard</h2>
-                    <p class="text-on-surface/60 text-lg leading-relaxed">타협하지 않는 완벽함. 백곰 홈케어는 프리미엄 공간 관리를 위한 가장 전문적인 해답을 제시합니다.</p>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-                <!-- Bento Grid Reimagined for Authority -->
-                <div class="md:col-span-4 bg-background p-10 border-t-4 border-primary shadow-lg flex flex-col justify-between">
-                    <div>
-                        <span class="material-symbols-outlined text-primary text-5xl mb-8">verified_user</span>
-                        <h3 class="font-headline-md text-headline-md text-primary mb-4 tracking-tight">1등급 친환경 인증</h3>
-                        <p class="text-on-surface/70 leading-relaxed">최고 권위 기관의 인증을 획득한 친환경 세제만을 사용하여 보이지 않는 곳의 안전까지 책임집니다.</p>
-                    </div>
-                </div>
-
-                <div class="md:col-span-8 bg-primary p-12 relative overflow-hidden flex flex-col justify-end group">
-                    <div class="absolute top-0 right-0 w-64 h-64 bg-secondary/10 -rotate-12 translate-x-20 -translate-y-20"></div>
-                    <div class="relative z-10">
-                        <h3 class="font-headline-md text-headline-md text-white mb-4 tracking-tight">100시간 전문 마스터 교육</h3>
-                        <p class="text-white/70 text-lg max-w-lg leading-relaxed mb-8">모든 서비스 매니저는 본사의 엄격한 기술 교육과 인성 검증을 거친 전문가입니다. 우리는 단순한 인력이 아닌, 공간의 가치를 이해하는 전문가를 파견합니다.</p>
-                        <a href="cleaning.html" class="inline-flex items-center gap-2 text-secondary font-bold uppercase tracking-widest text-sm">
-                            Learn About Our Training <span class="material-symbols-outlined">trending_flat</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="md:col-span-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="premium-border p-8 flex items-start gap-6 hover:bg-primary hover:text-white transition-all duration-300">
-                        <span class="material-symbols-outlined text-secondary text-[40px]">contract</span>
-                        <div>
-                            <h4 class="font-extrabold text-xl mb-2 tracking-tight">100% 책임 보상제</h4>
-                            <p class="text-sm opacity-70">결과에 대한 무한 책임 원칙 준수</p>
-                        </div>
-                    </div>
-                    <div class="premium-border p-8 flex items-start gap-6 hover:bg-primary hover:text-white transition-all duration-300">
-                        <span class="material-symbols-outlined text-secondary text-[40px]">inventory</span>
-                        <div>
-                            <h4 class="font-extrabold text-xl mb-2 tracking-tight">정밀 장비 케어</h4>
-                            <p class="text-sm opacity-70">독일산 프리미엄 전문 장비 상시 사용</p>
-                        </div>
-                    </div>
-                    <div class="premium-border p-8 flex items-start gap-6 hover:bg-primary hover:text-white transition-all duration-300">
-                        <span class="material-symbols-outlined text-secondary text-[40px]">description</span>
-                        <div>
-                            <h4 class="font-extrabold text-xl mb-2 tracking-tight">상세 인증 리포트</h4>
-                            <p class="text-sm opacity-70">디지털 검수 완료 보고서 상시 제공</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section (Verified Containers) -->
-    <section class="py-xl px-gutter max-w-container-max mx-auto">
-        <div class="text-center mb-16">
-            <div class="authority-stripe mx-auto mb-6"></div>
-            <h2 class="font-headline-lg text-headline-lg text-primary mb-4 uppercase tracking-tighter">Client Assurance (FAQ)</h2>
-            <p class="text-on-surface/60 max-w-xl mx-auto">우리의 프로세스는 투명하며, 당신의 질문은 우리의 기준을 보여줍니다.</p>
-        </div>
-
-        <div class="max-w-4xl mx-auto flex flex-col gap-6">
-            <details class="group bg-white border-2 border-primary overflow-hidden transition-all duration-300">
-                <summary class="flex items-center justify-between p-8 cursor-pointer list-none font-extrabold text-primary hover:bg-primary hover:text-white transition-colors uppercase tracking-tight">
-                    <div class="flex items-center gap-4">
-                        <span class="material-symbols-outlined text-secondary">verified</span>
-                        <span class="">예약 확정 및 일정 조율 프로세스</span>
-                    </div>
-                    <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
-                </summary>
-                <div class="p-8 bg-background border-t-2 border-primary text-on-surface/80 leading-relaxed font-body-md">
-                    백곰 홈케어의 모든 예약은 시스템을 통해 체계적으로 관리됩니다. 원활한 서비스 퀄리티 유지를 위해 최소 5일 전 예약을 원칙으로 하며, 예약 확정 시 담당 마스터의 프로필과 장비 리스트가 포함된 안내문이 발송됩니다.
-                </div>
-            </details>
-
-            <details class="group bg-white border-2 border-primary overflow-hidden transition-all duration-300">
-                <summary class="flex items-center justify-between p-8 cursor-pointer list-none font-extrabold text-primary hover:bg-primary hover:text-white transition-colors uppercase tracking-tight">
-                    <div class="flex items-center gap-4">
-                        <span class="material-symbols-outlined text-secondary">shield_with_heart</span>
-                        <span class="">친환경 인증 세제 및 약품 안전성</span>
-                    </div>
-                    <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
-                </summary>
-                <div class="p-8 bg-background border-t-2 border-primary text-on-surface/80 leading-relaxed font-body-md">
-                    우리는 화학 잔여물이 남지 않는 1등급 생분해성 세제만을 사용합니다. 이는 영유아 및 반려동물이 있는 공간에서도 완벽하게 안전하며, 시공 후 공기 질 측정 서비스를 통해 그 안전성을 수치로 증명해 드립니다.
-                </div>
-            </details>
-
-            <details class="group bg-white border-2 border-primary overflow-hidden transition-all duration-300">
-                <summary class="flex items-center justify-between p-8 cursor-pointer list-none font-extrabold text-primary hover:bg-primary hover:text-white transition-colors uppercase tracking-tight">
-                    <div class="flex items-center gap-4">
-                        <span class="material-symbols-outlined text-secondary">policy</span>
-                        <span class="">서비스 불만족 시 배상 및 A/S 규정</span>
-                    </div>
-                    <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
-                </summary>
-                <div class="p-8 bg-background border-t-2 border-primary text-on-surface/80 leading-relaxed font-body-md">
-                    '절대 만족' 원칙에 따라, 서비스 완료 후 24시간 이내에 접수된 모든 불만족 사항에 대해 48시간 이내 무상 재방문 및 완벽 보완 작업을 보장합니다. 우리는 업계 최고의 책임 배상 보험에 가입되어 있어 모든 리스크로부터 고객을 보호합니다.
-                </div>
-            </details>
-        </div>
-    </section>
+<a href="#process" class="bg-transparent border border-white/30 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center gap-2">
+                        서비스 프로세스
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. USP / TRUST INDICATORS -->
+<section class="py-xl bg-white">
+<div class="px-gutter max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-8 bg-surface-container-low rounded-xl border border-outline-variant flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-primary/5 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-4xl">verified</span>
+</div>
+<h3 class="font-headline-md text-xl mb-3">ISO-9001 인증 기업</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">국제 표준화 기구가 인증한 품질 경영 시스템을 통해 최상의 서비스 품질을 보장합니다.</p>
+</div>
+<div class="p-8 bg-surface-container-low rounded-xl border border-outline-variant flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-primary/5 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-4xl">security</span>
+</div>
+<h3 class="font-headline-md text-xl mb-3">배상책임보험 가입</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">혹시 모를 사고에 대비하여 최대 1억원 한도의 영업배상책임보험에 가입되어 안심할 수 있습니다.</p>
+</div>
+<div class="p-8 bg-surface-container-low rounded-xl border border-outline-variant flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-primary/5 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-4xl">school</span>
+</div>
+<h3 class="font-headline-md text-xl mb-3">100시간 마스터 교육</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">전문 매니저가 되기 위해 본사의 엄격한 기술 및 서비스 교육 100시간을 필수 이수합니다.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. SERVICE SUMMARY CARDS -->
+<section class="py-xl bg-surface-container-low">
+<div class="px-gutter max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">맞춤형 전문 서비스</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">공간의 특성에 맞는 최적화된 청소 솔루션을 합리적인 가격으로 제안합니다.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- 입주청소 -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group border border-outline-variant">
+<div class="h-48 overflow-hidden">
+<img alt="Move-in Cleaning" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVdQqdJyCW8bnfZQ5UlnNFZALCugas5y9VhHon6mHPGlX3PqWnmiFW58toKLy2InnJeNbHniZ0txCJlz77xCpJayysXysWdDS_NqVCvFsiUltD-wX_Dd0NU9PVNWTUZEYfr1ebnFAkJFgGAwWWOVY02QPfu6Hsond40rN8vLA2eJhs-phUJeqeRXS5lahM7CFPkEidBykWipF083Tj2ScsBQxa24ELKCwA1a5rLUM_zpYLTEZ7Kw4fsw"/>
+</div>
+<div class="p-8">
+<h4 class="font-headline-md text-xl mb-3">입주 청소</h4>
+<p class="text-on-surface-variant text-sm mb-6">신축 건물의 미세 먼지, 공사 분진, 유해 물질을 정밀 제거하여 건강한 첫 입주를 돕습니다.</p>
+<div class="flex justify-between items-end">
+<div>
+<span class="text-label-sm text-on-surface-variant block mb-1">예상 시작가</span>
+<span class="text-primary font-extrabold text-xl">150,000원~</span>
+</div>
+<a href="cleaning.html#move-in" class="text-secondary font-bold flex items-center gap-1 hover:underline">상세보기 <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+</div>
+<!-- 이사청소 -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group border border-outline-variant">
+<div class="h-48 overflow-hidden">
+<img alt="Move-out Cleaning" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9Ph-IiOj0GHLOD_YMs9jyt8BlIy--qaRm1JxA4uyqvT-G6BG5Q6Dsou-cVmWw7ZMr-daYHryzoTN9QijLdlRnWFkroKh1IOGwirZbRRrtJ3imp7f9Us5UENRcbQkSAmwpc6p1aUDYfSXvNhwXrwad734-NNlzCQv5xgkmy2oi8sy6-z8GCb7X09EhNA9Ow3IYEvEiOGoN8Nk1Pa0cpH1UDrfh8R4gZo16XKKAxcYEsKfwOPT5mV70zw"/>
+</div>
+<div class="p-8">
+<h4 class="font-headline-md text-xl mb-3">이사 청소</h4>
+<p class="text-on-surface-variant text-sm mb-6">기존 거주자의 흔적을 지우고 묵은 때와 세균까지 완벽하게 소독하여 쾌적한 새 출발을 선사합니다.</p>
+<div class="flex justify-between items-end">
+<div>
+<span class="text-label-sm text-on-surface-variant block mb-1">예상 시작가</span>
+<span class="text-primary font-extrabold text-xl">180,000원~</span>
+</div>
+<a href="cleaning.html#moving" class="text-secondary font-bold flex items-center gap-1 hover:underline">상세보기 <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+</div>
+<!-- 거주청소 -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group border border-outline-variant">
+<div class="h-48 overflow-hidden">
+<img alt="Residential Cleaning" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmICTeIWK4tG4-W3waOBrzyeJpkbiiCGWZI7ErlTdJd5vr9ILDXpCRCArFMsoxHNq1LEAf4cBDy9zY_9XApIcNKzlZgdU_SuImYt1Nqpo9lAuOLZvwxay8SBASKTskx8oSZ8hV-2Xp4OdrI5eta-3Zm240dZDzl48s97OH7Vlf8h9C9uEw4v1_Y70gV09BwJqFHnCWvNiw6uVNW4euJz0DwcvmbAbrKktXaYs4IUU1U_j8Ub9U8MVQrg"/>
+</div>
+<div class="p-8">
+<h4 class="font-headline-md text-xl mb-3">거주 청소</h4>
+<p class="text-on-surface-variant text-sm mb-6">현재 거주 중인 공간의 오염도가 높은 구역(주방, 화장실 등)을 집중 케어하여 삶의 질을 높입니다.</p>
+<div class="flex justify-between items-end">
+<div>
+<span class="text-label-sm text-on-surface-variant block mb-1">예상 시작가</span>
+<span class="text-primary font-extrabold text-xl">200,000원~</span>
+</div>
+<a href="cleaning.html#living" class="text-secondary font-bold flex items-center gap-1 hover:underline">상세보기 <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. WORK PROCESS -->
+<section class="py-xl bg-white overflow-hidden" id="process">
+<div class="px-gutter max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">안심 서비스 프로세스</h2>
+<p class="text-on-surface-variant">예약부터 완료 보고까지, 모든 과정이 투명하고 체계적으로 진행됩니다.</p>
+</div>
+<div class="relative">
+<!-- Desktop Timeline Line -->
+<div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-outline-variant -translate-y-1/2 z-0"></div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-14 h-14 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xl mb-6 shadow-lg">01</div>
+<div class="bg-white p-6 rounded-xl border border-outline-variant w-full">
+<h5 class="font-bold text-lg mb-2">상담 및 예약</h5>
+<p class="text-sm text-on-surface-variant leading-relaxed">온라인 또는 전화를 통한 간편한 일정 조율 및 확정</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-14 h-14 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xl mb-6 shadow-lg">02</div>
+<div class="bg-white p-6 rounded-xl border border-outline-variant w-full">
+<h5 class="font-bold text-lg mb-2">전문 매니저 방문</h5>
+<p class="text-sm text-on-surface-variant leading-relaxed">약속된 시간에 전문 교육을 이수한 마스터 팀 도착</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-14 h-14 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xl mb-6 shadow-lg">03</div>
+<div class="bg-white p-6 rounded-xl border border-outline-variant w-full">
+<h5 class="font-bold text-lg mb-2">딥 클리닝 수행</h5>
+<p class="text-sm text-on-surface-variant leading-relaxed">독일산 정밀 장비와 친환경 세제를 이용한 고강도 케어</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-14 h-14 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-xl mb-6 shadow-lg">04</div>
+<div class="bg-white p-6 rounded-xl border border-outline-variant w-full">
+<h5 class="font-bold text-lg mb-2">검수 및 결과보고</h5>
+<p class="text-sm text-on-surface-variant leading-relaxed">고객 대면 검수 후 디지털 작업 리포트 발행</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. BEFORE & AFTER GALLERY PREVIEW -->
+<section class="py-xl bg-surface-container">
+<div class="px-gutter max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">비포 &amp; 애프터</h2>
+<p class="text-on-surface-variant">BG 솔루션이 만드는 드라마틱한 변화를 확인해보세요.</p>
+</div>
+<a href="reviews.html" class="bg-white text-primary px-6 py-2 border border-outline rounded-lg font-bold hover:bg-primary hover:text-white transition-all inline-block">전체 갤러리 보기</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Case 1 -->
+<div class="space-y-4">
+<div class="grid grid-cols-2 gap-2 rounded-2xl overflow-hidden aspect-[16/9]">
+<div class="relative">
+<img alt="Before" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzDTLJwz24RxcyPLGE-YVKy8jcicXABfBdI8b5j2y2hz6LninCKWTfQFQytwZ8K64c8sfkVD8ivS0_Q2a00wNC-QqhlmFkOcZOn0soitVUU2aTlYAergzeoj6N-Xl-3kHNBHQwRcpDFelLocs5x0npVilWLfzHxlF8ZvUxlyv4dzSX2EWKlwAzu6bZH3CwNhhcFW-wE3ilcbqZ_AkCR2ALgPcdGy1XqpITJfst7tc7cgzeDJf1cS0p-A"/>
+<span class="absolute top-4 left-4 bg-black/60 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Before</span>
+</div>
+<div class="relative">
+<img alt="After" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJR4p_FDd-3dqbV7fgDrUbtMBB1vic2URww1K6-ytVQdsk2Ver2GxTouOgdTkHCpn_C7-RNzEw9CZWFP25zYJ38h-XYsfCtiCJgHjr0ZHUHHcF3gwDkEiFglsrbusIraRx-yqlMcFcMo2a9MjbUqAMoexOzxlND0i-eWilB_AkPcp0PkodbZ_I7sQhwmf3ho-hIt7c1hIOpan2fvasAbesGBtB1hQRcTr0zL-xRNzo4Prz9ZjopDkqwg"/>
+<span class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">After</span>
+</div>
+</div>
+<div class="flex justify-between items-center px-2">
+<span class="font-bold text-primary">오래된 주방 후드 기름때 제거</span>
+<span class="text-sm text-on-surface-variant">이수 자이 아파트</span>
+</div>
+</div>
+<!-- Case 2 -->
+<div class="space-y-4">
+<div class="grid grid-cols-2 gap-2 rounded-2xl overflow-hidden aspect-[16/9]">
+<div class="relative">
+<img alt="Before" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpGLOnCd7SqHp3KUeatO-2tTzMgAROhZV5Xyk4La1q8Vl7QWAeVUfkr9pHOtY8-O2yt05GhJd0lcZ1qYRq7dOjN66QELqR5TpcLTMNx_JeNN5aghGUOhdcNEd8o3auW4J09D08epw2neLZf4hG5tj5Hx-0AFUlk0SNDg1x_oCldMpBqPezvEzjrB4oYUetQjRN2Pcr1iCd16a8ElDthFRAe0doVj7O9-iIk3jrlZqfWRM3Z7METGEX_w"/>
+<span class="absolute top-4 left-4 bg-black/60 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Before</span>
+</div>
+<div class="relative">
+<img alt="After" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_zsNx0QpvfsyzJ9hWYxi3RedP-BZ2M4w7eJFCR6j5tHYW0lkCZ9Je6pY2FGg5PAASakx0mF6JnJ1Gr8emz7wteCOlibYkFTKECFfh3446XdCL4EkSEeQjQBr-iGbMVoMYaHmIuF1xVYsSZmoZ8HvbkVQGLdGwWi7SPo7jeyJTH0rQMUnVvGokTa5jCuajir39mpK4Awn86jOcOd665U4BkEyJnNtItEHVHGJtOKhiVa4mKp6K4KMDVw"/>
+<span class="absolute top-4 left-4 bg-secondary text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">After</span>
+</div>
+</div>
+<div class="flex justify-between items-center px-2">
+<span class="font-bold text-primary">욕실 실리콘 곰팡이 및 물때 케어</span>
+<span class="text-sm text-on-surface-variant">광교 중흥S클래스</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. REVIEWS & RATINGS PREVIEW -->
+<section class="py-xl bg-white">
+<div class="px-gutter max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-4 text-center md:text-left">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">사용자가 증명하는<br/>신뢰의 결과</h2>
+<div class="inline-block bg-surface-container-high p-8 rounded-2xl text-center border border-outline-variant">
+<div class="text-sm text-on-surface-variant mb-2">평균 고객 만족도</div>
+<div class="text-5xl font-extrabold text-primary mb-3">4.9<span class="text-2xl text-on-surface-variant">/5.0</span></div>
+<div class="flex justify-center gap-1 text-secondary">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="p-6 bg-surface-container-low rounded-xl border border-outline-variant">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-10 h-10 rounded-full bg-outline-variant flex items-center justify-center text-sm font-bold">김*</div>
+<div>
+<div class="font-bold text-sm">김지민 님</div>
+<div class="text-[10px] text-on-surface-variant">입주 청소 이용</div>
+</div>
+</div>
+<p class="text-sm text-on-surface leading-relaxed italic">"신축 아파트라 분진이 너무 걱정됐는데, 구석구석 손 안 닿는 곳까지 완벽하게 해주셨어요. 팀장님이 너무 친절하셨습니다."</p>
+</div>
+<div class="p-6 bg-surface-container-low rounded-xl border border-outline-variant">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-10 h-10 rounded-full bg-outline-variant flex items-center justify-center text-sm font-bold">박*</div>
+<div>
+<div class="font-bold text-sm">박상훈 님</div>
+<div class="text-[10px] text-on-surface-variant">이사 청소 이용</div>
+</div>
+</div>
+<p class="text-sm text-on-surface leading-relaxed italic">"기존 세입자분이 너무 지저분하게 쓰고 나가셔서 걱정했는데, 거의 새 집을 만들어 주셨네요. 돈이 아깝지 않은 서비스였습니다."</p>
+</div>
+<div class="p-6 bg-surface-container-low rounded-xl border border-outline-variant">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-10 h-10 rounded-full bg-outline-variant flex items-center justify-center text-sm font-bold">이*</div>
+<div>
+<div class="font-bold text-sm">이현정 님</div>
+<div class="text-[10px] text-on-surface-variant">거주 청소 이용</div>
+</div>
+</div>
+<p class="text-sm text-on-surface leading-relaxed italic">"맞벌이라 청소할 시간이 부족해 신청했는데 삶의 질이 수직 상승했습니다. 주방이 정말 반짝거려요."</p>
+</div>
+<div class="p-6 bg-surface-container-low rounded-xl border border-outline-variant">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-10 h-10 rounded-full bg-outline-variant flex items-center justify-center text-sm font-bold">최*</div>
+<div>
+<div class="font-bold text-sm">최준석 님</div>
+<div class="text-[10px] text-on-surface-variant">입주 청소 이용</div>
+</div>
+</div>
+<p class="text-sm text-on-surface leading-relaxed italic">"여러 업체 비교 끝에 선택했는데 왜 1위인지 알겠네요. 검수 리포트까지 챙겨주셔서 더 믿음이 갔습니다."</p>
+</div>
+</div>
+</div>
+</div>
+</section>
 </main>
-
 <!-- Footer -->
 <footer class="bg-primary text-white w-full py-xl border-t-8 border-secondary">
-    <div class="px-gutter max-w-container-max mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-16">
-            <div class="flex flex-col gap-6">
-                <span class="font-headline-md text-headline-md font-extrabold text-white tracking-tighter uppercase">백곰 홈케어</span>
-                <p class="text-white/60 max-w-sm leading-relaxed">
+<div class="px-gutter max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-16">
+<div class="flex flex-col gap-6">
+<div class="bg-white inline-block p-3 w-fit rounded-lg">
+<img alt="BG SOLUTION" class="h-12 w-auto" src="images/logo.png">
+</div>
+<p class="text-white/60 max-w-sm leading-relaxed">
                     프리미엄 공간 관리의 기준을 세웁니다. 우리는 가장 소중한 당신의 공간을 위해 타협 없는 완벽함을 추구합니다.
                 </p>
-                <p class="text-white/60 text-sm leading-relaxed">
-                    서울특별시 서초구 서초대로 123, 백곰빌딩 5층<br>
-                    대표번호: 1588-0000 | 이메일: support@baekgom.com
+<p class="text-white/60 text-sm leading-relaxed">
+                    서울특별시 서초구 서초대로 123, BG SOLUTION빌딩 5층<br/>
+                    대표번호: 1588-0000 | 이메일: support@bgsolution.com
                 </p>
-                <div class="flex gap-4">
-                    <div class="w-12 h-12 border border-white/20 flex items-center justify-center cursor-pointer hover:bg-secondary hover:border-secondary transition-all">
-                        <span class="material-symbols-outlined text-[20px]">policy</span>
-                    </div>
-                    <div class="w-12 h-12 border border-white/20 flex items-center justify-center cursor-pointer hover:bg-secondary hover:border-secondary transition-all">
-                        <span class="material-symbols-outlined text-[20px]">share</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-12">
-                <div class="flex flex-col gap-4">
-                    <h5 class="font-bold text-secondary uppercase tracking-widest text-xs">Services</h5>
-                    <a class="text-white/60 hover:text-white transition-all text-sm" href="cleaning.html">주거 공간 관리</a>
-                    <a class="text-white/60 hover:text-white transition-all text-sm" href="cleaning.html">상업 시설 케어</a>
-                    <a class="text-white/60 hover:text-white transition-all text-sm" href="cleaning.html">정밀 공기 정화</a>
-                </div>
-                <div class="flex flex-col gap-4">
-                    <h5 class="font-bold text-secondary uppercase tracking-widest text-xs">Trust</h5>
-                    <a class="text-white/60 hover:text-white transition-all text-sm" href="reviews.html">인증 현황</a>
-                    <a class="text-white/60 hover:text-white transition-all text-sm" href="#">보상 정책</a>
-                    <a class="text-white/60 hover:text-white transition-all text-sm" href="#">이용약관</a>
-                </div>
-                <div class="flex flex-col gap-4">
-                    <h5 class="font-bold text-secondary uppercase tracking-widest text-xs">Support</h5>
-                    <a class="text-white/60 hover:text-white transition-all text-sm" href="contact.html">1:1 상담</a>
-                    <a class="text-white/60 hover:text-white transition-all text-sm" href="#">기업 제휴</a>
-                    <a class="text-white/60 hover:text-white transition-all text-sm" href="contact.html">고객 센터</a>
-                </div>
-            </div>
-        </div>
-        <div class="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
-            <p class="text-white/40 text-xs tracking-widest uppercase">© 2024 WHITE BEAR HOME CARE. THE SUPREME STANDARD OF SPACE PURIFICATION.</p>
-            <div class="flex gap-8">
-                <span class="text-white/40 text-xs font-bold">KOSHA CERTIFIED</span>
-                <span class="text-white/40 text-xs font-bold">ISO 14001</span>
-                <span class="text-white/40 text-xs font-bold">ECO-LABELED</span>
-            </div>
-        </div>
-    </div>
+<div class="flex gap-4">
+<div class="w-10 h-10 border border-white/20 flex items-center justify-center cursor-pointer hover:bg-secondary hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-[18px]">policy</span>
+</div>
+<div class="w-10 h-10 border border-white/20 flex items-center justify-center cursor-pointer hover:bg-secondary hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div class="flex flex-col gap-4">
+<h5 class="font-bold text-secondary uppercase tracking-widest text-xs">Services</h5>
+<a class="text-white/60 hover:text-white transition-all text-sm" href="cleaning.html#move-in">입주 청소</a>
+<a class="text-white/60 hover:text-white transition-all text-sm" href="cleaning.html#moving">이사 청소</a>
+<a class="text-white/60 hover:text-white transition-all text-sm" href="cleaning.html#living">거주 청소</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-bold text-secondary uppercase tracking-widest text-xs">Trust</h5>
+<a class="text-white/60 hover:text-white transition-all text-sm" href="reviews.html">인증 현황</a>
+<a class="text-white/60 hover:text-white transition-all text-sm" href="faq.html">자주 묻는 질문</a>
+<a class="text-white/60 hover:text-white transition-all text-sm" href="#">이용약관</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-bold text-secondary uppercase tracking-widest text-xs">Support</h5>
+<a class="text-white/60 hover:text-white transition-all text-sm" href="contact.html">1:1 상담</a>
+<a class="text-white/60 hover:text-white transition-all text-sm" href="#">기업 제휴</a>
+<a class="text-white/60 hover:text-white transition-all text-sm" href="contact.html">고객 센터</a>
+</div>
+</div>
+</div>
+<div class="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-white/40 text-[10px] tracking-widest uppercase">© 2024 BG 솔루션. THE SUPREME STANDARD OF SPACE PURIFICATION.</p>
+</div>
+</div>
 </footer>
-
-<!-- Micro-interactions Script -->
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const nav = document.querySelector('nav');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 20) {
-                nav.classList.add('shadow-2xl');
-            } else {
-                nav.classList.remove('shadow-2xl');
-            }
-        });
-    });
-</script>
-
-
 </body></html>

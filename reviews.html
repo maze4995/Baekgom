@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html class="light" lang="ko"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>이용후기 | 백곰 홈케어</title>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>이용후기 | BG SOLUTION</title>
+<link href="images/logo.png" rel="icon" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
       tailwind.config = {
@@ -12,469 +13,402 @@
         theme: {
           extend: {
             "colors": {
-                "primary": "#0A1A3B",
-                "on-primary": "#FFFFFF",
-                "primary-container": "#13264D",
-                "on-primary-container": "#FFFFFF",
-                "secondary": "#B8860B",
-                "on-secondary": "#FFFFFF",
-                "secondary-container": "#F5E9CE",
-                "on-secondary-container": "#8A6508",
-                "tertiary": "#1A1A1A",
-                "on-tertiary": "#FFFFFF",
-                "tertiary-container": "#F1F3F5",
-                "on-tertiary-container": "#1A1A1A",
-                "surface": "#FFFFFF",
-                "on-surface": "#1A1A1A",
-                "surface-variant": "#F1F3F5",
-                "on-surface-variant": "#4B5563",
-                "surface-container-lowest": "#FFFFFF",
-                "surface-container-low": "#F8F9FA",
-                "surface-container": "#F1F3F5",
-                "surface-container-high": "#E9ECEF",
-                "surface-container-highest": "#DEE2E6",
-                "surface-dim": "#E5E7EB",
-                "surface-bright": "#FFFFFF",
-                "surface-tint": "#0A1A3B",
-                "inverse-surface": "#1A1A1A",
-                "inverse-on-surface": "#FFFFFF",
-                "inverse-primary": "#B8860B",
-                "background": "#F8F9FA",
-                "on-background": "#1A1A1A",
-                "outline": "#D1D5DB",
-                "outline-variant": "#1A1A1A",
-                "error": "#B3261E",
-                "on-error": "#FFFFFF",
-                "error-container": "#F9DEDC",
-                "on-error-container": "#410E0B",
-                "primary-fixed": "#13264D",
-                "primary-fixed-dim": "#0A1A3B",
-                "on-primary-fixed": "#FFFFFF",
-                "on-primary-fixed-variant": "#FFFFFF",
-                "secondary-fixed": "#F5E9CE",
-                "secondary-fixed-dim": "#E8D6A6",
-                "on-secondary-fixed": "#8A6508",
-                "on-secondary-fixed-variant": "#8A6508",
-                "tertiary-fixed": "#F1F3F5",
-                "tertiary-fixed-dim": "#DEE2E6",
-                "on-tertiary-fixed": "#1A1A1A",
-                "on-tertiary-fixed-variant": "#1A1A1A"
+                "surface-dim": "#cfdaf1",
+                "secondary-fixed": "#c9e6ff",
+                "on-tertiary": "#ffffff",
+                "on-primary-fixed-variant": "#364669",
+                "tertiary-fixed-dim": "#c5c7c8",
+                "secondary-container": "#a5d8ff",
+                "on-error-container": "#93000a",
+                "on-background": "#111c2c",
+                "on-primary-fixed": "#071b3b",
+                "primary-fixed": "#d8e2ff",
+                "outline-variant": "#c5c6cf",
+                "surface-container-lowest": "#ffffff",
+                "surface-bright": "#f9f9ff",
+                "inverse-surface": "#263142",
+                "surface-container-high": "#dee8ff",
+                "surface-container-highest": "#d8e3fa",
+                "on-primary-container": "#8293ba",
+                "background": "#f9f9ff",
+                "surface-variant": "#d8e3fa",
+                "tertiary-fixed": "#e1e3e4",
+                "error": "#ba1a1a",
+                "on-error": "#ffffff",
+                "on-tertiary-container": "#919394",
+                "surface-container": "#e7eeff",
+                "surface-container-low": "#f0f3ff",
+                "on-primary": "#ffffff",
+                "outline": "#75777f",
+                "inverse-primary": "#b6c6f0",
+                "secondary-fixed-dim": "#9accf3",
+                "primary-fixed-dim": "#b6c6f0",
+                "on-secondary-fixed-variant": "#0c4b6c",
+                "on-secondary-fixed": "#001e2f",
+                "primary": "#031636",
+                "tertiary": "#151819",
+                "inverse-on-surface": "#ebf1ff",
+                "tertiary-container": "#292c2d",
+                "surface-tint": "#4e5e82",
+                "on-tertiary-fixed": "#191c1d",
+                "surface": "#f9f9ff",
+                "on-secondary-container": "#285f80",
+                "on-surface-variant": "#44474e",
+                "error-container": "#ffdad6",
+                "secondary": "#2e6385",
+                "primary-container": "#1a2b4c",
+                "on-surface": "#111c2c",
+                "on-tertiary-fixed-variant": "#454748",
+                "on-secondary": "#ffffff"
             },
             "borderRadius": {
-                    "DEFAULT": "0px",
-                    "lg": "2px",
-                    "xl": "4px",
-                    "2xl": "4px",
-                    "3xl": "6px",
-                    "full": "9999px"
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
             },
             "spacing": {
-                    "xs": "4px",
-                    "sm": "12px",
-                    "xl": "80px",
-                    "gutter": "24px",
-                    "margin-mobile": "16px",
-                    "lg": "48px",
-                    "container-max": "1200px",
-                    "base": "8px",
-                    "md": "24px"
+                "base": "8px",
+                "sm": "12px",
+                "xl": "80px",
+                "container-max": "1200px",
+                "lg": "48px",
+                "xs": "4px",
+                "md": "24px",
+                "margin-mobile": "16px",
+                "gutter": "24px"
             },
             "fontFamily": {
-                    "headline-xl": ["Manrope"],
-                    "headline-lg": ["Manrope"],
-                    "headline-lg-mobile": ["Manrope"],
-                    "headline-md": ["Manrope"],
-                    "body-lg": ["Manrope"],
-                    "body-md": ["Manrope"],
-                    "label-md": ["Manrope"],
-                    "label-sm": ["Manrope"]
+                "label-md": ["Manrope"],
+                "headline-md": ["Manrope"],
+                "headline-lg-mobile": ["Manrope"],
+                "headline-xl": ["Manrope"],
+                "body-md": ["Manrope"],
+                "label-sm": ["Manrope"],
+                "headline-lg": ["Manrope"],
+                "body-lg": ["Manrope"]
             },
             "fontSize": {
-                    "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "800"}],
-                    "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                    "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
-                    "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
-                    "body-lg": ["20px", {"lineHeight": "1.7", "fontWeight": "400"}],
-                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "700"}],
-                    "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}]
+                "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                "headline-lg": ["32px", {"lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
             }
           },
         },
       }
     </script>
 <style>
-        html {
-            zoom: 0.875;
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .before-after-slider {
-            position: relative;
-            overflow: hidden;
-            user-select: none;
-        }
-        .slider-handle {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: white;
-            cursor: ew-resize;
-            z-index: 10;
-        }
-        .slider-circle {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 40px;
-            height: 40px;
-            background: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-    </style>
-</head>
-<body class="bg-background text-on-background font-body-md overflow-x-hidden">
-<!-- Top Navigation Bar -->
-<nav class="fixed top-0 w-full z-50 bg-white border-b-2 border-primary">
-    <div class="flex justify-between items-center h-24 px-gutter max-w-container-max mx-auto">
-        <div class="flex items-center gap-2">
-            <a href="index.html" class="font-headline-md text-headline-md font-extrabold text-primary tracking-tighter uppercase">백곰 홈케어</a>
+    .before-after-slider { position: relative; overflow: hidden; user-select: none; }
+    .slider-handle { position: absolute; top: 0; bottom: 0; width: 2px; background: white; cursor: ew-resize; z-index: 10; }
+    .slider-circle {
+        position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+        width: 40px; height: 40px; background: white; border-radius: 50%;
+        display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+</style>
+</head><body class="bg-background text-on-background font-body-md overflow-x-hidden">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-outline-variant/20 shadow-sm">
+        <div class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto">
+            <a href="index.html" class="text-2xl font-extrabold text-primary tracking-tight">BG솔루션</a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="index.html">홈</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="cleaning.html">청소안내</a>
+                <a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1" href="reviews.html">이용후기</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="contact.html">상담문의</a>
+                <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="faq.html">FAQ</a>
+            </div>
+            <a href="contact.html" class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all inline-block">상담 예약</a>
         </div>
-        <div class="hidden md:flex items-center gap-10">
-            <a class="text-on-surface/60 font-bold hover:text-primary transition-colors tracking-tight" href="index.html">회사소개</a>
-            <a class="text-on-surface/60 font-bold hover:text-primary transition-colors tracking-tight" href="cleaning.html">청소안내</a>
-            <a class="text-primary font-extrabold border-b-4 border-secondary py-1 tracking-tight" href="reviews.html">이용후기</a>
-            <a class="text-on-surface/60 font-bold hover:text-primary transition-colors tracking-tight" href="contact.html">상담문의</a>
-        </div>
-        <div class="flex items-center gap-6">
-            <button class="hidden md:block text-primary font-bold tracking-tight">로그인</button>
-            <a href="contact.html" class="bg-primary text-on-primary px-8 py-3 font-extrabold tracking-widest uppercase hover:bg-on-surface transition-colors inline-block">상담 예약</a>
-        </div>
-    </div>
-</nav>
-<main class="pt-24">
-<!-- Hero Section -->
-<section class="relative py-xl overflow-hidden">
-<div class="max-w-container-max mx-auto px-md relative z-10 text-center">
-<span class="inline-block px-sm py-xs border border-primary text-primary font-label-sm mb-md uppercase tracking-wider">
-                REAL TRANSFORMATION
+    </nav>
+
+    <main class="pt-20">
+    <!-- Hero Section -->
+    <section class="relative pt-xl pb-lg overflow-hidden">
+        <div class="max-w-container-max mx-auto px-md relative z-10 text-center">
+            <span class="inline-block px-sm py-xs bg-secondary-container text-on-secondary-container rounded-full font-label-sm mb-md">
+                놀라운 변화
             </span>
-<h1 class="font-headline-xl text-headline-xl md:text-headline-xl text-primary mb-md tracking-tighter">
-                True Stories of <span class="text-secondary">Clean Transformation</span>
-</h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
-                백곰홈케어의 세심한 손길로 변화된 수천 가구의 감동적인 리뷰를 확인하세요.
+            <h1 class="font-headline-xl text-headline-xl md:text-headline-xl text-primary mb-md">
+                청소로 완성된 <span class="text-secondary">새로운 공간의 이야기</span>
+            </h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                BG SOLUTION의 세심한 손길로 변화된 수천 가구의 감동적인 리뷰를 확인하세요.
                 단순한 청소를 넘어 새로운 시작을 약속드립니다.
             </p>
-</div>
-</section>
-<!-- Statistics Section -->
-<section class="py-lg bg-surface-container-low border-y-2 border-primary">
-<div class="max-w-container-max mx-auto px-md">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
-<div class="bg-white p-lg border border-outline shadow-sm text-center">
-<p class="text-on-surface-variant font-label-md mb-xs">누적 리뷰 수</p>
-<h2 class="text-primary font-headline-xl text-headline-xl">2,500+</h2>
-<div class="flex justify-center mt-xs text-secondary">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">groups</span>
-</div>
-</div>
-<div class="bg-white p-lg border border-outline shadow-sm text-center">
-<p class="text-on-surface-variant font-label-md mb-xs">평균 평점</p>
-<h2 class="text-primary font-headline-xl text-headline-xl">4.9<span class="text-headline-md text-on-surface-variant">/5.0</span></h2>
-<div class="flex justify-center mt-xs text-secondary gap-xs">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-</div>
-</div>
-<div class="bg-white p-lg border border-outline shadow-sm text-center">
-<p class="text-on-surface-variant font-label-md mb-xs">고객 만족도</p>
-<h2 class="text-primary font-headline-xl text-headline-xl">99%</h2>
-<div class="flex justify-center mt-xs text-secondary">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Filter & Search -->
-<section class="pt-lg">
-<div class="max-w-container-max mx-auto px-md flex flex-col md:flex-row justify-between items-center gap-md">
-<div class="flex flex-wrap gap-base">
-<button class="px-md py-base bg-primary text-on-primary font-label-md uppercase tracking-wider">전체</button>
-<button class="px-md py-base bg-white text-on-surface-variant border border-outline font-label-md hover:bg-surface-container transition-colors">이사청소</button>
-<button class="px-md py-base bg-white text-on-surface-variant border border-outline font-label-md hover:bg-surface-container transition-colors">거주청소</button>
-<button class="px-md py-base bg-white text-on-surface-variant border border-outline font-label-md hover:bg-surface-container transition-colors">부분청소</button>
-</div>
-<div class="relative w-full md:w-80">
-<input class="w-full pl-md pr-xl py-base bg-white border border-outline focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none" placeholder="후기 검색하기..." type="text"/>
-<button class="absolute right-md top-1/2 -translate-y-1/2 text-primary">
-<span class="material-symbols-outlined">search</span>
-</button>
-</div>
-</div>
-</section>
-<!-- Before & After Grid -->
-<section class="py-lg">
-<div class="max-w-container-max mx-auto px-md">
-<h3 class="font-headline-lg text-headline-lg text-primary mb-lg tracking-tighter">포토 리뷰 (Before &amp; After)</h3>
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-lg">
-<!-- B&A Card 1 -->
-<div class="group bg-white overflow-hidden border-2 border-primary shadow-sm">
-<div class="before-after-slider h-80 relative" id="slider-1">
-<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDAX9Q8CreX5QIWX7fYNPq7FrGIscn29l228Gs_hmP3nudjTpTbj8iwNbhiFaGqu9V__Dm98ROwuiciR4agVy8AxvAMWxz7nCVoYDHUspx2ZmFHD7PpD7yDTTNO0f0OGNSrxf3kacbFIOIttVBEI8GWNjtodOkqRJDSvGacnIWEAgP-ikwI2_e7c0rvM3reBFD36gP6NKfw6PqBWQPXPBGZfh3muDBj0Oa-wt8aj2oVwT185Ft2owxBlw')" role="img" aria-label="반짝이는 대리석 주방 조리대 After">
-<span class="absolute top-md right-md bg-secondary text-white px-sm py-xs font-label-sm z-20">AFTER</span>
-</div>
-<div class="absolute inset-0 bg-cover bg-center w-1/2 overflow-hidden border-r-2 border-white transition-all duration-300" id="before-img-1" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBql8laVK6ykPtMvdmM9bzxkiq07LKVbQgH8CovfC6Zx2XIiXdYAX1-Rq8ppSOe1Izt18KBuooV48XvpUgNNW9P2_rIer8sfzQaGTZ6iaKYaqAtwocrKFHPRXsh3AFNVzXQw-gnnA4hs6jE_XeEhXnQzRGp3KJmQb4nEVO66B45_WKfvmL182eeNbFA6Wkh29QiKM7AD5YAotmUSwtHkyQusnKJXDjSEKmqVrgdRMK9t7LDOj6zXHW0dw')" role="img" aria-label="기름때 가득한 주방 조리대 Before">
-<span class="absolute top-md left-md bg-on-surface text-white px-sm py-xs font-label-sm z-20">BEFORE</span>
-</div>
-<div class="slider-handle left-1/2" id="handle-1">
-<div class="slider-circle">
-<span class="material-symbols-outlined text-primary">unfold_more_double</span>
-</div>
-</div>
-</div>
-<div class="p-md">
-<div class="flex justify-between items-start mb-sm">
-<div>
-<h4 class="font-headline-md text-headline-md text-primary">기름때 가득했던 주방의 대변신</h4>
-<p class="text-on-surface-variant font-label-sm">이사청소 | 서초구 반포동</p>
-</div>
-<div class="flex text-secondary">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-</div>
-</div>
-<p class="text-body-md text-on-surface-variant line-clamp-2">
-                            이사 들어갈 집 주방 상태가 너무 안 좋아서 걱정했는데, 백곰홈케어 덕분에 새 집처럼 깨끗해졌어요! 특히 가스레인지 주변 기름때가 완벽하게 제거되었습니다.
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="py-lg bg-surface-container-low border-y border-outline-variant/30">
+        <div class="max-w-container-max mx-auto px-md">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+                <div class="bg-white p-lg rounded-xl border border-outline-variant/20 shadow-sm text-center">
+                    <p class="text-on-surface-variant font-label-md mb-xs">누적 리뷰 수</p>
+                    <h2 class="text-primary font-headline-xl text-headline-xl">2,500+</h2>
+                    <div class="flex justify-center mt-xs text-secondary">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">groups</span>
+                    </div>
+                </div>
+                <div class="bg-white p-lg rounded-xl border border-outline-variant/20 shadow-sm text-center">
+                    <p class="text-on-surface-variant font-label-md mb-xs">평균 평점</p>
+                    <h2 class="text-primary font-headline-xl text-headline-xl">4.9<span class="text-headline-md text-on-surface-variant">/5.0</span></h2>
+                    <div class="flex justify-center mt-xs text-yellow-500 gap-xs">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                    </div>
+                </div>
+                <div class="bg-white p-lg rounded-xl border border-outline-variant/20 shadow-sm text-center">
+                    <p class="text-on-surface-variant font-label-md mb-xs">고객 만족도</p>
+                    <h2 class="text-primary font-headline-xl text-headline-xl">99%</h2>
+                    <div class="flex justify-center mt-xs text-green-600">
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter & Search-->
+    <section class="pt-lg">
+        <div class="max-w-container-max mx-auto px-md flex flex-col md:flex-row justify-between items-center gap-md">
+            <div class="flex flex-wrap gap-base">
+                <button class="px-md py-base rounded-full bg-primary text-on-primary font-label-md">전체</button>
+                <button class="px-md py-base rounded-full bg-white text-on-surface-variant border border-outline-variant/30 font-label-md hover:bg-surface-container transition-colors">이사청소</button>
+                <button class="px-md py-base rounded-full bg-white text-on-surface-variant border border-outline-variant/30 font-label-md hover:bg-surface-container transition-colors">거주청소</button>
+                <button class="px-md py-base rounded-full bg-white text-on-surface-variant border border-outline-variant/30 font-label-md hover:bg-surface-container transition-colors">부분청소</button>
+            </div>
+            <div class="relative w-full md:w-80">
+                <input class="w-full pl-md pr-xl py-base bg-white border border-outline-variant/30 rounded-full focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none" placeholder="후기 검색하기..." type="text">
+                <button class="absolute right-md top-1/2 -translate-y-1/2 text-primary">
+                    <span class="material-symbols-outlined">search</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before & After Grid -->
+    <section class="py-lg">
+        <div class="max-w-container-max mx-auto px-md">
+            <h3 class="font-headline-lg text-headline-lg text-primary mb-lg">포토 리뷰 (청소 전 &amp; 후)</h3>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-lg">
+                <!-- B&A Card 1 -->
+                <div class="group bg-white rounded-xl overflow-hidden border border-outline-variant/20 shadow-sm">
+                    <div class="before-after-slider h-80 relative" id="slider-1">
+                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDAX9Q8CreX5QIWX7fYNPq7FrGIscn29l228Gs_hmP3nudjTpTbj8iwNbhiFaGqu9V__Dm98ROwuiciR4agVy8AxvAMWxz7nCVoYDHUspx2ZmFHD7PpD7yDTTNO0f0OGNSrxf3kacbFIOIttVBEI8GWNjtodOkqRJDSvGacnIWEAgP-ikwI2_e7c0rvM3reBFD36gP6NKfw6PqBWQPXPBGZfh3muDBj0Oa-wt8aj2oVwT185Ft2owxBlw')">
+                            <span class="absolute top-md right-md bg-green-500 text-white px-sm py-xs rounded font-label-sm z-20">청소 후</span>
+                        </div>
+                        <div class="absolute inset-0 bg-cover bg-center w-1/2 overflow-hidden border-r-2 border-white transition-all duration-300" id="before-img-1" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBql8laVK6ykPtMvdmM9bzxkiq07LKVbQgH8CovfC6Zx2XIiXdYAX1-Rq8ppSOe1Izt18KBuooV48XvpUgNNW9P2_rIer8sfzQaGTZ6iaKYaqAtwocrKFHPRXsh3AFNVzXQw-gnnA4hs6jE_XeEhXnQzRGp3KJmQb4nEVO66B45_WKfvmL182eeNbFA6Wkh29QiKM7AD5YAotmUSwtHkyQusnKJXDjSEKmqVrgdRMK9t7LDOj6zXHW0dw')">
+                            <span class="absolute top-md left-md bg-red-500 text-white px-sm py-xs rounded font-label-sm z-20">청소 전</span>
+                        </div>
+                        <div class="slider-handle left-1/2" id="handle-1">
+                            <div class="slider-circle">
+                                <span class="material-symbols-outlined text-primary">unfold_more_double</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-md">
+                        <div class="flex justify-between items-start mb-sm">
+                            <div>
+                                <h4 class="font-headline-md text-headline-md text-primary">기름때 가득했던 주방의 대변신</h4>
+                                <p class="text-on-surface-variant font-label-sm">이사청소 | 서초구 반포동</p>
+                            </div>
+                            <div class="flex text-yellow-500">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                            </div>
+                        </div>
+                        <p class="text-body-md text-on-surface-variant line-clamp-2">
+                            이사 들어갈 집 주방 상태가 너무 안 좋아서 걱정했는데, BG SOLUTION 덕분에 새 집처럼 깨끗해졌어요! 특히 가스레인지 주변 기름때가 완벽하게 제거되었습니다.
                         </p>
-</div>
-</div>
-<!-- B&A Card 2 -->
-<div class="group bg-white overflow-hidden border-2 border-primary shadow-sm">
-<div class="before-after-slider h-80 relative" id="slider-2">
-<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCbJeZDmBTskh5BnkQ-YGCtWmmPjOf5x20yzpLygjeizIfA1zpEuYIsnIFzkA-fVPD8RC77zfxMqpZMoiK9-A20SBf-tVlBEqPe-OxVku3SlI-tPHLNPt9EQv2Oyl5p6tI1d9smEkhDsPw0T41kxfiWlmk5DhQjJom1GzE8XLeKLv-8RU913bGyifj2lllwb8745eUMFJv7tWlbXGnLEVkjM8Ca6sRZYPc32swlXpeomaBfxu3gSrMYEw')" role="img" aria-label="사용된 크롬 마감재와 유리가 반짝이는 욕실 After">
-<span class="absolute top-md right-md bg-secondary text-white px-sm py-xs font-label-sm z-20">AFTER</span>
-</div>
-<div class="absolute inset-0 bg-cover bg-center w-1/2 overflow-hidden border-r-2 border-white transition-all duration-300" id="before-img-2" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD4cVusPkleXyvpDM_G_yOMigwwCz6I8jdCwq7cpZux7Hd922xT0j25lkOByD0q0duA12WhhOF24CILNc4dhRpb7ZUbVEslcGsi0QPEuzhNVcFwjWeRuDknq3OFsCiE8_zh26uzA1o-bbu8RId2FP01zq8sJOTySirlhwgqrqIZu0uvnXcG2O8VbVsM78qVrV4dkaynnc56NCG-_JdBmyXrHg6J_Aye7yUZo42o5UX9O2cEksWgcPohAg')" role="img" aria-label="줄눈 곰팡이와 물때가 있는 욕실 Before">
-<span class="absolute top-md left-md bg-on-surface text-white px-sm py-xs font-label-sm z-20">BEFORE</span>
-</div>
-<div class="slider-handle left-1/2" id="handle-2">
-<div class="slider-circle">
-<span class="material-symbols-outlined text-primary">unfold_more_double</span>
-</div>
-</div>
-</div>
-<div class="p-md">
-<div class="flex justify-between items-start mb-sm">
-<div>
-<h4 class="font-headline-md text-headline-md text-primary">욕실 곰팡이 완전 박멸!</h4>
-<p class="text-on-surface-variant font-label-sm">거주청소 | 송파구 잠실동</p>
-</div>
-<div class="flex text-secondary">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-</div>
-</div>
-<p class="text-body-md text-on-surface-variant line-clamp-2">
+                    </div>
+                </div>
+                <!-- B&A Card 2 -->
+                <div class="group bg-white rounded-xl overflow-hidden border border-outline-variant/20 shadow-sm">
+                    <div class="before-after-slider h-80 relative" id="slider-2">
+                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCbJeZDmBTskh5BnkQ-YGCtWmmPjOf5x20yzpLygjeizIfA1zpEuYIsnIFzkA-fVPD8RC77zfxMqpZMoiK9-A20SBf-tVlBEqPe-OxVku3SlI-tPHLNPt9EQv2Oyl5p6tI1d9smEkhDsPw0T41kxfiWlmk5DhQjJom1GzE8XLeKLv-8RU913bGyifj2lllwb8745eUMFJv7tWlbXGnLEVkjM8Ca6sRZYPc32swlXpeomaBfxu3gSrMYEw')">
+                            <span class="absolute top-md right-md bg-green-500 text-white px-sm py-xs rounded font-label-sm z-20">청소 후</span>
+                        </div>
+                        <div class="absolute inset-0 bg-cover bg-center w-1/2 overflow-hidden border-r-2 border-white transition-all duration-300" id="before-img-2" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD4cVusPkleXyvpDM_G_yOMigwwCz6I8jdCwq7cpZux7Hd922xT0j25lkOByD0q0duA12WhhOF24CILNc4dhRpb7ZUbVEslcGsi0QPEuzhNVcFwjWeRuDknq3OFsCiE8_zh26uzA1o-bbu8RId2FP01zq8sJOTySirlhwgqrqIZu0uvnXcG2O8VbVsM78qVrV4dkaynnc56NCG-_JdBmyXrHg6J_Aye7yUZo42o5UX9O2cEksWgcPohAg')">
+                            <span class="absolute top-md left-md bg-red-500 text-white px-sm py-xs rounded font-label-sm z-20">청소 전</span>
+                        </div>
+                        <div class="slider-handle left-1/2" id="handle-2">
+                            <div class="slider-circle">
+                                <span class="material-symbols-outlined text-primary">unfold_more_double</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-md">
+                        <div class="flex justify-between items-start mb-sm">
+                            <div>
+                                <h4 class="font-headline-md text-headline-md text-primary">욕실 곰팡이 완전 박멸!</h4>
+                                <p class="text-on-surface-variant font-label-sm">거주청소 | 송파구 잠실동</p>
+                            </div>
+                            <div class="flex text-yellow-500">
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                            </div>
+                        </div>
+                        <p class="text-body-md text-on-surface-variant line-clamp-2">
                             화장실 줄눈 사이사이 곰팡이 때문에 스트레스였는데 전문가의 손길은 다르네요. 약품 냄새도 거의 안 나고 정말 꼼꼼하게 작업해주셨습니다.
                         </p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Text Reviews Grid -->
-<section class="py-lg bg-surface">
-<div class="max-w-container-max mx-auto px-md">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
-<!-- Review Card 1 -->
-<div class="bg-white p-md border border-outline shadow-sm hover:shadow-md transition-shadow">
-<div class="flex justify-between items-center mb-md">
-<div class="flex items-center gap-base">
-<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container font-bold">김</div>
-<div>
-<p class="font-label-md text-primary">김*희 고객님</p>
-<p class="text-xs text-on-surface-variant">이사청소 | 3일 전</p>
-</div>
-</div>
-<div class="flex text-secondary scale-75 origin-right">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-</div>
-</div>
-<p class="text-body-md text-on-surface-variant mb-md italic">
-                        "처음 이용해보는데 소문대로 정말 꼼꼼하시네요. 창틀 먼지 하나 없이 깨끗하게 닦아주셔서 너무 만족스럽습니다. 다음에도 꼭 백곰으로 예약할게요!"
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Text Reviews Grid -->
+    <section class="py-lg bg-surface">
+        <div class="max-w-container-max mx-auto px-md">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+                <!-- Review Card 1 -->
+                <div class="bg-white p-md rounded-xl border border-outline-variant/20 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex justify-between items-center mb-md">
+                        <div class="flex items-center gap-base">
+                            <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container font-bold">김</div>
+                            <div>
+                                <p class="font-label-md text-primary">김*희 고객님</p>
+                                <p class="text-xs text-on-surface-variant">이사청소 | 3일 전</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-500 scale-75 origin-right">
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                    </div>
+                    <p class="text-body-md text-on-surface-variant mb-md italic">
+                        "처음 이용해보는데 소문대로 정말 꼼꼼하시네요. 창틀 먼지 하나 없이 깨끗하게 닦아주셔서 너무 만족스럽습니다. 다음에도 꼭 BG SOLUTION으로 예약할게요!"
                     </p>
-<div class="pt-md border-t border-outline flex items-center gap-xs text-secondary font-label-sm">
-<span class="material-symbols-outlined text-sm">check_circle</span>
+                    <div class="pt-md border-t border-outline-variant/10 flex items-center gap-xs text-secondary font-label-sm">
+                        <span class="material-symbols-outlined text-sm">check_circle</span>
                         본인 인증 고객
                     </div>
-</div>
-<!-- Review Card 2 -->
-<div class="bg-white p-md border border-outline shadow-sm hover:shadow-md transition-shadow">
-<div class="flex justify-between items-center mb-md">
-<div class="flex items-center gap-base">
-<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary font-bold">이</div>
-<div>
-<p class="font-label-md text-primary">이*준 고객님</p>
-<p class="text-xs text-on-surface-variant">거주청소 | 1주일 전</p>
-</div>
-</div>
-<div class="flex text-secondary scale-75 origin-right">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-</div>
-</div>
-<p class="text-body-md text-on-surface-variant mb-md italic">
+                </div>
+                <!-- Review Card 2 -->
+                <div class="bg-white p-md rounded-xl border border-outline-variant/20 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex justify-between items-center mb-md">
+                        <div class="flex items-center gap-base">
+                            <div class="w-10 h-10 rounded-full bg-surface-dim flex items-center justify-center text-primary font-bold">이</div>
+                            <div>
+                                <p class="font-label-md text-primary">이*준 고객님</p>
+                                <p class="text-xs text-on-surface-variant">거주청소 | 1주일 전</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-500 scale-75 origin-right">
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                    </div>
+                    <p class="text-body-md text-on-surface-variant mb-md italic">
                         "부모님 댁 효도 청소로 해드렸는데 너무 좋아하시네요. 에어컨 필터부터 보이지 않는 곳까지 다 신경 써주시는 모습에 감동했습니다."
                     </p>
-<div class="pt-md border-t border-outline flex items-center gap-xs text-secondary font-label-sm">
-<span class="material-symbols-outlined text-sm">check_circle</span>
+                    <div class="pt-md border-t border-outline-variant/10 flex items-center gap-xs text-secondary font-label-sm">
+                        <span class="material-symbols-outlined text-sm">check_circle</span>
                         본인 인증 고객
                     </div>
-</div>
-<!-- Review Card 3 -->
-<div class="bg-white p-md border border-outline shadow-sm hover:shadow-md transition-shadow">
-<div class="flex justify-between items-center mb-md">
-<div class="flex items-center gap-base">
-<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold">박</div>
-<div>
-<p class="font-label-md text-primary">박*민 고객님</p>
-<p class="text-xs text-on-surface-variant">부분청소 | 2주일 전</p>
-</div>
-</div>
-<div class="flex text-secondary scale-75 origin-right">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
-</div>
-</div>
-<p class="text-body-md text-on-surface-variant mb-md italic">
+                </div>
+                <!-- Review Card 3 -->
+                <div class="bg-white p-md rounded-xl border border-outline-variant/20 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex justify-between items-center mb-md">
+                        <div class="flex items-center gap-base">
+                            <div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-white font-bold">박</div>
+                            <div>
+                                <p class="font-label-md text-primary">박*민 고객님</p>
+                                <p class="text-xs text-on-surface-variant">부분청소 | 2주일 전</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-500 scale-75 origin-right">
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                    </div>
+                    <p class="text-body-md text-on-surface-variant mb-md italic">
                         "베란다랑 세탁실만 따로 부탁드렸는데, 생각보다 훨씬 깨끗해졌어요. 배수구 냄새까지 잡아주셔서 대만족입니다. 가성비 최고예요."
                     </p>
-<div class="pt-md border-t border-outline flex items-center gap-xs text-secondary font-label-sm">
-<span class="material-symbols-outlined text-sm">check_circle</span>
+                    <div class="pt-md border-t border-outline-variant/10 flex items-center gap-xs text-secondary font-label-sm">
+                        <span class="material-symbols-outlined text-sm">check_circle</span>
                         본인 인증 고객
                     </div>
-</div>
-</div>
-<div class="mt-lg text-center">
-<button class="px-lg py-base bg-white border border-primary text-primary font-label-md hover:bg-primary hover:text-on-primary transition-all">
+                </div>
+            </div>
+            <div class="mt-lg text-center">
+                <button class="px-lg py-base bg-white border border-primary text-primary rounded-lg font-label-md hover:bg-primary hover:text-on-primary transition-all">
                     더 많은 후기 보기 (1/250)
                 </button>
-</div>
-</div>
-</section>
-<!-- CTA Section -->
-<section class="py-xl relative bg-primary">
-<div class="max-w-container-max mx-auto px-md relative z-10 text-center text-on-primary">
-<h2 class="font-headline-xl text-headline-xl mb-md tracking-tighter">Join our satisfied customers</h2>
-<p class="font-body-lg text-body-lg opacity-80 mb-lg max-w-xl mx-auto">
-                지금 바로 예약하고 백곰홈케어만의 차원이 다른 프리미엄 서비스를 직접 경험해보세요.
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-xl relative">
+        <div class="absolute inset-0 bg-primary overflow-hidden">
+        </div>
+        <div class="max-w-container-max mx-auto px-md relative z-10 text-center text-on-primary">
+            <h2 class="font-headline-xl text-headline-xl mb-md">수많은 고객님이 이미 만족하셨습니다</h2>
+            <p class="font-body-lg text-body-lg opacity-80 mb-lg max-w-xl mx-auto">
+                지금 바로 예약하고 BG SOLUTION만의 차원이 다른 프리미엄 서비스를 직접 경험해보세요.
             </p>
-<div class="flex flex-col md:flex-row justify-center gap-md">
-<a href="contact.html" class="bg-on-primary text-primary px-xl py-md font-headline-md hover:bg-secondary hover:text-white transition-all shadow-lg inline-block">
+            <div class="flex flex-col md:flex-row justify-center gap-md">
+                <a href="contact.html" class="bg-on-primary text-primary px-xl py-md rounded-xl font-headline-md hover:scale-105 active:scale-95 transition-all shadow-lg inline-block">
                     지금 예약하기
                 </a>
-<a href="contact.html" class="bg-transparent border-2 border-on-primary text-on-primary px-xl py-md font-headline-md hover:bg-on-primary/10 transition-all inline-block">
+                <a href="contact.html" class="bg-transparent border-2 border-on-primary text-on-primary px-xl py-md rounded-xl font-headline-md hover:bg-on-primary/10 transition-all inline-block">
                     상담 먼저 받기
                 </a>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-primary text-white w-full py-xl border-t-8 border-secondary">
-    <div class="px-gutter max-w-container-max mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-16">
-            <div class="flex flex-col gap-6">
-                <span class="font-headline-md text-headline-md font-extrabold text-white tracking-tighter uppercase">백곰 홈케어</span>
-                <p class="text-white/60 max-w-sm leading-relaxed">
-                    프리미엄 공간 관리의 기준을 세웁니다. 우리는 가장 소중한 당신의 공간을 위해 타협 없는 완벽함을 추구합니다.
-                </p>
-                <p class="text-white/60 text-sm leading-relaxed">
-                    서울특별시 서초구 서초대로 123, 백곰빌딩 5층<br>
-                    대표번호: 1588-0000 | 이메일: support@baekgom.com
-                </p>
-                <div class="flex gap-4">
-                    <div class="w-12 h-12 border border-white/20 flex items-center justify-center cursor-pointer hover:bg-secondary hover:border-secondary transition-all">
-                        <span class="material-symbols-outlined text-[20px]">policy</span>
-                    </div>
-                    <div class="w-12 h-12 border border-white/20 flex items-center justify-center cursor-pointer hover:bg-secondary hover:border-secondary transition-all">
-                        <span class="material-symbols-outlined text-[20px]">share</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-12">
-                <div class="flex flex-col gap-4">
-                    <h5 class="font-bold text-secondary uppercase tracking-widest text-xs">Services</h5>
-                    <a class="text-white/60 hover:text-white transition-all text-sm" href="cleaning.html">주거 공간 관리</a>
-                    <a class="text-white/60 hover:text-white transition-all text-sm" href="cleaning.html">상업 시설 케어</a>
-                    <a class="text-white/60 hover:text-white transition-all text-sm" href="cleaning.html">정밀 공기 정화</a>
-                </div>
-                <div class="flex flex-col gap-4">
-                    <h5 class="font-bold text-secondary uppercase tracking-widest text-xs">Trust</h5>
-                    <a class="text-white/60 hover:text-white transition-all text-sm" href="reviews.html">인증 현황</a>
-                    <a class="text-white/60 hover:text-white transition-all text-sm" href="#">보상 정책</a>
-                    <a class="text-white/60 hover:text-white transition-all text-sm" href="#">이용약관</a>
-                </div>
-                <div class="flex flex-col gap-4">
-                    <h5 class="font-bold text-secondary uppercase tracking-widest text-xs">Support</h5>
-                    <a class="text-white/60 hover:text-white transition-all text-sm" href="contact.html">1:1 상담</a>
-                    <a class="text-white/60 hover:text-white transition-all text-sm" href="#">기업 제휴</a>
-                    <a class="text-white/60 hover:text-white transition-all text-sm" href="contact.html">고객 센터</a>
-                </div>
             </div>
         </div>
-        <div class="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
-            <p class="text-white/40 text-xs tracking-widest uppercase">© 2024 WHITE BEAR HOME CARE. THE SUPREME STANDARD OF SPACE PURIFICATION.</p>
-            <div class="flex gap-8">
-                <span class="text-white/40 text-xs font-bold">KOSHA CERTIFIED</span>
-                <span class="text-white/40 text-xs font-bold">ISO 14001</span>
-                <span class="text-white/40 text-xs font-bold">ECO-LABELED</span>
+    </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-on-primary py-lg px-md">
+        <div class="max-w-container-max mx-auto w-full flex flex-col md:flex-row justify-between items-center gap-lg">
+            <div class="flex flex-col items-center md:items-start gap-sm">
+                <div class="bg-white inline-block p-3 rounded-xl w-fit">
+                    <img alt="BG SOLUTION" class="h-10 w-auto" src="images/logo.png">
+                </div>
+                <p class="text-surface-variant/70 text-center md:text-left">
+                    주소: 서울특별시 서초구 서초대로 123, BG SOLUTION빌딩 5층<br>
+                    대표번호: 1588-0000 | 이메일: support@bgsolution.com
+                </p>
+            </div>
+            <div class="flex flex-col items-center md:items-end gap-md">
+                <div class="flex gap-lg">
+                    <a class="text-surface-variant/70 hover:text-secondary-fixed transition-colors font-label-md" href="#">이용약관</a>
+                    <a class="text-surface-variant/70 hover:text-secondary-fixed transition-colors font-label-md" href="#">개인정보처리방침</a>
+                    <a class="text-surface-variant/70 hover:text-secondary-fixed transition-colors font-label-md" href="contact.html">고객센터</a>
+                </div>
+                <p class="text-surface-variant/70 text-sm">© 2024 BG SOLUTION. 모든 권리 보유.</p>
             </div>
         </div>
-    </div>
-</footer>
-<script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const nav = document.querySelector('nav');
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 20) {
-                    nav.classList.add('shadow-2xl');
-                } else {
-                    nav.classList.remove('shadow-2xl');
-                }
-            });
-        });
+    </footer>
 
-        // Before/After sliders
+    <script>
+        // Simple interactive script for Before/After sliders
         function initSlider(sliderId, handleId, beforeImgId) {
             const slider = document.getElementById(sliderId);
             const handle = document.getElementById(handleId);
@@ -509,4 +443,5 @@
             initSlider('slider-2', 'handle-2', 'before-img-2');
         });
     </script>
+
 </body></html>

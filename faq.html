@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html class="light" lang="ko"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>자주 묻는 질문 | BG SOLUTION</title>
+<link href="images/logo.png" rel="icon" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#ffffff",
+                    "surface-tint": "#4e5e82",
+                    "on-background": "#111c2c",
+                    "on-secondary-fixed-variant": "#0c4b6c",
+                    "on-secondary-fixed": "#001e2f",
+                    "inverse-surface": "#263142",
+                    "primary-fixed": "#d8e2ff",
+                    "on-secondary-container": "#285f80",
+                    "secondary": "#2e6385",
+                    "on-primary-fixed-variant": "#364669",
+                    "on-tertiary-container": "#919394",
+                    "secondary-fixed": "#c9e6ff",
+                    "secondary-container": "#a5d8ff",
+                    "inverse-on-surface": "#ebf1ff",
+                    "primary-container": "#1a2b4c",
+                    "tertiary-container": "#292c2d",
+                    "tertiary": "#151819",
+                    "on-primary": "#ffffff",
+                    "outline": "#75777f",
+                    "on-surface-variant": "#44474e",
+                    "inverse-primary": "#b6c6f0",
+                    "tertiary-fixed": "#e1e3e4",
+                    "primary-fixed-dim": "#b6c6f0",
+                    "on-primary-container": "#8293ba",
+                    "tertiary-fixed-dim": "#c5c7c8",
+                    "surface-dim": "#cfdaf1",
+                    "surface-container": "#e7eeff",
+                    "surface-bright": "#f9f9ff",
+                    "secondary-fixed-dim": "#9accf3",
+                    "surface-container-low": "#f0f3ff",
+                    "surface-container-highest": "#d8e3fa",
+                    "surface": "#f9f9ff",
+                    "on-surface": "#111c2c",
+                    "surface-variant": "#d8e3fa",
+                    "primary": "#031636",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed-variant": "#454748",
+                    "on-tertiary-fixed": "#191c1d",
+                    "on-primary-fixed": "#071b3b",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "background": "#f9f9ff",
+                    "surface-container-high": "#dee8ff",
+                    "error-container": "#ffdad6",
+                    "outline-variant": "#c5c6cf",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "md": "24px",
+                    "xl": "80px",
+                    "base": "8px",
+                    "container-max": "1200px",
+                    "sm": "12px",
+                    "lg": "48px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Manrope"],
+                    "label-md": ["Manrope"],
+                    "label-sm": ["Manrope"],
+                    "headline-xl": ["Manrope"],
+                    "body-md": ["Manrope"],
+                    "headline-lg": ["Manrope"],
+                    "headline-md": ["Manrope"],
+                    "headline-lg-mobile": ["Manrope"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .faq-accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        padding-left: 24px;
+        padding-right: 24px;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+    .faq-accordion-item.active .faq-accordion-content {
+        max-height: 500px;
+        padding-bottom: 24px;
+    }
+    .faq-accordion-item.active .faq-icon {
+        transform: rotate(180deg);
+    }
+</style>
+</head><body class="font-body-md text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-outline-variant/20 shadow-sm">
+    <div class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto">
+        <a href="index.html" class="text-2xl font-extrabold text-primary tracking-tight">BG솔루션</a>
+        <div class="hidden md:flex items-center gap-8">
+            <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="index.html">홈</a>
+            <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="cleaning.html">청소안내</a>
+            <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="reviews.html">이용후기</a>
+            <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="contact.html">상담문의</a>
+            <a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1" href="faq.html">FAQ</a>
+        </div>
+        <a href="contact.html" class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all inline-block">상담 예약</a>
+    </div>
+</nav>
+
+<main class="pt-20">
+    <!-- Hero Section -->
+    <section class="relative py-xl bg-surface overflow-hidden">
+        <div class="max-w-container-max mx-auto px-gutter relative z-10 text-center">
+            <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container mb-6 font-label-sm text-label-sm">
+                <span class="material-symbols-outlined mr-2" style="font-size: 18px;">support_agent</span>
+                고객 지원 센터
+            </div>
+            <h1 class="font-headline-xl text-headline-xl text-primary mb-6">자주 묻는 질문</h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                프리미엄 홈 케어 서비스에 대해 궁금하신 모든 것을 확인하세요. 원하는 답변을 찾을 수 없다면 고객 센터로 문의해 주세요.
+            </p>
+            <!-- Quick Search -->
+            <div class="mt-10 max-w-xl mx-auto relative">
+                <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+                <input class="w-full pl-12 pr-6 py-4 rounded-xl border border-outline-variant bg-surface-container-lowest focus:ring-2 focus:ring-secondary-container focus:border-secondary outline-none transition-all font-body-md shadow-sm" placeholder="검색어를 입력하세요 (예: 환불, 에어컨, 일정)" type="text">
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Categories Navigation (Sticky) -->
+    <div class="sticky top-20 z-40 bg-surface/90 backdrop-blur-sm border-b border-outline-variant/20" id="faq-subnav">
+        <div class="max-w-container-max mx-auto px-gutter">
+            <div class="flex overflow-x-auto no-scrollbar py-4 gap-8">
+                <a class="whitespace-nowrap font-label-md text-label-md text-primary flex items-center gap-2 hover:opacity-80 transition-opacity" href="#booking">
+                    <span class="material-symbols-outlined" style="font-size: 20px;">payments</span> 예약 및 결제
+                </a>
+                <a class="whitespace-nowrap font-label-md text-label-md text-on-surface-variant flex items-center gap-2 hover:text-primary transition-colors" href="#cleaning">
+                    <span class="material-symbols-outlined" style="font-size: 20px;">vacuum</span> 청소 프로세스
+                </a>
+                <a class="whitespace-nowrap font-label-md text-label-md text-on-surface-variant flex items-center gap-2 hover:text-primary transition-colors" href="#guarantee">
+                    <span class="material-symbols-outlined" style="font-size: 20px;">verified_user</span> AS 및 품질 보증
+                </a>
+                <a class="whitespace-nowrap font-label-md text-label-md text-on-surface-variant flex items-center gap-2 hover:text-primary transition-colors" href="#general">
+                    <span class="material-symbols-outlined" style="font-size: 20px;">info</span> 일반 문의
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Sections Content -->
+    <div class="max-w-container-max mx-auto px-gutter py-xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-xl">
+            <!-- Left Sidebar -->
+            <aside class="lg:col-span-4 space-y-8">
+                <div class="p-8 rounded-xl bg-primary text-on-primary shadow-xl relative overflow-hidden">
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                                <span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+                            </div>
+                            <div class="font-headline-md text-headline-md">BG SOLUTION</div>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md mb-4">도움이 더 필요하신가요?</h3>
+                        <p class="font-body-md text-body-md text-on-primary/80 mb-8">홈 케어 관련 전문 상담을 위해 평일 오전 9시부터 오후 6시까지 상담팀이 대기하고 있습니다.</p>
+                        <a class="block w-full py-4 text-center rounded-lg bg-surface-container-lowest text-primary font-label-md hover:bg-surface transition-colors shadow-lg" href="https://pf.kakao.com/_xhrfgb" target="_blank">
+                            전문가와 채팅하기
+                        </a>
+                    </div>
+                </div>
+                <div class="p-6 rounded-xl border border-outline-variant bg-surface-container-low">
+                    <h4 class="font-label-md text-label-md text-primary mb-4 uppercase tracking-wider">서비스 하이라이트</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary" style="font-size: 20px;">check_circle</span>
+                            <span class="font-body-md text-body-md">100% 인증 친환경 세제 사용</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary" style="font-size: 20px;">check_circle</span>
+                            <span class="font-body-md text-body-md">표준화된 12단계 살균 공정</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-secondary" style="font-size: 20px;">check_circle</span>
+                            <span class="font-body-md text-body-md">24시간 만족 보장 제도</span>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Right Content: Accordion Sections -->
+            <div class="lg:col-span-8 space-y-16">
+                <!-- Section: Booking & Payment -->
+                <section class="scroll-mt-40" id="booking">
+                    <h2 class="font-headline-lg text-headline-lg text-primary mb-8 flex items-center gap-3">
+                        <span class="w-1.5 h-8 bg-secondary rounded-full"></span>
+                        예약 및 결제
+                    </h2>
+                    <div class="space-y-4">
+                        <div class="faq-accordion-item border border-outline-variant bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                            <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)" type="button">
+                                <span class="font-headline-md text-headline-md text-on-surface">청소 서비스 예약은 어떻게 하나요?</span>
+                                <span class="material-symbols-outlined faq-icon transition-transform text-outline">expand_more</span>
+                            </button>
+                            <div class="faq-accordion-content px-6">
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    웹사이트의 '상담 예약' 버튼을 통해 간편하게 예약하실 수 있습니다. 서비스 유형을 선택하고 희망하시는 날짜와 시간을 지정한 후 주소를 입력해 주세요. 예약 완료 즉시 알림톡이나 이메일로 확정 안내가 발송됩니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-accordion-item border border-outline-variant bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                            <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)" type="button">
+                                <span class="font-headline-md text-headline-md text-on-surface">어떤 결제 수단을 사용할 수 있나요?</span>
+                                <span class="material-symbols-outlined faq-icon transition-transform text-outline">expand_more</span>
+                            </button>
+                            <div class="faq-accordion-content px-6">
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    모든 주요 신용/체크카드, 계좌이체는 물론 카카오페이, 네이버페이와 같은 간편 결제 서비스를 이용하실 수 있습니다. 결제는 예약 시점에 안전하게 처리됩니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-accordion-item border border-outline-variant bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                            <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)" type="button">
+                                <span class="font-headline-md text-headline-md text-on-surface">예약 취소나 일정 변경이 가능한가요?</span>
+                                <span class="material-symbols-outlined faq-icon transition-transform text-outline">expand_more</span>
+                            </button>
+                            <div class="faq-accordion-content px-6">
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    네, 방문 24시간 전까지는 위약금 없이 일정 변경 및 취소가 가능합니다. 방문 24시간 이내의 취소 시에는 소정의 서비스 수수료가 발생할 수 있습니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Cleaning Process -->
+                <section class="scroll-mt-40" id="cleaning">
+                    <h2 class="font-headline-lg text-headline-lg text-primary mb-8 flex items-center gap-3">
+                        <span class="w-1.5 h-8 bg-secondary rounded-full"></span>
+                        청소 프로세스
+                    </h2>
+                    <div class="space-y-4">
+                        <div class="faq-accordion-item border border-outline-variant bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                            <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)" type="button">
+                                <span class="font-headline-md text-headline-md text-on-surface">표준 청소 서비스에는 무엇이 포함되나요?</span>
+                                <span class="material-symbols-outlined faq-icon transition-transform text-outline">expand_more</span>
+                            </button>
+                            <div class="faq-accordion-content px-6">
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    표준 청소에는 모든 표면의 먼지 제거, 바닥 살균 청소, 욕실 소독 및 주방 표면 세척이 포함됩니다. 상세한 항목은 메인 메뉴의 '청소안내' 섹션을 참고해 주세요.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-accordion-item border border-outline-variant bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                            <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)" type="button">
+                                <span class="font-headline-md text-headline-md text-on-surface">청소 시간은 얼마나 걸리나요?</span>
+                                <span class="material-symbols-outlined faq-icon transition-transform text-outline">expand_more</span>
+                            </button>
+                            <div class="faq-accordion-content px-6">
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    평수와 오염도에 따라 다르지만, 24평 기준으로 입주청소는 4~5시간, 이사청소는 5~6시간 정도 소요됩니다. 정확한 소요 시간은 상담 시 안내해 드립니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-accordion-item border border-outline-variant bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                            <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)" type="button">
+                                <span class="font-headline-md text-headline-md text-on-surface">청소 장비를 직접 준비해 오시나요?</span>
+                                <span class="material-symbols-outlined faq-icon transition-transform text-outline">expand_more</span>
+                            </button>
+                            <div class="faq-accordion-content px-6">
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    물론입니다. 저희 전문 팀은 고성능 진공 청소기, 스팀 살균기, 그리고 각 자재에 맞는 친환경 세제를 모두 구비하여 방문합니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: AS/Guarantee -->
+                <section class="scroll-mt-40" id="guarantee">
+                    <h2 class="font-headline-lg text-headline-lg text-primary mb-8 flex items-center gap-3">
+                        <span class="w-1.5 h-8 bg-secondary rounded-full"></span>
+                        AS 및 품질 보증
+                    </h2>
+                    <div class="p-8 bg-surface-container-high rounded-2xl border border-outline-variant/50 mb-8 flex flex-col md:flex-row items-center gap-6">
+                        <div class="w-20 h-20 shrink-0 bg-primary rounded-full flex items-center justify-center">
+                            <span class="material-symbols-outlined text-white" style="font-size: 40px;">shield_with_heart</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline-md text-headline-md text-primary mb-2">품질 약속</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">서비스 품질에 100% 만족하지 못하셨을 경우, 24시간 이내에 알려주시면 담당 팀이 다시 방문하여 무료로 재청소를 진행해 드립니다.</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="faq-accordion-item border border-outline-variant bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                            <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)" type="button">
+                                <span class="font-headline-md text-headline-md text-on-surface">재청소는 어떻게 요청하나요?</span>
+                                <span class="material-symbols-outlined faq-icon transition-transform text-outline">expand_more</span>
+                            </button>
+                            <div class="faq-accordion-content px-6">
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    고객센터 전화나 카카오톡 채널을 통해 접수해 주시면, 담당 팀이 확인 후 24시간 이내 무상 재방문 일정을 잡아드립니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: General -->
+                <section class="scroll-mt-40" id="general">
+                    <h2 class="font-headline-lg text-headline-lg text-primary mb-8 flex items-center gap-3">
+                        <span class="w-1.5 h-8 bg-secondary rounded-full"></span>
+                        일반 문의
+                    </h2>
+                    <div class="space-y-4">
+                        <div class="faq-accordion-item border border-outline-variant bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                            <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)" type="button">
+                                <span class="font-headline-md text-headline-md text-on-surface">청소 전문가분들은 보험에 가입되어 있나요?</span>
+                                <span class="material-symbols-outlined faq-icon transition-transform text-outline">expand_more</span>
+                            </button>
+                            <div class="faq-accordion-content px-6">
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    네, 모든 BG SOLUTION 전문가는 책임 보험에 가입되어 있습니다. 철저한 신원 확인과 지속적인 전문 교육을 통해 가장 높은 수준의 안전과 신뢰를 보장합니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-accordion-item border border-outline-variant bg-white rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+                            <button class="w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)" type="button">
+                                <span class="font-headline-md text-headline-md text-on-surface">서비스 진행 중에 꼭 집에 있어야 하나요?</span>
+                                <span class="material-symbols-outlined faq-icon transition-transform text-outline">expand_more</span>
+                            </button>
+                            <div class="faq-accordion-content px-6">
+                                <p class="font-body-md text-body-md text-on-surface-variant">
+                                    고객님의 선택에 달려 있습니다. 많은 정기 고객분들이 도어락 비밀번호나 경비실을 통해 출입 방법을 안내해 주시고 부재중에 서비스를 받으십니다. 첫 서비스의 경우 팀에게 안내 사항을 전달하기 위해 가급적 계시는 것을 추천드립니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Still have questions banner -->
+    <section class="bg-surface-container-low py-xl border-t border-outline-variant/30">
+        <div class="max-w-container-max mx-auto px-gutter text-center">
+            <h3 class="font-headline-lg text-headline-lg text-primary mb-6">원하시는 답변을 찾지 못하셨나요?</h3>
+            <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl mx-auto">상담팀이 고객님의 메시지를 기다리고 있습니다. 영업시간 기준 보통 30분 이내에 답변해 드립니다.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="contact.html" class="bg-primary text-on-primary px-10 py-4 rounded-xl font-label-md flex items-center justify-center gap-3 hover:opacity-90 transition-all">
+                    <span class="material-symbols-outlined" style="font-size: 20px;">chat</span> 고객 지원 문의
+                </a>
+                <a href="tel:1588-0000" class="bg-surface text-primary border border-outline-variant px-10 py-4 rounded-xl font-label-md flex items-center justify-center gap-3 hover:bg-surface-container transition-all">
+                    <span class="material-symbols-outlined" style="font-size: 20px;">call</span> 고객센터 전화하기
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="w-full bg-primary py-lg">
+    <div class="max-w-container-max mx-auto px-gutter">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
+            <div class="mb-8 md:mb-0 space-y-3">
+                <div class="bg-white inline-block p-2 rounded-lg">
+                    <img alt="BG SOLUTION" class="h-9 w-auto" src="images/logo.png">
+                </div>
+                <p class="font-body-md text-body-md text-on-primary/60 max-w-sm">더 깨끗하고 건강한 주거 환경을 위한 프리미엄 홈 케어 서비스.</p>
+            </div>
+            <div class="flex flex-wrap gap-8">
+                <a class="font-body-md text-body-md text-on-primary/80 hover:text-on-primary transition-opacity" href="#">개인정보 처리방침</a>
+                <a class="font-body-md text-body-md text-on-primary/80 hover:text-on-primary transition-opacity" href="#">이용약관</a>
+                <a class="font-body-md text-body-md text-on-primary/80 hover:text-on-primary transition-opacity" href="#">쿠키 설정</a>
+                <a class="font-body-md text-body-md text-on-primary/80 hover:text-on-primary transition-opacity" href="contact.html">고객 지원</a>
+            </div>
+        </div>
+        <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="font-body-md text-body-md text-on-primary/40">© 2024 BG SOLUTION. All rights reserved.</div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Accordion toggle
+    function toggleFaq(btn) {
+        const item = btn.closest('.faq-accordion-item');
+        item.classList.toggle('active');
+    }
+
+    // Scroll spy for the FAQ category sub-navigation
+    (function () {
+        const sections = document.querySelectorAll('main section[id]');
+        const navLinks = document.querySelectorAll('#faq-subnav a');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                if (window.scrollY >= section.offsetTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                const isActive = link.getAttribute('href') === `#${current}`;
+                link.classList.toggle('text-primary', isActive);
+                link.classList.toggle('text-on-surface-variant', !isActive);
+            });
+        });
+    })();
+</script>
+</body></html>
