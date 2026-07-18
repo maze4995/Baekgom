@@ -2,124 +2,20 @@
 <html class="light" lang="ko"><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="description" content="견적·예약, 청소 프로세스, AS·품질보증, 환불 규정 등 자주 묻는 질문을 한곳에 모았습니다.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BG SOLUTION">
+<meta property="og:title" content="자주 묻는 질문 | BG SOLUTION">
+<meta property="og:description" content="견적·예약, 청소 프로세스, AS·품질보증, 환불 규정 등 자주 묻는 질문을 한곳에 모았습니다.">
+<meta property="og:image" content="images/logo.png">
+<meta name="twitter:card" content="summary">
 <title>자주 묻는 질문 | BG SOLUTION</title>
 <link href="images/logo.png" rel="icon" type="image/png">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "on-error": "#ffffff",
-                    "surface-tint": "#4e5e82",
-                    "on-background": "#111c2c",
-                    "on-secondary-fixed-variant": "#0c4b6c",
-                    "on-secondary-fixed": "#001e2f",
-                    "inverse-surface": "#263142",
-                    "primary-fixed": "#d8e2ff",
-                    "on-secondary-container": "#285f80",
-                    "secondary": "#2e6385",
-                    "on-primary-fixed-variant": "#364669",
-                    "on-tertiary-container": "#919394",
-                    "secondary-fixed": "#c9e6ff",
-                    "secondary-container": "#a5d8ff",
-                    "inverse-on-surface": "#ebf1ff",
-                    "primary-container": "#1a2b4c",
-                    "tertiary-container": "#292c2d",
-                    "tertiary": "#151819",
-                    "on-primary": "#ffffff",
-                    "outline": "#75777f",
-                    "on-surface-variant": "#44474e",
-                    "inverse-primary": "#b6c6f0",
-                    "tertiary-fixed": "#e1e3e4",
-                    "primary-fixed-dim": "#b6c6f0",
-                    "on-primary-container": "#8293ba",
-                    "tertiary-fixed-dim": "#c5c7c8",
-                    "surface-dim": "#cfdaf1",
-                    "surface-container": "#e7eeff",
-                    "surface-bright": "#f9f9ff",
-                    "secondary-fixed-dim": "#9accf3",
-                    "surface-container-low": "#f0f3ff",
-                    "surface-container-highest": "#d8e3fa",
-                    "surface": "#f9f9ff",
-                    "on-surface": "#111c2c",
-                    "surface-variant": "#d8e3fa",
-                    "primary": "#031636",
-                    "on-error-container": "#93000a",
-                    "on-tertiary-fixed-variant": "#454748",
-                    "on-tertiary-fixed": "#191c1d",
-                    "on-primary-fixed": "#071b3b",
-                    "on-tertiary": "#ffffff",
-                    "surface-container-lowest": "#ffffff",
-                    "on-secondary": "#ffffff",
-                    "background": "#f9f9ff",
-                    "surface-container-high": "#dee8ff",
-                    "error-container": "#ffdad6",
-                    "outline-variant": "#c5c6cf",
-                    "error": "#ba1a1a"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "spacing": {
-                    "xs": "4px",
-                    "gutter": "24px",
-                    "margin-mobile": "16px",
-                    "md": "24px",
-                    "xl": "80px",
-                    "base": "8px",
-                    "container-max": "1200px",
-                    "sm": "12px",
-                    "lg": "48px"
-            },
-            "fontFamily": {
-                    "body-lg": ["Manrope"],
-                    "label-md": ["Manrope"],
-                    "label-sm": ["Manrope"],
-                    "headline-xl": ["Manrope"],
-                    "body-md": ["Manrope"],
-                    "headline-lg": ["Manrope"],
-                    "headline-md": ["Manrope"],
-                    "headline-lg-mobile": ["Manrope"]
-            },
-            "fontSize": {
-                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "600"}],
-                    "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
-                    "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
-                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "headline-lg": ["32px", {"lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "700"}],
-                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
-                    "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}]
-            }
-          },
-        },
-      }
-    </script>
-<style>
-    .no-scrollbar::-webkit-scrollbar { display: none; }
-    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-    .faq-accordion-content {
-        max-height: 0;
-        overflow: hidden;
-        padding-left: 24px;
-        padding-right: 24px;
-        transition: max-height 0.3s ease, padding 0.3s ease;
-    }
-    .faq-accordion-item.active .faq-accordion-content {
-        max-height: 500px;
-        padding-bottom: 24px;
-    }
-    .faq-accordion-item.active .faq-icon {
-        transform: rotate(180deg);
-    }
-</style>
+<script src="assets/tailwind-config.js"></script>
+<link rel="stylesheet" href="assets/site.css">
 </head><body class="font-body-md text-on-surface">
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-outline-variant/20 shadow-sm">
@@ -151,7 +47,8 @@
             <!-- Quick Search -->
             <div class="mt-10 max-w-xl mx-auto relative">
                 <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
-                <input class="w-full pl-12 pr-6 py-4 rounded-xl border border-outline-variant bg-surface-container-lowest focus:ring-2 focus:ring-secondary-container focus:border-secondary outline-none transition-all font-body-md shadow-sm" placeholder="검색어를 입력하세요 (예: 환불, 에어컨, 일정)" type="text">
+                <input id="faq-search" class="w-full pl-12 pr-6 py-4 rounded-xl border border-outline-variant bg-surface-container-lowest focus:ring-2 focus:ring-secondary-container focus:border-secondary outline-none transition-all font-body-md shadow-sm" placeholder="검색어를 입력하세요 (예: 환불, 에어컨, 일정)" type="text">
+                <p id="faq-no-result" class="hidden mt-4 text-on-surface-variant font-label-md">검색 결과가 없습니다. 원하는 답변이 없다면 카카오톡 또는 1588-0000으로 문의해 주세요.</p>
             </div>
         </div>
     </section>
@@ -513,6 +410,36 @@
         const item = btn.closest('.faq-accordion-item');
         item.classList.toggle('active');
     }
+
+    // FAQ 검색: 질문/답변 텍스트로 필터링, 일치 항목은 자동 펼침, 빈 섹션은 숨김
+    (function () {
+        const input = document.getElementById('faq-search');
+        const items = Array.from(document.querySelectorAll('.faq-accordion-item'));
+        const sections = Array.from(document.querySelectorAll('main section[id]'));
+        const noResult = document.getElementById('faq-no-result');
+        if (!input) return;
+
+        input.addEventListener('input', () => {
+            const q = input.value.trim().toLowerCase();
+            let anyMatch = false;
+
+            items.forEach((item) => {
+                const match = !q || item.textContent.toLowerCase().includes(q);
+                item.style.display = match ? '' : 'none';
+                item.classList.toggle('active', !!q && match); // 검색 중이면 일치 항목 펼침
+                if (match) anyMatch = true;
+            });
+
+            // 표시할 항목이 하나도 없는 섹션(제목 포함)은 통째로 숨김
+            sections.forEach((sec) => {
+                const visible = sec.querySelectorAll('.faq-accordion-item');
+                const hasVisible = Array.from(visible).some((i) => i.style.display !== 'none');
+                sec.style.display = hasVisible ? '' : 'none';
+            });
+
+            noResult.classList.toggle('hidden', anyMatch);
+        });
+    })();
 
     // Scroll spy for the FAQ category sub-navigation
     (function () {

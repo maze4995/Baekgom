@@ -2,115 +2,20 @@
 <html class="light" lang="ko"><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="description" content="BG SOLUTION 청소 전·후 사진과 실제 고객 후기. 누적 2,500여 건, 평균 만족도 4.9/5.0.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BG SOLUTION">
+<meta property="og:title" content="이용후기 | BG SOLUTION">
+<meta property="og:description" content="BG SOLUTION 청소 전·후 사진과 실제 고객 후기. 누적 2,500여 건, 평균 만족도 4.9/5.0.">
+<meta property="og:image" content="images/logo.png">
+<meta name="twitter:card" content="summary">
 <title>이용후기 | BG SOLUTION</title>
 <link href="images/logo.png" rel="icon" type="image/png">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                "surface-dim": "#cfdaf1",
-                "secondary-fixed": "#c9e6ff",
-                "on-tertiary": "#ffffff",
-                "on-primary-fixed-variant": "#364669",
-                "tertiary-fixed-dim": "#c5c7c8",
-                "secondary-container": "#a5d8ff",
-                "on-error-container": "#93000a",
-                "on-background": "#111c2c",
-                "on-primary-fixed": "#071b3b",
-                "primary-fixed": "#d8e2ff",
-                "outline-variant": "#c5c6cf",
-                "surface-container-lowest": "#ffffff",
-                "surface-bright": "#f9f9ff",
-                "inverse-surface": "#263142",
-                "surface-container-high": "#dee8ff",
-                "surface-container-highest": "#d8e3fa",
-                "on-primary-container": "#8293ba",
-                "background": "#f9f9ff",
-                "surface-variant": "#d8e3fa",
-                "tertiary-fixed": "#e1e3e4",
-                "error": "#ba1a1a",
-                "on-error": "#ffffff",
-                "on-tertiary-container": "#919394",
-                "surface-container": "#e7eeff",
-                "surface-container-low": "#f0f3ff",
-                "on-primary": "#ffffff",
-                "outline": "#75777f",
-                "inverse-primary": "#b6c6f0",
-                "secondary-fixed-dim": "#9accf3",
-                "primary-fixed-dim": "#b6c6f0",
-                "on-secondary-fixed-variant": "#0c4b6c",
-                "on-secondary-fixed": "#001e2f",
-                "primary": "#031636",
-                "tertiary": "#151819",
-                "inverse-on-surface": "#ebf1ff",
-                "tertiary-container": "#292c2d",
-                "surface-tint": "#4e5e82",
-                "on-tertiary-fixed": "#191c1d",
-                "surface": "#f9f9ff",
-                "on-secondary-container": "#285f80",
-                "on-surface-variant": "#44474e",
-                "error-container": "#ffdad6",
-                "secondary": "#2e6385",
-                "primary-container": "#1a2b4c",
-                "on-surface": "#111c2c",
-                "on-tertiary-fixed-variant": "#454748",
-                "on-secondary": "#ffffff"
-            },
-            "borderRadius": {
-                "DEFAULT": "0.25rem",
-                "lg": "0.5rem",
-                "xl": "0.75rem",
-                "full": "9999px"
-            },
-            "spacing": {
-                "base": "8px",
-                "sm": "12px",
-                "xl": "80px",
-                "container-max": "1200px",
-                "lg": "48px",
-                "xs": "4px",
-                "md": "24px",
-                "margin-mobile": "16px",
-                "gutter": "24px"
-            },
-            "fontFamily": {
-                "label-md": ["Manrope"],
-                "headline-md": ["Manrope"],
-                "headline-lg-mobile": ["Manrope"],
-                "headline-xl": ["Manrope"],
-                "body-md": ["Manrope"],
-                "label-sm": ["Manrope"],
-                "headline-lg": ["Manrope"],
-                "body-lg": ["Manrope"]
-            },
-            "fontSize": {
-                "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "600"}],
-                "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
-                "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
-                "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
-                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
-                "headline-lg": ["32px", {"lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "700"}],
-                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
-            }
-          },
-        },
-      }
-    </script>
-<style>
-    .before-after-slider { position: relative; overflow: hidden; user-select: none; }
-    .slider-handle { position: absolute; top: 0; bottom: 0; width: 2px; background: white; cursor: ew-resize; z-index: 10; }
-    .slider-circle {
-        position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-        width: 40px; height: 40px; background: white; border-radius: 50%;
-        display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-</style>
+<script src="assets/tailwind-config.js"></script>
+<link rel="stylesheet" href="assets/site.css">
 </head><body class="bg-background text-on-background font-body-md overflow-x-hidden">
     <!-- TopNavBar -->
     <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-outline-variant/20 shadow-sm">
@@ -180,14 +85,14 @@
     <!-- Filter & Search-->
     <section class="pt-lg">
         <div class="max-w-container-max mx-auto px-md flex flex-col md:flex-row justify-between items-center gap-md">
-            <div class="flex flex-wrap gap-base">
-                <button class="px-md py-base rounded-full bg-primary text-on-primary font-label-md">전체</button>
-                <button class="px-md py-base rounded-full bg-white text-on-surface-variant border border-outline-variant/30 font-label-md hover:bg-surface-container transition-colors">이사청소</button>
-                <button class="px-md py-base rounded-full bg-white text-on-surface-variant border border-outline-variant/30 font-label-md hover:bg-surface-container transition-colors">거주청소</button>
-                <button class="px-md py-base rounded-full bg-white text-on-surface-variant border border-outline-variant/30 font-label-md hover:bg-surface-container transition-colors">부분청소</button>
+            <div class="flex flex-wrap gap-base" id="review-filters">
+                <button data-filter="전체" class="review-filter-btn px-md py-base rounded-full bg-primary text-on-primary font-label-md">전체</button>
+                <button data-filter="이사청소" class="review-filter-btn px-md py-base rounded-full bg-white text-on-surface-variant border border-outline-variant/30 font-label-md hover:bg-surface-container transition-colors">이사청소</button>
+                <button data-filter="거주청소" class="review-filter-btn px-md py-base rounded-full bg-white text-on-surface-variant border border-outline-variant/30 font-label-md hover:bg-surface-container transition-colors">거주청소</button>
+                <button data-filter="부분청소" class="review-filter-btn px-md py-base rounded-full bg-white text-on-surface-variant border border-outline-variant/30 font-label-md hover:bg-surface-container transition-colors">부분청소</button>
             </div>
             <div class="relative w-full md:w-80">
-                <input class="w-full pl-md pr-xl py-base bg-white border border-outline-variant/30 rounded-full focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none" placeholder="후기 검색하기..." type="text">
+                <input id="review-search" class="w-full pl-md pr-xl py-base bg-white border border-outline-variant/30 rounded-full focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none" placeholder="후기 검색하기..." type="text">
                 <button class="absolute right-md top-1/2 -translate-y-1/2 text-primary">
                     <span class="material-symbols-outlined">search</span>
                 </button>
@@ -201,12 +106,12 @@
             <h3 class="font-headline-lg text-headline-lg text-primary mb-lg">포토 리뷰 (청소 전 &amp; 후)</h3>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-lg">
                 <!-- B&A Card 1 -->
-                <div class="group bg-white rounded-xl overflow-hidden border border-outline-variant/20 shadow-sm">
+                <div class="review-item group bg-white rounded-xl overflow-hidden border border-outline-variant/20 shadow-sm" data-category="이사청소">
                     <div class="before-after-slider h-80 relative" id="slider-1">
-                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDAX9Q8CreX5QIWX7fYNPq7FrGIscn29l228Gs_hmP3nudjTpTbj8iwNbhiFaGqu9V__Dm98ROwuiciR4agVy8AxvAMWxz7nCVoYDHUspx2ZmFHD7PpD7yDTTNO0f0OGNSrxf3kacbFIOIttVBEI8GWNjtodOkqRJDSvGacnIWEAgP-ikwI2_e7c0rvM3reBFD36gP6NKfw6PqBWQPXPBGZfh3muDBj0Oa-wt8aj2oVwT185Ft2owxBlw')">
+                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/photo-13.png')">
                             <span class="absolute top-md right-md bg-green-500 text-white px-sm py-xs rounded font-label-sm z-20">청소 후</span>
                         </div>
-                        <div class="absolute inset-0 bg-cover bg-center w-1/2 overflow-hidden border-r-2 border-white transition-all duration-300" id="before-img-1" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBql8laVK6ykPtMvdmM9bzxkiq07LKVbQgH8CovfC6Zx2XIiXdYAX1-Rq8ppSOe1Izt18KBuooV48XvpUgNNW9P2_rIer8sfzQaGTZ6iaKYaqAtwocrKFHPRXsh3AFNVzXQw-gnnA4hs6jE_XeEhXnQzRGp3KJmQb4nEVO66B45_WKfvmL182eeNbFA6Wkh29QiKM7AD5YAotmUSwtHkyQusnKJXDjSEKmqVrgdRMK9t7LDOj6zXHW0dw')">
+                        <div class="absolute inset-0 bg-cover bg-center w-1/2 overflow-hidden border-r-2 border-white transition-all duration-300" id="before-img-1" style="background-image: url('images/photo-14.png')">
                             <span class="absolute top-md left-md bg-red-500 text-white px-sm py-xs rounded font-label-sm z-20">청소 전</span>
                         </div>
                         <div class="slider-handle left-1/2" id="handle-1">
@@ -235,12 +140,12 @@
                     </div>
                 </div>
                 <!-- B&A Card 2 -->
-                <div class="group bg-white rounded-xl overflow-hidden border border-outline-variant/20 shadow-sm">
+                <div class="review-item group bg-white rounded-xl overflow-hidden border border-outline-variant/20 shadow-sm" data-category="거주청소">
                     <div class="before-after-slider h-80 relative" id="slider-2">
-                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCbJeZDmBTskh5BnkQ-YGCtWmmPjOf5x20yzpLygjeizIfA1zpEuYIsnIFzkA-fVPD8RC77zfxMqpZMoiK9-A20SBf-tVlBEqPe-OxVku3SlI-tPHLNPt9EQv2Oyl5p6tI1d9smEkhDsPw0T41kxfiWlmk5DhQjJom1GzE8XLeKLv-8RU913bGyifj2lllwb8745eUMFJv7tWlbXGnLEVkjM8Ca6sRZYPc32swlXpeomaBfxu3gSrMYEw')">
+                        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/photo-15.png')">
                             <span class="absolute top-md right-md bg-green-500 text-white px-sm py-xs rounded font-label-sm z-20">청소 후</span>
                         </div>
-                        <div class="absolute inset-0 bg-cover bg-center w-1/2 overflow-hidden border-r-2 border-white transition-all duration-300" id="before-img-2" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD4cVusPkleXyvpDM_G_yOMigwwCz6I8jdCwq7cpZux7Hd922xT0j25lkOByD0q0duA12WhhOF24CILNc4dhRpb7ZUbVEslcGsi0QPEuzhNVcFwjWeRuDknq3OFsCiE8_zh26uzA1o-bbu8RId2FP01zq8sJOTySirlhwgqrqIZu0uvnXcG2O8VbVsM78qVrV4dkaynnc56NCG-_JdBmyXrHg6J_Aye7yUZo42o5UX9O2cEksWgcPohAg')">
+                        <div class="absolute inset-0 bg-cover bg-center w-1/2 overflow-hidden border-r-2 border-white transition-all duration-300" id="before-img-2" style="background-image: url('images/photo-16.png')">
                             <span class="absolute top-md left-md bg-red-500 text-white px-sm py-xs rounded font-label-sm z-20">청소 전</span>
                         </div>
                         <div class="slider-handle left-1/2" id="handle-2">
@@ -275,9 +180,9 @@
     <!-- Text Reviews Grid -->
     <section class="py-lg bg-surface">
         <div class="max-w-container-max mx-auto px-md">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md" id="text-review-grid">
                 <!-- Review Card 1 -->
-                <div class="bg-white p-md rounded-xl border border-outline-variant/20 shadow-sm hover:shadow-md transition-shadow">
+                <div class="review-item bg-white p-md rounded-xl border border-outline-variant/20 shadow-sm hover:shadow-md transition-shadow" data-category="이사청소">
                     <div class="flex justify-between items-center mb-md">
                         <div class="flex items-center gap-base">
                             <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container font-bold">김</div>
@@ -303,7 +208,7 @@
                     </div>
                 </div>
                 <!-- Review Card 2 -->
-                <div class="bg-white p-md rounded-xl border border-outline-variant/20 shadow-sm hover:shadow-md transition-shadow">
+                <div class="review-item bg-white p-md rounded-xl border border-outline-variant/20 shadow-sm hover:shadow-md transition-shadow" data-category="거주청소">
                     <div class="flex justify-between items-center mb-md">
                         <div class="flex items-center gap-base">
                             <div class="w-10 h-10 rounded-full bg-surface-dim flex items-center justify-center text-primary font-bold">이</div>
@@ -329,7 +234,7 @@
                     </div>
                 </div>
                 <!-- Review Card 3 -->
-                <div class="bg-white p-md rounded-xl border border-outline-variant/20 shadow-sm hover:shadow-md transition-shadow">
+                <div class="review-item bg-white p-md rounded-xl border border-outline-variant/20 shadow-sm hover:shadow-md transition-shadow" data-category="부분청소">
                     <div class="flex justify-between items-center mb-md">
                         <div class="flex items-center gap-base">
                             <div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-white font-bold">박</div>
@@ -356,9 +261,10 @@
                 </div>
             </div>
             <div class="mt-lg text-center">
-                <button class="px-lg py-base bg-white border border-primary text-primary rounded-lg font-label-md hover:bg-primary hover:text-on-primary transition-all">
-                    더 많은 후기 보기 (1/250)
+                <button id="load-more-btn" class="px-lg py-base bg-white border border-primary text-primary rounded-lg font-label-md hover:bg-primary hover:text-on-primary transition-all">
+                    더 많은 후기 보기
                 </button>
+                <p id="no-more-reviews" class="hidden mt-md text-on-surface-variant font-label-sm">모든 후기를 확인하셨습니다 🙌</p>
             </div>
         </div>
     </section>
@@ -441,6 +347,86 @@
         document.addEventListener('DOMContentLoaded', () => {
             initSlider('slider-1', 'handle-1', 'before-img-1');
             initSlider('slider-2', 'handle-2', 'before-img-2');
+        });
+
+        // ── 후기 필터 & 검색 ──
+        let activeFilter = '전체';
+
+        function applyReviewFilters() {
+            const q = (document.getElementById('review-search').value || '').trim().toLowerCase();
+            document.querySelectorAll('.review-item').forEach((item) => {
+                const cat = item.dataset.category || '';
+                const matchCat = activeFilter === '전체' || cat === activeFilter;
+                const matchText = !q || item.textContent.toLowerCase().includes(q);
+                item.style.display = matchCat && matchText ? '' : 'none';
+            });
+        }
+
+        document.querySelectorAll('.review-filter-btn').forEach((btn) => {
+            btn.addEventListener('click', () => {
+                activeFilter = btn.dataset.filter;
+                document.querySelectorAll('.review-filter-btn').forEach((b) => {
+                    const on = b === btn;
+                    b.classList.toggle('bg-primary', on);
+                    b.classList.toggle('text-on-primary', on);
+                    b.classList.toggle('bg-white', !on);
+                    b.classList.toggle('text-on-surface-variant', !on);
+                    b.classList.toggle('border', !on);
+                    b.classList.toggle('border-outline-variant/30', !on);
+                });
+                applyReviewFilters();
+            });
+        });
+        document.getElementById('review-search').addEventListener('input', applyReviewFilters);
+
+        // ── 더 많은 후기 보기 (추가 샘플 후기 append) ──
+        const moreReviews = [
+            { initial: '정', name: '정*아 고객님', cat: '이사청소', when: '3주일 전', avatar: 'bg-secondary-container text-on-secondary-container',
+              text: '이사 당일 시간 맞춰 오셔서 빠르게 끝내주셨어요. 베란다 유리까지 반짝반짝해져서 기분 좋게 입주했습니다.' },
+            { initial: '최', name: '최*훈 고객님', cat: '거주청소', when: '3주일 전', avatar: 'bg-surface-dim text-primary',
+              text: '분기마다 정기청소 맡기고 있는데 항상 꼼꼼하세요. 주방 후드 안쪽까지 신경 써주셔서 믿고 맡깁니다.' },
+            { initial: '한', name: '한*름 고객님', cat: '부분청소', when: '1개월 전', avatar: 'bg-primary-container text-white',
+              text: '화장실 두 곳만 부분으로 요청했는데 줄눈 곰팡이까지 싹 잡아주셨어요. 필요한 곳만 알뜰하게 해결했습니다.' },
+            { initial: '오', name: '오*석 고객님', cat: '이사청소', when: '1개월 전', avatar: 'bg-secondary-container text-on-secondary-container',
+              text: '구축 아파트라 걱정 많았는데 새집처럼 만들어 주셨습니다. 사진으로 결과 보고서까지 보내주셔서 신뢰가 갔어요.' },
+        ];
+        let loaded = 0;
+        const PER_PAGE = 2;
+
+        function buildReviewCard(r) {
+            const stars = '<span class="material-symbols-outlined" style="font-variation-settings: \'FILL\' 1;">star</span>'.repeat(5);
+            const el = document.createElement('div');
+            el.className = 'review-item bg-white p-md rounded-xl border border-outline-variant/20 shadow-sm hover:shadow-md transition-shadow';
+            el.dataset.category = r.cat;
+            el.innerHTML = `
+                <div class="flex justify-between items-center mb-md">
+                    <div class="flex items-center gap-base">
+                        <div class="w-10 h-10 rounded-full ${r.avatar} flex items-center justify-center font-bold">${r.initial}</div>
+                        <div>
+                            <p class="font-label-md text-primary">${r.name}</p>
+                            <p class="text-xs text-on-surface-variant">${r.cat} | ${r.when}</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-500 scale-75 origin-right">${stars}</div>
+                </div>
+                <p class="text-body-md text-on-surface-variant mb-md italic">"${r.text}"</p>
+                <div class="pt-md border-t border-outline-variant/10 flex items-center gap-xs text-secondary font-label-sm">
+                    <span class="material-symbols-outlined text-sm">check_circle</span>
+                    본인 인증 고객
+                </div>`;
+            return el;
+        }
+
+        document.getElementById('load-more-btn').addEventListener('click', () => {
+            const grid = document.getElementById('text-review-grid');
+            const batch = moreReviews.slice(loaded, loaded + PER_PAGE);
+            batch.forEach((r) => grid.appendChild(buildReviewCard(r)));
+            loaded += batch.length;
+            applyReviewFilters();
+            if (loaded >= moreReviews.length) {
+                document.getElementById('load-more-btn').classList.add('hidden');
+                document.getElementById('no-more-reviews').classList.remove('hidden');
+            }
         });
     </script>
 

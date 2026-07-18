@@ -2,109 +2,20 @@
 <html class="light" lang="ko"><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="description" content="간편 상담 신청과 즉시 견적 미리보기. 서비스 유형과 평수만 입력하면 예상 금액을 바로 확인할 수 있습니다.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BG SOLUTION">
+<meta property="og:title" content="상담문의 | BG SOLUTION">
+<meta property="og:description" content="간편 상담 신청과 즉시 견적 미리보기. 서비스 유형과 평수만 입력하면 예상 금액을 바로 확인할 수 있습니다.">
+<meta property="og:image" content="images/logo.png">
+<meta name="twitter:card" content="summary">
 <title>상담문의 | BG SOLUTION</title>
 <link href="images/logo.png" rel="icon" type="image/png">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "on-primary-fixed-variant": "#364669",
-                        "error": "#ba1a1a",
-                        "surface-bright": "#f9f9ff",
-                        "on-primary": "#ffffff",
-                        "surface": "#f9f9ff",
-                        "on-tertiary": "#ffffff",
-                        "on-tertiary-container": "#919394",
-                        "tertiary-fixed-dim": "#c5c7c8",
-                        "surface-variant": "#d8e3fa",
-                        "surface-tint": "#4e5e82",
-                        "surface-container-lowest": "#ffffff",
-                        "on-primary-fixed": "#071b3b",
-                        "secondary-fixed": "#c9e6ff",
-                        "inverse-surface": "#263142",
-                        "on-surface": "#111c2c",
-                        "on-secondary-container": "#285f80",
-                        "surface-container-highest": "#d8e3fa",
-                        "on-background": "#111c2c",
-                        "surface-container-low": "#f0f3ff",
-                        "surface-container-high": "#dee8ff",
-                        "inverse-on-surface": "#ebf1ff",
-                        "on-secondary-fixed": "#001e2f",
-                        "on-surface-variant": "#44474e",
-                        "error-container": "#ffdad6",
-                        "on-tertiary-fixed-variant": "#454748",
-                        "outline": "#75777f",
-                        "surface-container": "#e7eeff",
-                        "secondary-container": "#a5d8ff",
-                        "on-secondary-fixed-variant": "#0c4b6c",
-                        "secondary": "#2e6385",
-                        "primary": "#031636",
-                        "on-error": "#ffffff",
-                        "surface-dim": "#cfdaf1",
-                        "on-primary-container": "#8293ba",
-                        "primary-container": "#1a2b4c",
-                        "on-secondary": "#ffffff",
-                        "outline-variant": "#c5c6cf",
-                        "on-error-container": "#93000a",
-                        "background": "#f9f9ff",
-                        "primary-fixed-dim": "#b6c6f0",
-                        "primary-fixed": "#d8e2ff",
-                        "tertiary": "#151819",
-                        "secondary-fixed-dim": "#9accf3",
-                        "inverse-primary": "#b6c6f0",
-                        "on-tertiary-fixed": "#191c1d",
-                        "tertiary-fixed": "#e1e3e4",
-                        "tertiary-container": "#292c2d"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "base": "8px",
-                        "container-max": "1200px",
-                        "md": "24px",
-                        "xl": "80px",
-                        "sm": "12px",
-                        "margin-mobile": "16px",
-                        "xs": "4px",
-                        "gutter": "24px",
-                        "lg": "48px"
-                    },
-                    "fontFamily": {
-                        "label-md": ["Manrope"],
-                        "headline-xl": ["Manrope"],
-                        "headline-md": ["Manrope"],
-                        "headline-lg": ["Manrope"],
-                        "headline-lg-mobile": ["Manrope"],
-                        "body-md": ["Manrope"],
-                        "label-sm": ["Manrope"],
-                        "body-lg": ["Manrope"]
-                    },
-                    "fontSize": {
-                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "600" }],
-                        "headline-xl": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800" }],
-                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
-                        "headline-lg": ["32px", { "lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "700" }],
-                        "headline-lg-mobile": ["28px", { "lineHeight": "1.3", "fontWeight": "700" }],
-                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "label-sm": ["12px", { "lineHeight": "1.4", "fontWeight": "500" }],
-                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
-                    }
-                },
-            },
-        }
-    </script>
-<style>
-    .input-focus-effect:focus { box-shadow: 0 0 0 4px rgba(3, 22, 54, 0.1); }
-</style>
+<script src="assets/tailwind-config.js"></script>
+<link rel="stylesheet" href="assets/site.css">
 </head><body class="bg-background text-on-background font-body-md overflow-x-hidden">
 <!-- Top Navigation Bar -->
 <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-outline-variant/20 shadow-sm">
@@ -142,12 +53,14 @@
                 <!-- Contact Info -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
                     <div class="flex flex-col gap-xs">
-                        <label class="font-label-md text-label-md text-primary ml-1">성함</label>
-                        <input class="bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all" placeholder="홍길동" required type="text">
+                        <label class="font-label-md text-label-md text-primary ml-1" for="f-customerName">성함</label>
+                        <input id="f-customerName" name="customerName" class="bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all" placeholder="홍길동" required type="text">
                     </div>
                     <div class="flex flex-col gap-xs">
-                        <label class="font-label-md text-label-md text-primary ml-1">연락처</label>
-                        <input class="bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all" placeholder="010-0000-0000" required type="tel">
+                        <label class="font-label-md text-label-md text-primary ml-1" for="f-customerPhone">연락처</label>
+                        <input id="f-customerPhone" name="customerPhone" class="bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all" placeholder="010-0000-0000" required type="tel">
+                        <!-- 허니팟(봇 트랩): 사람 눈에 안 보이며 채워지면 서버가 무시 -->
+                        <input id="f-company" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" class="hidden" style="display:none !important">
                     </div>
                 </div>
 
@@ -155,12 +68,12 @@
                 <h3 class="text-primary font-bold text-lg border-b border-outline-variant pb-2 pt-2">기본 정보</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
                     <div class="flex flex-col gap-xs">
-                        <label class="font-label-md text-label-md text-primary ml-1">지역</label>
-                        <input class="bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all" placeholder="예: 서울시 강남구" required type="text">
+                        <label class="font-label-md text-label-md text-primary ml-1" for="f-region">지역</label>
+                        <input id="f-region" name="region" class="bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all" placeholder="예: 서울시 강남구" required type="text">
                     </div>
                     <div class="flex flex-col gap-xs">
-                        <label class="font-label-md text-label-md text-primary ml-1">건물 유형</label>
-                        <select class="bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all appearance-none cursor-pointer">
+                        <label class="font-label-md text-label-md text-primary ml-1" for="f-buildingType">건물 유형</label>
+                        <select id="f-buildingType" name="buildingType" class="bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all appearance-none cursor-pointer">
                             <option value="apt">아파트</option>
                             <option value="officetel">오피스텔</option>
                             <option value="villa">빌라</option>
@@ -170,12 +83,12 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
                     <div class="flex flex-col gap-xs">
-                        <label class="font-label-md text-label-md text-primary ml-1">단지명</label>
-                        <input class="bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all" placeholder="예: OO아파트">
+                        <label class="font-label-md text-label-md text-primary ml-1" for="f-complex">단지명</label>
+                        <input id="f-complex" name="complex" class="bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all" placeholder="예: OO아파트">
                     </div>
                     <div class="flex flex-col gap-xs">
-                        <label class="font-label-md text-label-md text-primary ml-1">공급면적 / 전용면적</label>
-                        <input class="bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all" placeholder="예: 34평 / 25평">
+                        <label class="font-label-md text-label-md text-primary ml-1" for="f-pyeong">공급면적 / 전용면적</label>
+                        <input id="f-pyeong" name="pyeong" class="bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all" placeholder="예: 34평 / 25평">
                     </div>
                 </div>
                 <p class="text-label-sm text-on-surface-variant -mt-2 ml-1">※ 평수를 모르실 경우 단지명 또는 평면도를 보내주시면 확인해 드립니다.</p>
@@ -184,31 +97,31 @@
                 <h3 class="text-primary font-bold text-lg border-b border-outline-variant pb-2 pt-2">공간 정보</h3>
                 <div class="grid grid-cols-3 gap-md">
                     <div class="flex flex-col gap-xs">
-                        <label class="font-label-md text-label-md text-primary ml-1">방 개수</label>
-                        <input class="bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all" min="0" placeholder="예: 3" type="number">
+                        <label class="font-label-md text-label-md text-primary ml-1" for="f-rooms">방 개수</label>
+                        <input id="f-rooms" name="rooms" class="bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all" min="0" placeholder="예: 3" type="number">
                     </div>
                     <div class="flex flex-col gap-xs">
-                        <label class="font-label-md text-label-md text-primary ml-1">화장실 개수</label>
-                        <input class="bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all" min="0" placeholder="예: 2" type="number">
+                        <label class="font-label-md text-label-md text-primary ml-1" for="f-bathrooms">화장실 개수</label>
+                        <input id="f-bathrooms" name="bathrooms" class="bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all" min="0" placeholder="예: 2" type="number">
                     </div>
                     <div class="flex flex-col gap-xs">
-                        <label class="font-label-md text-label-md text-primary ml-1">베란다 개수</label>
-                        <input class="bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all" min="0" placeholder="예: 2" type="number">
+                        <label class="font-label-md text-label-md text-primary ml-1" for="f-verandas">베란다 개수</label>
+                        <input id="f-verandas" name="verandas" class="bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all" min="0" placeholder="예: 2" type="number">
                     </div>
                 </div>
                 <p class="text-label-sm text-on-surface-variant -mt-2 ml-1">※ 다용도실, 대피실, 통베란다는 아래 특이사항에 별도로 기재해 주세요.</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
                     <div class="flex flex-col gap-xs">
-                        <label class="font-label-md text-label-md text-primary ml-1">건물 상태</label>
-                        <select class="bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all appearance-none cursor-pointer">
+                        <label class="font-label-md text-label-md text-primary ml-1" for="f-buildingCondition">건물 상태</label>
+                        <select id="f-buildingCondition" name="buildingCondition" class="bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all appearance-none cursor-pointer">
                             <option value="new">신축</option>
                             <option value="old">구축</option>
                             <option value="renovated">인테리어 완료</option>
                         </select>
                     </div>
                     <div class="flex flex-col gap-xs">
-                        <label class="font-label-md text-label-md text-primary ml-1">거주 여부</label>
-                        <select class="bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all appearance-none cursor-pointer">
+                        <label class="font-label-md text-label-md text-primary ml-1" for="f-occupancy">거주 여부</label>
+                        <select id="f-occupancy" name="occupancy" class="bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all appearance-none cursor-pointer">
                             <option value="occupied">거주 중</option>
                             <option value="vacant">공실</option>
                         </select>
@@ -219,8 +132,8 @@
                 <h3 class="text-primary font-bold text-lg border-b border-outline-variant pb-2 pt-2">일정 및 기타</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
                     <div class="flex flex-col gap-xs">
-                        <label class="font-label-md text-label-md text-primary ml-1">서비스 유형</label>
-                        <select class="bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all appearance-none cursor-pointer">
+                        <label class="font-label-md text-label-md text-primary ml-1" for="f-serviceType">서비스 유형</label>
+                        <select id="f-serviceType" name="serviceType" class="bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all appearance-none cursor-pointer">
                             <option value="move-in">입주청소</option>
                             <option value="move-out">이사청소</option>
                             <option value="residential">거주청소</option>
@@ -228,17 +141,17 @@
                         </select>
                     </div>
                     <div class="flex flex-col gap-xs">
-                        <label class="font-label-md text-label-md text-primary ml-1">이사(청소) 예정일</label>
-                        <input class="bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all" type="date">
+                        <label class="font-label-md text-label-md text-primary ml-1" for="f-scheduledDate">이사(청소) 예정일</label>
+                        <input id="f-scheduledDate" name="scheduledDate" class="bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all" type="date">
                     </div>
                 </div>
                 <div class="flex flex-col gap-xs">
-                    <label class="font-label-md text-label-md text-primary ml-1">특이사항</label>
-                    <textarea class="bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all resize-none" placeholder="다용도실/대피실/통베란다 여부, 반려동물, 주차 등 참고할 내용을 자유롭게 적어주세요." rows="4"></textarea>
+                    <label class="font-label-md text-label-md text-primary ml-1" for="f-notes">특이사항</label>
+                    <textarea id="f-notes" name="notes" class="bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all resize-none" placeholder="다용도실/대피실/통베란다 여부, 반려동물, 주차 등 참고할 내용을 자유롭게 적어주세요." rows="4"></textarea>
                 </div>
                 <div class="flex flex-col gap-xs">
-                    <label class="font-label-md text-label-md text-primary ml-1">유입 경로</label>
-                    <select class="bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all appearance-none cursor-pointer">
+                    <label class="font-label-md text-label-md text-primary ml-1" for="f-leadSource">유입 경로</label>
+                    <select id="f-leadSource" name="leadSource" class="bg-surface-container-low border-none rounded-lg p-4 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all appearance-none cursor-pointer">
                         <option value="">선택해 주세요</option>
                         <option value="instagram">인스타그램</option>
                         <option value="danggeun">당근마켓</option>
@@ -278,6 +191,33 @@
 
         <!-- Sidebar Info (Contact Channels & FAQ) -->
         <aside class="lg:col-span-4 space-y-md">
+            <!-- 즉시 견적 계산기 -->
+            <div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm border border-outline-variant" id="estimator">
+                <h3 class="font-headline-md text-headline-md text-primary mb-1 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-secondary">calculate</span>
+                    즉시 견적 미리보기
+                </h3>
+                <p class="font-label-sm text-label-sm text-on-surface-variant mb-4">서비스와 평수를 선택하면 예상 금액을 바로 확인할 수 있어요.</p>
+                <!-- 서비스 유형 토글 -->
+                <div class="grid grid-cols-2 gap-2 mb-4" id="est-service-toggle">
+                    <button type="button" data-service="move-in" class="est-svc-btn px-2 py-2.5 rounded-lg font-label-md text-label-md border border-outline-variant text-on-surface-variant transition-all">입주청소</button>
+                    <button type="button" data-service="move-out" class="est-svc-btn px-2 py-2.5 rounded-lg font-label-md text-label-md border border-outline-variant text-on-surface-variant transition-all">이사청소</button>
+                    <button type="button" data-service="residential" class="est-svc-btn px-2 py-2.5 rounded-lg font-label-md text-label-md border border-outline-variant text-on-surface-variant transition-all">거주청소</button>
+                    <button type="button" data-service="office" class="est-svc-btn px-2 py-2.5 rounded-lg font-label-md text-label-md border border-outline-variant text-on-surface-variant transition-all">사무실/상업</button>
+                </div>
+                <!-- 평수 입력 -->
+                <div class="flex items-center gap-2 mb-4">
+                    <input id="est-pyeong" type="number" min="1" inputmode="numeric" placeholder="평수 입력" class="flex-1 bg-surface-container-low border-none rounded-lg p-3 font-body-md text-on-surface focus:ring-2 focus:ring-primary outline-none input-focus-effect transition-all">
+                    <span class="font-body-md text-on-surface-variant">평</span>
+                </div>
+                <!-- 결과 -->
+                <div class="bg-secondary-container/30 border border-secondary-container rounded-lg p-4 text-center">
+                    <p class="font-label-sm text-label-sm text-on-surface-variant mb-1" id="est-caption">예상 견적</p>
+                    <p class="font-headline-lg text-headline-lg text-primary" id="est-amount">— </p>
+                    <p class="font-label-sm text-label-sm text-on-surface-variant mt-1" id="est-unit"></p>
+                </div>
+                <p class="font-label-sm text-label-sm text-on-surface-variant mt-3 leading-tight">※ 평당 단가 기준 예상 금액이며, 현장 실측·상태 확인 후 최종 확정됩니다.</p>
+            </div>
             <!-- Trust & Quick Contact Card -->
             <div class="bg-primary-container text-on-primary-container rounded-xl p-6 shadow-lg relative overflow-hidden">
                 <h3 class="font-headline-md text-headline-md text-on-primary-fixed mb-4">빠른 상담 채널</h3>
@@ -356,15 +296,15 @@
     <section class="mt-xl grid grid-cols-1 md:grid-cols-3 gap-md">
         <div class="h-48 rounded-xl overflow-hidden shadow-sm relative group cursor-pointer">
             <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors z-10"></div>
-            <img class="w-full h-full object-cover" alt="전문적인 대리석 청소 장면" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXVmhLjX3MlUp5ARqXkAH7nePismD0x60DzMMSwaoDxl9Ua751cRuVwQIsBv8NyQdibTXkRWCo4YRnTwdvgzUWhRWyIa_k0yW-auKtFrXh7wZ2ac_yhJXTqFUFHdtrQN96gJyc3k8_1nIgS3V3GKxTs1bxdREVVEktnaAPiARne9TO2bc7lnv6RGaEDtJrQP9tRogAYSoTBZlbcbN0ESg2A7AgDOOr5WkMyW__4QuqjFN9oqi9bateFw">
+            <img class="w-full h-full object-cover" alt="전문적인 대리석 청소 장면" src="images/photo-17.png">
         </div>
         <div class="h-48 rounded-xl overflow-hidden shadow-sm relative group cursor-pointer">
             <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors z-10"></div>
-            <img class="w-full h-full object-cover" alt="깨끗하게 청소된 거실 전경" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG7nvzVNJjWUWQ30P1O08TbuuJfkH9P_P2hSOPqKaAJLieFen7qs9l0EDZrtOMCNiJTBMfhbHC6pcR4qhve6w4vzMH11NZFhXuoNBxqQArOvoR_-ne6xhdplHF3SCalYaMYHa4hDr-4jcV34KbVe-tnUvDSZaVP5akYCjd_RFTtbg3sPypt89_13MHNXZRSjhlhd18pijcz1BSZ9SxZsINzjim2PoUaxZpM-hDb8cSbXIvIqkKYmbYWA">
+            <img class="w-full h-full object-cover" alt="깨끗하게 청소된 거실 전경" src="images/photo-18.png">
         </div>
         <div class="h-48 rounded-xl overflow-hidden shadow-sm relative group cursor-pointer">
             <div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors z-10"></div>
-            <img class="w-full h-full object-cover" alt="전문 청소 장비 클로즈업" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6NH0SBquGdo4VGwQ7LREkKoVxxnCAGE35yojHZX_ZcZUKhgOQps5J5x2I6rVi5SOr8B-BSEBOyg_naa1DKqb5gQIZpCtTGMnhb7wuRXOSFMyzU8LLLFx9k9rqZnnZctRh-cFzkBpQrPjtLfk3arFv6gvEfr2LuviOS_MWIuKFkidiQwCZcgUqAYtarxSmQTooc_Ptr1N0BBvRbyC3R7ui9VNHPDl04W_VOdrEHZMuw9RsxN8zcEXzbg">
+            <img class="w-full h-full object-cover" alt="전문 청소 장비 클로즈업" src="images/photo-19.png">
         </div>
     </section>
 </main>
@@ -386,13 +326,46 @@
 </footer>
 
 <script>
-    // Form Submission Interaction
-    document.getElementById('consultationForm').addEventListener('submit', function(e) {
+    // 상담문의 접수 엔드포인트(BG앱 Firebase Cloud Function, Hosting rewrite).
+    const INQUIRY_ENDPOINT = 'https://bgsolution-5df52.web.app/api/inquiry';
+
+    // ── 상담폼 제출: Cloud Function으로 전송하여 상담원 "접수" 탭에 등록 ──
+    const form = document.getElementById('consultationForm');
+    form.addEventListener('submit', async function (e) {
         e.preventDefault();
-        const btn = e.target.querySelector('button[type="submit"]');
+        const btn = form.querySelector('button[type="submit"]');
         const originalContent = btn.innerHTML;
 
-        // Visual feedback
+        if (!document.getElementById('privacy').checked) {
+            alert('개인정보 수집 및 이용에 동의해 주세요.');
+            return;
+        }
+
+        // 값 수집(설명형 select은 라벨 텍스트로 보내 상담원이 읽기 쉽게 함)
+        const val = (id) => (document.getElementById(id)?.value || '').trim();
+        const label = (id) => {
+            const el = document.getElementById(id);
+            return el && el.selectedOptions[0] ? el.selectedOptions[0].text.trim() : '';
+        };
+        const payload = {
+            customerName: val('f-customerName'),
+            customerPhone: val('f-customerPhone'),
+            region: val('f-region'),
+            complex: val('f-complex'),
+            buildingType: label('f-buildingType'),
+            pyeong: val('f-pyeong'),
+            rooms: val('f-rooms'),
+            bathrooms: val('f-bathrooms'),
+            verandas: val('f-verandas'),
+            buildingCondition: label('f-buildingCondition'),
+            occupancy: label('f-occupancy'),
+            serviceType: val('f-serviceType'),
+            scheduledDate: val('f-scheduledDate'),
+            notes: val('f-notes'),
+            leadSource: label('f-leadSource'),
+            company: val('f-company'), // 허니팟
+        };
+
         btn.disabled = true;
         btn.innerHTML = `
             <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -402,13 +375,76 @@
             <span>처리 중...</span>
         `;
 
-        setTimeout(() => {
+        try {
+            const res = await fetch(INQUIRY_ENDPOINT, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload),
+            });
+            const data = await res.json().catch(() => ({}));
+            if (!res.ok || !data.ok) throw new Error(data.error || '접수 실패');
+
             alert('상담 신청이 성공적으로 접수되었습니다. 담당자가 곧 연락드리겠습니다.');
+            form.reset();
+            updateEstimate();
+        } catch (err) {
+            alert('접수 중 오류가 발생했습니다. 잠시 후 다시 시도하시거나 전화(1588-0000) 또는 카카오톡으로 문의해 주세요.');
+        } finally {
             btn.disabled = false;
             btn.innerHTML = originalContent;
-            e.target.reset();
-        }, 1500);
+        }
     });
+
+    // ── 즉시 견적 계산기 ──
+    const RATE = { 'move-in': 15000, 'move-out': 16000, residential: 18000 }; // 평당 단가(원)
+    const svcSelect = document.getElementById('f-serviceType');
+    const estPyeong = document.getElementById('est-pyeong');
+    const estBtns = document.querySelectorAll('.est-svc-btn');
+    const won = (n) => n.toLocaleString('ko-KR') + '원';
+
+    function setActiveButton(service) {
+        estBtns.forEach((b) => {
+            const on = b.dataset.service === service;
+            b.classList.toggle('bg-primary', on);
+            b.classList.toggle('text-on-primary', on);
+            b.classList.toggle('border-primary', on);
+            b.classList.toggle('text-on-surface-variant', !on);
+        });
+    }
+
+    function updateEstimate() {
+        const service = svcSelect.value;
+        setActiveButton(service);
+        const amountEl = document.getElementById('est-amount');
+        const unitEl = document.getElementById('est-unit');
+        const captionEl = document.getElementById('est-caption');
+
+        if (!RATE[service]) { // 사무실/상업공간
+            captionEl.textContent = '예상 견적';
+            amountEl.textContent = '별도 문의';
+            unitEl.textContent = '현장 상황에 따라 맞춤 견적을 드려요.';
+            return;
+        }
+        const py = parseFloat(estPyeong.value);
+        if (!py || py <= 0) {
+            captionEl.textContent = '예상 견적';
+            amountEl.textContent = '— ';
+            unitEl.textContent = `평당 ${won(RATE[service])} 기준`;
+            return;
+        }
+        captionEl.textContent = `${py}평 · 평당 ${won(RATE[service])}`;
+        amountEl.textContent = '약 ' + won(Math.round(py * RATE[service]));
+        unitEl.textContent = '현장 확인 후 최종 확정';
+    }
+
+    // 위젯 버튼 → 폼 select 동기화(양방향)
+    estBtns.forEach((b) => b.addEventListener('click', () => {
+        svcSelect.value = b.dataset.service;
+        updateEstimate();
+    }));
+    svcSelect.addEventListener('change', updateEstimate);
+    estPyeong.addEventListener('input', updateEstimate);
+    updateEstimate();
 
     // Subtle fade/parallax effect on the hero header while scrolling
     window.addEventListener('scroll', () => {

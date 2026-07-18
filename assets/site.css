@@ -1,0 +1,78 @@
+/* BG SOLUTION 공통 커스텀 스타일. 5개 페이지가 공유(사용하지 않는 규칙이 있어도 무해). */
+
+/* 폼 포커스 링 (contact) */
+.input-focus-effect:focus { box-shadow: 0 0 0 4px rgba(3, 22, 54, 0.1); }
+
+/* 홈 히어로 액센트 (index) */
+.premium-border { border: 1px solid rgba(117, 119, 127, 0.2); }
+.authority-stripe { width: 40px; height: 4px; background-color: #2e6385; }
+
+/* 청소안내 카드/뱃지 (cleaning) */
+.tonal-layer { background-color: rgba(3, 22, 54, 0.04); }
+.trust-badge-gradient { background: linear-gradient(135deg, #031636 0%, #2e6385 100%); }
+.service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px -10px rgba(3, 22, 54, 0.15); }
+
+/* 가로 스크롤바 숨김 (cleaning, faq) */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Before/After 슬라이더 (reviews) */
+.before-after-slider { position: relative; overflow: hidden; user-select: none; }
+.slider-handle { position: absolute; top: 0; bottom: 0; width: 2px; background: white; cursor: ew-resize; z-index: 10; }
+.slider-circle {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 40px; height: 40px; background: white; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* FAQ 아코디언 (faq) */
+.faq-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    padding-left: 24px;
+    padding-right: 24px;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+.faq-accordion-item.active .faq-accordion-content {
+    max-height: 500px;
+    padding-bottom: 24px;
+}
+.faq-accordion-item.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+/* ── PulseFit 스타일 Hero (index) — framer-motion을 CSS로 대체 ── */
+.font-inter { font-family: "Inter", "Manrope", sans-serif; }
+
+@keyframes heroFadeDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: none; } }
+@keyframes heroFadeUp   { from { opacity: 0; transform: translateY(30px); }  to { opacity: 1; transform: none; } }
+@keyframes heroScaleIn  { from { opacity: 0; transform: scale(0.95); }        to { opacity: 1; transform: none; } }
+@keyframes heroCardsUp  { from { opacity: 0; transform: translateY(100px); }  to { opacity: 1; transform: none; } }
+@keyframes heroMarquee  { from { transform: translateX(0); }                  to { transform: translateX(-50%); } }
+
+/* opacity:0을 지속 규칙으로 두지 않고 keyframe from + fill-mode:both의 backwards fill로 처리 →
+   애니메이션이 아예 적용되지 않는 환경에서도 콘텐츠가 보이도록(위 히어로가 빈 화면이 되지 않게) 함. */
+.hero-anim { animation-duration: 0.8s; animation-fill-mode: both; animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1); }
+.hero-header  { animation-name: heroFadeDown; animation-duration: 0.6s; }
+.hero-content { animation-name: heroFadeUp;   animation-delay: 0.2s; }
+.hero-actions { animation-name: heroScaleIn;  animation-delay: 0.4s; }
+.hero-disclaimer { animation-name: heroFadeUp; animation-duration: 0.6s; animation-delay: 0.6s; }
+.hero-proof   { animation-name: heroFadeUp;   animation-duration: 0.6s; animation-delay: 0.7s; }
+.hero-cards   { animation-name: heroCardsUp;  animation-duration: 1s;   animation-delay: 0.8s; }
+
+/* 카드 자동 스크롤 마퀴 (원본은 카드 목록을 2배 복제) */
+.hero-marquee-track {
+    display: flex;
+    gap: 24px;
+    padding-left: 24px;
+    width: max-content;
+    animation: heroMarquee 30s linear infinite;
+}
+.hero-marquee:hover .hero-marquee-track { animation-play-state: paused; }
+.hero-card { flex-shrink: 0; width: 356px; height: 480px; border-radius: 24px; overflow: hidden; position: relative; cursor: pointer; box-shadow: 0 8px 32px rgba(0,0,0,0.12); transition: transform 0.3s ease; }
+.hero-card:hover { transform: translateY(-10px) scale(1.03); }
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-anim { opacity: 1; animation: none; }
+    .hero-marquee-track { animation: none; }
+}
