@@ -12,29 +12,31 @@
 <title>자주 묻는 질문 | BG SOLUTION</title>
 <link href="images/logo.png" rel="icon" type="image/png">
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script src="assets/tailwind-config.js"></script>
 <link rel="stylesheet" href="assets/site.css">
 </head><body class="font-body-md text-on-surface">
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-outline-variant/20 shadow-sm">
-    <div class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto">
-        <a href="index.html" class="text-2xl font-extrabold text-primary tracking-tight">BG솔루션</a>
-        <div class="hidden md:flex items-center gap-8">
-            <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="index.html">홈</a>
-            <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="cleaning.html">청소안내</a>
-            <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="reviews.html">이용후기</a>
-            <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="contact.html">상담문의</a>
-            <a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1" href="faq.html">FAQ</a>
-        </div>
-        <a href="contact.html" class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all inline-block">상담 예약</a>
-    </div>
+<header class="site-nav font-inter fixed top-0 w-full z-50" style="background:rgba(255,255,255,0.85);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid rgba(226,232,240,0.7);">
+<div class="flex justify-between items-center h-20 px-6 lg:px-16">
+<a href="index.html" class="text-2xl font-extrabold tracking-tight" style="color:#031636;">BG솔루션</a>
+<nav class="hidden lg:flex items-center gap-8" aria-label="Main navigation">
+<a href="index.html" class="text-[16px] hover:opacity-70 transition-opacity" style="color:#4a5568;">홈</a>
+<a href="cleaning.html" class="text-[16px] hover:opacity-70 transition-opacity" style="color:#4a5568;">청소안내</a>
+<a href="reviews.html" class="text-[16px] hover:opacity-70 transition-opacity" style="color:#4a5568;">이용후기</a>
+<a href="contact.html" class="text-[16px] hover:opacity-70 transition-opacity" style="color:#4a5568;">무료견적상담</a>
+<a href="faq.html" class="text-[16px] hover:opacity-70 transition-opacity" style="color:#031636;font-weight:600;">FAQ</a>
 </nav>
+<a href="contact.html" class="px-6 py-3 rounded-full font-medium transition-transform hover:scale-105" style="background:#031636;color:#fff;box-shadow:0 4px 12px rgba(3,22,54,0.18);">무료 견적 상담</a>
+</div>
+</header>
+<div aria-hidden="true" style="position:fixed;top:0;left:0;right:0;height:600px;z-index:-1;pointer-events:none;background:linear-gradient(180deg,#E8F0FF 0%,#EEF3FD 45%,#f9f9ff 100%);"></div>
 
 <main class="pt-20">
     <!-- Hero Section -->
-    <section class="relative py-xl bg-surface overflow-hidden">
+    <section class="relative py-xl overflow-hidden">
         <div class="max-w-container-max mx-auto px-gutter relative z-10 text-center">
             <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container mb-6 font-label-sm text-label-sm">
                 <span class="material-symbols-outlined mr-2" style="font-size: 18px;">support_agent</span>
@@ -87,8 +89,8 @@
                             <div class="font-headline-md text-headline-md">BG SOLUTION</div>
                         </div>
                         <h3 class="font-headline-md text-headline-md mb-4">도움이 더 필요하신가요?</h3>
-                        <p class="font-body-md text-body-md text-on-primary/80 mb-8">홈 케어 관련 전문 상담을 위해 평일 오전 9시부터 오후 6시까지 상담팀이 대기하고 있습니다.</p>
-                        <a class="block w-full py-4 text-center rounded-lg bg-surface-container-lowest text-primary font-label-md hover:bg-surface transition-colors shadow-lg" href="https://pf.kakao.com/_xhrfgb" target="_blank">
+                        <p class="font-body-md text-body-md text-on-primary/80 mb-8">홈 케어 관련 전문 상담을 위해 24시간 상담팀이 대기하고 있습니다.</p>
+                        <a class="block w-full py-4 text-center rounded-full bg-surface-container-lowest text-primary font-label-md hover:bg-surface transition-colors shadow-lg" href="https://pf.kakao.com/_xhrfgb" target="_blank">
                             전문가와 채팅하기
                         </a>
                     </div>
@@ -370,10 +372,10 @@
             <h3 class="font-headline-lg text-headline-lg text-primary mb-6">원하시는 답변을 찾지 못하셨나요?</h3>
             <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl mx-auto">상담팀이 고객님의 메시지를 기다리고 있습니다. 영업시간 기준 보통 30분 이내에 답변해 드립니다.</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="contact.html" class="bg-primary text-on-primary px-10 py-4 rounded-xl font-label-md flex items-center justify-center gap-3 hover:opacity-90 transition-all">
+                <a href="contact.html" class="bg-primary text-on-primary px-10 py-4 rounded-full font-label-md flex items-center justify-center gap-3 hover:opacity-90 transition-all">
                     <span class="material-symbols-outlined" style="font-size: 20px;">chat</span> 고객 지원 문의
                 </a>
-                <a href="tel:1588-0000" class="bg-surface text-primary border border-outline-variant px-10 py-4 rounded-xl font-label-md flex items-center justify-center gap-3 hover:bg-surface-container transition-all">
+                <a href="tel:1588-0000" class="bg-surface text-primary border border-outline-variant px-10 py-4 rounded-full font-label-md flex items-center justify-center gap-3 hover:bg-surface-container transition-all">
                     <span class="material-symbols-outlined" style="font-size: 20px;">call</span> 고객센터 전화하기
                 </a>
             </div>
@@ -382,26 +384,54 @@
 </main>
 
 <!-- Footer -->
-<footer class="w-full bg-primary py-lg">
-    <div class="max-w-container-max mx-auto px-gutter">
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
-            <div class="mb-8 md:mb-0 space-y-3">
-                <div class="bg-white inline-block p-2 rounded-lg">
-                    <img alt="BG SOLUTION" class="h-9 w-auto" src="images/logo.png">
-                </div>
-                <p class="font-body-md text-body-md text-on-primary/60 max-w-sm">더 깨끗하고 건강한 주거 환경을 위한 프리미엄 홈 케어 서비스.</p>
-            </div>
-            <div class="flex flex-wrap gap-8">
-                <a class="font-body-md text-body-md text-on-primary/80 hover:text-on-primary transition-opacity" href="#">개인정보 처리방침</a>
-                <a class="font-body-md text-body-md text-on-primary/80 hover:text-on-primary transition-opacity" href="#">이용약관</a>
-                <a class="font-body-md text-body-md text-on-primary/80 hover:text-on-primary transition-opacity" href="#">쿠키 설정</a>
-                <a class="font-body-md text-body-md text-on-primary/80 hover:text-on-primary transition-opacity" href="contact.html">고객 지원</a>
-            </div>
-        </div>
-        <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="font-body-md text-body-md text-on-primary/40">© 2024 BG SOLUTION. All rights reserved.</div>
-        </div>
-    </div>
+<footer class="bg-primary text-white w-full py-xl border-t-8 border-secondary">
+<div class="px-gutter max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-16">
+<div class="flex flex-col gap-6">
+<div class="bg-white inline-block p-3 w-fit rounded-lg">
+<img alt="BG SOLUTION" class="h-12 w-auto" src="images/logo.png">
+</div>
+<p class="text-white/60 max-w-sm leading-relaxed">
+                    프리미엄 공간 관리의 기준을 세웁니다. 우리는 가장 소중한 당신의 공간을 위해 타협 없는 완벽함을 추구합니다.
+                </p>
+<p class="text-white/60 text-sm leading-relaxed">
+                    서울특별시 중랑구 봉화산로 194 389동 3층 753호<br/>
+                    대표번호: 010-9942-9367 | 이메일: clean1004_@naver.com
+                </p>
+<div class="flex gap-4">
+<div class="w-10 h-10 border border-white/20 flex items-center justify-center cursor-pointer hover:bg-secondary hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-[18px]">policy</span>
+</div>
+<div class="w-10 h-10 border border-white/20 flex items-center justify-center cursor-pointer hover:bg-secondary hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div class="flex flex-col gap-4">
+<h5 class="font-bold text-secondary uppercase tracking-widest text-xs">Services</h5>
+<a class="text-white/60 hover:text-white transition-all text-sm" href="cleaning.html#move-in">입주 청소</a>
+<a class="text-white/60 hover:text-white transition-all text-sm" href="cleaning.html#moving">이사 청소</a>
+<a class="text-white/60 hover:text-white transition-all text-sm" href="cleaning.html#living">거주 청소</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-bold text-secondary uppercase tracking-widest text-xs">Trust</h5>
+<a class="text-white/60 hover:text-white transition-all text-sm" href="reviews.html">인증 현황</a>
+<a class="text-white/60 hover:text-white transition-all text-sm" href="faq.html">자주 묻는 질문</a>
+<a class="text-white/60 hover:text-white transition-all text-sm" href="#">이용약관</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-bold text-secondary uppercase tracking-widest text-xs">Support</h5>
+<a class="text-white/60 hover:text-white transition-all text-sm" href="contact.html">1:1 상담</a>
+<a class="text-white/60 hover:text-white transition-all text-sm" href="#">기업 제휴</a>
+<a class="text-white/60 hover:text-white transition-all text-sm" href="contact.html">고객 센터</a>
+</div>
+</div>
+</div>
+<div class="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-white/40 text-[10px] tracking-widest uppercase">© 2024 BG 솔루션. THE SUPREME STANDARD OF SPACE PURIFICATION.</p>
+</div>
+</div>
 </footer>
 
 <script>
@@ -460,4 +490,5 @@
         });
     })();
 </script>
+<script src="assets/fab.js"></script>
 </body></html>

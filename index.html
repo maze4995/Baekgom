@@ -26,25 +26,26 @@
 <!-- WebGL 클라우드스케이프 배경 (미지원 시 위 CSS 그라데이션 폴백) -->
 <canvas id="hero-bg" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;z-index:0;"></canvas>
 <!-- Header -->
-<header class="hero-anim hero-header relative z-20 flex justify-between items-center px-6 lg:px-16 py-7">
+<header class="site-nav font-inter fixed top-0 w-full z-50" style="background:rgba(255,255,255,0.85);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid rgba(226,232,240,0.7);">
+<div class="flex justify-between items-center h-20 px-6 lg:px-16">
 <a href="index.html" class="text-2xl font-extrabold tracking-tight" style="color:#031636;">BG솔루션</a>
 <nav class="hidden lg:flex items-center gap-8" aria-label="Main navigation">
-<a href="index.html" class="text-[16px] font-semibold hover:opacity-70 transition-opacity" style="color:#031636;">홈</a>
+<a href="index.html" class="text-[16px] hover:opacity-70 transition-opacity" style="color:#031636;font-weight:600;">홈</a>
 <a href="cleaning.html" class="text-[16px] hover:opacity-70 transition-opacity" style="color:#4a5568;">청소안내</a>
 <a href="reviews.html" class="text-[16px] hover:opacity-70 transition-opacity" style="color:#4a5568;">이용후기</a>
 <a href="contact.html" class="text-[16px] hover:opacity-70 transition-opacity" style="color:#4a5568;">무료견적상담</a>
 <a href="faq.html" class="text-[16px] hover:opacity-70 transition-opacity" style="color:#4a5568;">FAQ</a>
 </nav>
-<a href="contact.html" class="px-6 py-3 rounded-full font-medium transition-transform hover:scale-105" style="background:#fff;border:1px solid #e2e8f0;color:#031636;box-shadow:0 2px 8px rgba(0,0,0,0.08);">무료 견적 상담</a>
+<a href="contact.html" class="px-6 py-3 rounded-full font-medium transition-transform hover:scale-105" style="background:#031636;color:#fff;box-shadow:0 4px 12px rgba(3,22,54,0.18);">무료 견적 상담</a>
+</div>
 </header>
 <!-- Hero content -->
-<div class="relative z-10 flex-1 flex flex-col items-center justify-center px-4 text-center py-12">
+<div class="relative z-10 flex-1 flex flex-col items-center justify-center px-4 text-center pt-32 pb-12">
 <div class="hero-anim hero-content flex flex-col items-center max-w-4xl gap-8">
 <h1 class="hero-title font-extrabold" style="font-size:clamp(36px,6vw,72px);line-height:1.1;color:#031636;letter-spacing:-0.02em;"><span class="hw" style="animation-delay:.35s">새</span> <span class="hw" style="animation-delay:.44s">집처럼</span> <span class="hw" style="animation-delay:.53s">완벽한</span> <span class="hw" style="animation-delay:.62s">청소,</span><br/><span class="hw" style="animation-delay:.73s;color:#2e6385">BG</span> <span class="hw" style="animation-delay:.82s;color:#2e6385">SOLUTION이</span> <span class="hw" style="animation-delay:.91s;color:#2e6385">책임집니다</span></h1>
 <p style="font-size:clamp(16px,2vw,20px);line-height:1.6;color:#4a5568;max-width:620px;"></p>
 <div class="hero-anim hero-actions flex flex-col sm:flex-row items-center gap-4">
-<a href="contact.html" class="flex items-center gap-2 px-8 py-4 rounded-full font-medium transition-transform hover:scale-105" style="background:#031636;color:#fff;font-size:18px;box-shadow:0 4px 16px rgba(3,22,54,0.2);">지금 예약하기<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 10H13M13 10L10 7M13 10L10 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-<a href="#process" class="px-8 py-4 rounded-full font-medium transition-transform hover:scale-105" style="background:transparent;border:1px solid #cbd5e0;color:#031636;font-size:18px;">서비스 프로세스</a>
+<a href="contact.html" class="flex items-center gap-2 px-8 py-4 rounded-full font-medium transition-transform hover:scale-105" style="background:#031636;color:#fff;font-size:18px;box-shadow:0 4px 16px rgba(3,22,54,0.2);">무료 견적받기<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 10H13M13 10L10 7M13 10L10 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 </div>
 <p class="hero-anim hero-disclaimer" style="font-size:13px;color:#718096;font-style:italic;">불만족 시 24시간 내 무료 A/S · 최대 1억원 배상책임보험 가입</p>
 <div class="hero-anim hero-proof flex items-center gap-3">
@@ -79,8 +80,8 @@
                     프리미엄 공간 관리의 기준을 세웁니다. 우리는 가장 소중한 당신의 공간을 위해 타협 없는 완벽함을 추구합니다.
                 </p>
 <p class="text-white/60 text-sm leading-relaxed">
-                    서울특별시 서초구 서초대로 123, BG SOLUTION빌딩 5층<br/>
-                    대표번호: 1588-0000 | 이메일: support@bgsolution.com
+                    서울특별시 중랑구 봉화산로 194 389동 3층 753호<br/>
+                    대표번호: 010-9942-9367 | 이메일: clean1004_@naver.com
                 </p>
 <div class="flex gap-4">
 <div class="w-10 h-10 border border-white/20 flex items-center justify-center cursor-pointer hover:bg-secondary hover:border-secondary transition-all">
@@ -256,4 +257,5 @@ const heroReviews = [
   (function loop(now){ draw((now - start) / 1000); requestAnimationFrame(loop); })(start);
 })();
 </script>
+<script src="assets/fab.js"></script>
 </body></html>
