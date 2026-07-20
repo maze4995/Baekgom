@@ -23,6 +23,8 @@
 <!-- HERO (PulseFit 스타일 리디자인) -->
 <main>
 <section class="font-inter relative w-full min-h-screen flex flex-col overflow-hidden" style="background:linear-gradient(180deg,#E8F0FF 0%,#F5F9FF 50%,#FFFFFF 100%);" aria-label="Hero">
+<!-- WebGL 클라우드스케이프 배경 (미지원 시 위 CSS 그라데이션 폴백) -->
+<canvas id="hero-bg" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;z-index:0;"></canvas>
 <!-- Header -->
 <header class="hero-anim hero-header relative z-20 flex justify-between items-center px-6 lg:px-16 py-7">
 <a href="index.html" class="text-2xl font-extrabold tracking-tight" style="color:#031636;">BG솔루션</a>
@@ -30,21 +32,21 @@
 <a href="index.html" class="text-[16px] font-semibold hover:opacity-70 transition-opacity" style="color:#031636;">홈</a>
 <a href="cleaning.html" class="text-[16px] hover:opacity-70 transition-opacity" style="color:#4a5568;">청소안내</a>
 <a href="reviews.html" class="text-[16px] hover:opacity-70 transition-opacity" style="color:#4a5568;">이용후기</a>
-<a href="contact.html" class="text-[16px] hover:opacity-70 transition-opacity" style="color:#4a5568;">상담문의</a>
+<a href="contact.html" class="text-[16px] hover:opacity-70 transition-opacity" style="color:#4a5568;">무료견적상담</a>
 <a href="faq.html" class="text-[16px] hover:opacity-70 transition-opacity" style="color:#4a5568;">FAQ</a>
 </nav>
-<a href="contact.html" class="px-6 py-3 rounded-full font-medium transition-transform hover:scale-105" style="background:#fff;border:1px solid #e2e8f0;color:#031636;box-shadow:0 2px 8px rgba(0,0,0,0.08);">상담 예약</a>
+<a href="contact.html" class="px-6 py-3 rounded-full font-medium transition-transform hover:scale-105" style="background:#fff;border:1px solid #e2e8f0;color:#031636;box-shadow:0 2px 8px rgba(0,0,0,0.08);">무료 견적 상담</a>
 </header>
 <!-- Hero content -->
 <div class="relative z-10 flex-1 flex flex-col items-center justify-center px-4 text-center py-12">
 <div class="hero-anim hero-content flex flex-col items-center max-w-4xl gap-8">
-<h1 class="font-extrabold" style="font-size:clamp(36px,6vw,72px);line-height:1.1;color:#031636;letter-spacing:-0.02em;">새 집처럼 완벽한 청소,<br/><span style="color:#2e6385;">BG SOLUTION이 책임집니다</span></h1>
-<p style="font-size:clamp(16px,2vw,20px);line-height:1.6;color:#4a5568;max-width:620px;">입주·이사·거주 청소 전문. ISO-9001 인증 전문가가 고온 스팀 살균과 친환경 세제로 당신의 공간을 새것처럼 되돌립니다.</p>
+<h1 class="hero-title font-extrabold" style="font-size:clamp(36px,6vw,72px);line-height:1.1;color:#031636;letter-spacing:-0.02em;"><span class="hw" style="animation-delay:.35s">새</span> <span class="hw" style="animation-delay:.44s">집처럼</span> <span class="hw" style="animation-delay:.53s">완벽한</span> <span class="hw" style="animation-delay:.62s">청소,</span><br/><span class="hw" style="animation-delay:.73s;color:#2e6385">BG</span> <span class="hw" style="animation-delay:.82s;color:#2e6385">SOLUTION이</span> <span class="hw" style="animation-delay:.91s;color:#2e6385">책임집니다</span></h1>
+<p style="font-size:clamp(16px,2vw,20px);line-height:1.6;color:#4a5568;max-width:620px;"></p>
 <div class="hero-anim hero-actions flex flex-col sm:flex-row items-center gap-4">
 <a href="contact.html" class="flex items-center gap-2 px-8 py-4 rounded-full font-medium transition-transform hover:scale-105" style="background:#031636;color:#fff;font-size:18px;box-shadow:0 4px 16px rgba(3,22,54,0.2);">지금 예약하기<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 10H13M13 10L10 7M13 10L10 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
 <a href="#process" class="px-8 py-4 rounded-full font-medium transition-transform hover:scale-105" style="background:transparent;border:1px solid #cbd5e0;color:#031636;font-size:18px;">서비스 프로세스</a>
 </div>
-<p class="hero-anim hero-disclaimer" style="font-size:13px;color:#718096;font-style:italic;">불만족 시 24시간 내 무료 재청소 · 최대 1억원 배상책임보험 가입</p>
+<p class="hero-anim hero-disclaimer" style="font-size:13px;color:#718096;font-style:italic;">불만족 시 24시간 내 무료 A/S · 최대 1억원 배상책임보험 가입</p>
 <div class="hero-anim hero-proof flex items-center gap-3">
 <div class="flex -space-x-2">
 <img src="images/photo-09.png" alt="고객" class="rounded-full border-2 border-white object-cover" style="width:40px;height:40px;"/>
@@ -52,7 +54,7 @@
 <img src="images/photo-13.png" alt="고객" class="rounded-full border-2 border-white object-cover" style="width:40px;height:40px;"/>
 <img src="images/photo-15.png" alt="고객" class="rounded-full border-2 border-white object-cover" style="width:40px;height:40px;"/>
 </div>
-<span style="font-size:14px;font-weight:500;color:#4a5568;">2,500+ 고객이 선택한 프리미엄 홈케어 · 평균 만족도 4.9/5.0</span>
+<span style="font-size:14px;font-weight:500;color:#4a5568;">2,500+ 고객이 선택한 프리미엄 홈케어 · 당근마켓 만족도 4.9/5.0</span>
 </div>
 </div>
 </div>
@@ -60,104 +62,7 @@
 <div class="hero-anim hero-cards hero-marquee relative z-10 w-full overflow-hidden py-14">
 <div class="absolute left-0 top-0 bottom-0 z-10 pointer-events-none" style="width:150px;background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,0) 100%);"></div>
 <div class="absolute right-0 top-0 bottom-0 z-10 pointer-events-none" style="width:150px;background:linear-gradient(270deg,#fff 0%,rgba(255,255,255,0) 100%);"></div>
-<div class="hero-marquee-track">
-<a href="cleaning.html#move-in" class="hero-card">
-<img src="images/photo-02.png" alt="신축 입주 전 완벽 케어" style="width:100%;height:100%;object-fit:cover;"/>
-<div class="absolute inset-0" style="background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%);"></div>
-<div class="absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-2">
-<span style="font-size:12px;font-weight:500;color:rgba(255,255,255,0.8);text-transform:uppercase;letter-spacing:0.1em;">입주청소</span>
-<h3 style="font-size:24px;font-weight:600;color:#fff;line-height:1.3;">신축 입주 전 완벽 케어</h3>
-</div>
-</a>
-<a href="cleaning.html#moving" class="hero-card">
-<img src="images/photo-03.png" alt="이사 전후 딥클리닝" style="width:100%;height:100%;object-fit:cover;"/>
-<div class="absolute inset-0" style="background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%);"></div>
-<div class="absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-2">
-<span style="font-size:12px;font-weight:500;color:rgba(255,255,255,0.8);text-transform:uppercase;letter-spacing:0.1em;">이사청소</span>
-<h3 style="font-size:24px;font-weight:600;color:#fff;line-height:1.3;">이사 전후 딥클리닝</h3>
-</div>
-</a>
-<a href="cleaning.html#living" class="hero-card">
-<img src="images/photo-04.png" alt="생활 공간 집중 관리" style="width:100%;height:100%;object-fit:cover;"/>
-<div class="absolute inset-0" style="background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%);"></div>
-<div class="absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-2">
-<span style="font-size:12px;font-weight:500;color:rgba(255,255,255,0.8);text-transform:uppercase;letter-spacing:0.1em;">거주청소</span>
-<h3 style="font-size:24px;font-weight:600;color:#fff;line-height:1.3;">생활 공간 집중 관리</h3>
-</div>
-</a>
-<a href="reviews.html" class="hero-card">
-<img src="images/photo-05.png" alt="드라마틱한 변화" style="width:100%;height:100%;object-fit:cover;"/>
-<div class="absolute inset-0" style="background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%);"></div>
-<div class="absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-2">
-<span style="font-size:12px;font-weight:500;color:rgba(255,255,255,0.8);text-transform:uppercase;letter-spacing:0.1em;">Before & After</span>
-<h3 style="font-size:24px;font-weight:600;color:#fff;line-height:1.3;">드라마틱한 변화</h3>
-</div>
-</a>
-<a href="cleaning.html" class="hero-card">
-<img src="images/photo-08.png" alt="고온 스팀 방역 청소" style="width:100%;height:100%;object-fit:cover;"/>
-<div class="absolute inset-0" style="background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%);"></div>
-<div class="absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-2">
-<span style="font-size:12px;font-weight:500;color:rgba(255,255,255,0.8);text-transform:uppercase;letter-spacing:0.1em;">스팀 살균</span>
-<h3 style="font-size:24px;font-weight:600;color:#fff;line-height:1.3;">고온 스팀 방역 청소</h3>
-</div>
-</a>
-<a href="reviews.html" class="hero-card">
-<img src="images/photo-06.png" alt="찌든 기름때 완벽 제거" style="width:100%;height:100%;object-fit:cover;"/>
-<div class="absolute inset-0" style="background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%);"></div>
-<div class="absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-2">
-<span style="font-size:12px;font-weight:500;color:rgba(255,255,255,0.8);text-transform:uppercase;letter-spacing:0.1em;">주방 케어</span>
-<h3 style="font-size:24px;font-weight:600;color:#fff;line-height:1.3;">찌든 기름때 완벽 제거</h3>
-</div>
-</a>
-<a href="cleaning.html#move-in" class="hero-card">
-<img src="images/photo-02.png" alt="신축 입주 전 완벽 케어" style="width:100%;height:100%;object-fit:cover;"/>
-<div class="absolute inset-0" style="background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%);"></div>
-<div class="absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-2">
-<span style="font-size:12px;font-weight:500;color:rgba(255,255,255,0.8);text-transform:uppercase;letter-spacing:0.1em;">입주청소</span>
-<h3 style="font-size:24px;font-weight:600;color:#fff;line-height:1.3;">신축 입주 전 완벽 케어</h3>
-</div>
-</a>
-<a href="cleaning.html#moving" class="hero-card">
-<img src="images/photo-03.png" alt="이사 전후 딥클리닝" style="width:100%;height:100%;object-fit:cover;"/>
-<div class="absolute inset-0" style="background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%);"></div>
-<div class="absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-2">
-<span style="font-size:12px;font-weight:500;color:rgba(255,255,255,0.8);text-transform:uppercase;letter-spacing:0.1em;">이사청소</span>
-<h3 style="font-size:24px;font-weight:600;color:#fff;line-height:1.3;">이사 전후 딥클리닝</h3>
-</div>
-</a>
-<a href="cleaning.html#living" class="hero-card">
-<img src="images/photo-04.png" alt="생활 공간 집중 관리" style="width:100%;height:100%;object-fit:cover;"/>
-<div class="absolute inset-0" style="background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%);"></div>
-<div class="absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-2">
-<span style="font-size:12px;font-weight:500;color:rgba(255,255,255,0.8);text-transform:uppercase;letter-spacing:0.1em;">거주청소</span>
-<h3 style="font-size:24px;font-weight:600;color:#fff;line-height:1.3;">생활 공간 집중 관리</h3>
-</div>
-</a>
-<a href="reviews.html" class="hero-card">
-<img src="images/photo-05.png" alt="드라마틱한 변화" style="width:100%;height:100%;object-fit:cover;"/>
-<div class="absolute inset-0" style="background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%);"></div>
-<div class="absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-2">
-<span style="font-size:12px;font-weight:500;color:rgba(255,255,255,0.8);text-transform:uppercase;letter-spacing:0.1em;">Before & After</span>
-<h3 style="font-size:24px;font-weight:600;color:#fff;line-height:1.3;">드라마틱한 변화</h3>
-</div>
-</a>
-<a href="cleaning.html" class="hero-card">
-<img src="images/photo-08.png" alt="고온 스팀 방역 청소" style="width:100%;height:100%;object-fit:cover;"/>
-<div class="absolute inset-0" style="background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%);"></div>
-<div class="absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-2">
-<span style="font-size:12px;font-weight:500;color:rgba(255,255,255,0.8);text-transform:uppercase;letter-spacing:0.1em;">스팀 살균</span>
-<h3 style="font-size:24px;font-weight:600;color:#fff;line-height:1.3;">고온 스팀 방역 청소</h3>
-</div>
-</a>
-<a href="reviews.html" class="hero-card">
-<img src="images/photo-06.png" alt="찌든 기름때 완벽 제거" style="width:100%;height:100%;object-fit:cover;"/>
-<div class="absolute inset-0" style="background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%);"></div>
-<div class="absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-2">
-<span style="font-size:12px;font-weight:500;color:rgba(255,255,255,0.8);text-transform:uppercase;letter-spacing:0.1em;">주방 케어</span>
-<h3 style="font-size:24px;font-weight:600;color:#fff;line-height:1.3;">찌든 기름때 완벽 제거</h3>
-</div>
-</a>
-</div>
+<div class="hero-marquee-track"></div>
 </div>
 </section>
 
@@ -212,4 +117,143 @@
 </div>
 </div>
 </footer>
+<script>
+/* ── 히어로 후기 카드 목록 ──────────────────────────────
+   카드 추가/교체는 이 배열만 수정하면 됩니다. (자동으로 무한 루프 복제됨)
+   img: images/ 에 넣은 사진 파일명 (png/jpg/jpeg/webp 무엇이든)
+   title: 카드 제목 / rating: 별점 / date: 날짜 / text: 후기 전문 / href: 클릭 시 이동(선택) */
+const heroReviews = [
+  { img: "images/moveout-01.jpeg", title: "성북구 이사청소", rating: "5.0", date: "2024.09.17",
+    text: "처음부터 상담도 친절하게 해주셨고 가격도 정직하게 알려 주셨습니다. 추가금 있을 수도 있다고 언지하고 집 확인후 추가금 받으셨습니다. 전주인이 강아지를 키웠어서 털이 사방에 껴있었는데 청소 깔끔하게 잘 해주셨어요.너무 만족합니다!!",
+    href: "reviews.html" },
+
+  /* ↓ 아래는 예시 카드입니다. 실제 사진(images/에 추가)과 후기로 교체하세요. */
+  { img: "images/moveout-02.webp", title: "성북구 이사청소", rating: "5.0", 
+    text: "오늘 오전에 청소받았습니다! 두분이 오셔서 꼼꼼하게 해주셨고요! 저희집이 91년도에 지어진 구옥빌라인데,리모델링하고 처음으로 입주청소라는걸 해봤습니다ㅎㅎ 샷시에 묵은때들이 장난아니었는데 반짝반짝! 창문 유리코팅도 해주시고(부들부들) 피톤치드도 다른곳에서 해주는거랑 질이 다른 진짜라고 하시더라고요! (어쩐지 마스크를 뚫고 들어오는 향기가 짱짱!) 현관문 주변도 거미줄하나없이 청소해주셨어요! 아기랑 살집인데 기분좋게 시작하네요!", href: "reviews.html" },
+  { img: "images/moveout-03.webp", title: "종로구 거주청소", rating: "5.0",
+    text: "정말 만족 스러운 경험이었습니다. 상담해주신 분, 작업해주신 분들 모두 친절 하셨고 자세히 알려주셔서 좋았습니다. 큰 맘 먹고 한 화장실 공사 덕에 다른 곳 보다 더 어려운 작업 이었을텐데, 정말 만족스럽게 작업해주셨습니다.", href: "reviews.html" },
+  { img: "images/moveout-04.webp", title: "강동구 거주청소", rating: "5.0",
+    text: "시간 마춰 딱 시작해주셨구, 창틀 먼지 및 전체적인 청소도 다 깨끗하게 해주셨습니다. 에어콘 청서 옵션 추가 했구요, 덕분에 더운데 이사할때도 맘편히 키고 이사했네요. 감사합니다.", href: "reviews.html" },
+  { img: "images/moveout-05.webp", title: "동소문동 이사청소", rating: "5.0",
+    text: "입주청소 계의 혁명 최고의 입주청소 감사합니다. 아주 만족스럽고 마무리까지 철저히 해주셨어요. 다시 한다 해도 여기서 하고 싶습니다.", href: "reviews.html" },
+  { img: "images/moveout-06.webp", title: "종로구 이사청소", rating: "5.0",
+    text: "아침 일찍 오셔서 신속하게 깨끗하게 해주셨습니다. 무거운 가구 이동 부탁드렸는데 잘 도와주셨어요. 감사합니다.", href: "reviews.html" },
+];
+
+(function () {
+  var track = document.querySelector('.hero-marquee-track');
+  if (!track || !heroReviews.length) return;
+  function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+  function card(r){
+    return '<a href="'+esc(r.href||'reviews.html')+'" class="hero-card">'
+      + '<img src="'+esc(r.img)+'" alt="'+esc(r.title)+'" style="width:100%;height:100%;object-fit:cover;"/>'
+      + '<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 35%,rgba(0,0,0,0.65) 100%);"></div>'
+      + '<div style="position:absolute;left:20px;right:20px;bottom:20px;text-shadow:0 1px 4px rgba(0,0,0,0.55);">'
+      + '<h3 style="color:#fff;font-size:20px;font-weight:800;line-height:1.2;letter-spacing:-0.01em;margin-bottom:10px;">'+esc(r.title)+'</h3>'
+      + '<div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">'
+      + '<svg width="14" height="14" viewBox="0 0 24 24" fill="#ffffff"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm-1.2 14.2L6.8 12.2l1.4-1.4 2.6 2.6 5.2-5.2 1.4 1.4z"/></svg>'
+      + '<span style="color:#fff;font-size:12px;font-weight:700;">동네 주민 후기</span>'
+      + '</div>'
+      + '<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">'
+      + '<span style="color:#ffd257;font-size:14px;font-weight:800;">★ '+esc(r.rating)+'</span>'
+      + '<span style="color:rgba(255,255,255,0.85);font-size:11px;">'+esc(r.date)+'</span>'
+      + '</div>'
+      + '<p style="color:#fff;font-size:12.5px;line-height:1.55;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden;">'+esc(r.text)+'</p>'
+      + '</div></a>';
+  }
+  // 자연스러운 무한 루프를 위해 목록을 2번 이어붙임(CSS가 -50% 이동)
+  track.innerHTML = heroReviews.concat(heroReviews).map(card).join('');
+})();
+</script>
+<script>
+/* ── 히어로 WebGL 클라우드스케이프 배경 ──
+   색을 바꾸려면 아래 COLOR_BOTTOM/MID/TOP 값(hex)만 수정하세요. */
+(function () {
+  var canvas = document.getElementById('hero-bg');
+  if (!canvas) return;
+  var host = canvas.parentElement;
+  var gl = canvas.getContext('webgl', { antialias: true, alpha: true });
+  if (!gl) return; // 미지원 시 CSS 그라데이션 폴백 유지
+
+  var VERT = 'attribute vec2 position; void main(){ gl_Position = vec4(position,0.0,1.0); }';
+  var FRAG = [
+    'precision highp float;',
+    'uniform vec2 u_resolution; uniform float u_time;',
+    'uniform vec3 u_colorBottom; uniform vec3 u_colorMid; uniform vec3 u_colorTop; uniform float u_speed;',
+    'float hash(vec2 p){ return fract(sin(dot(p, vec2(127.1,311.7)))*43758.5453123); }',
+    'float noise(vec2 p){ vec2 i=floor(p); vec2 f=fract(p);',
+    '  float a=hash(i); float b=hash(i+vec2(1.0,0.0)); float c=hash(i+vec2(0.0,1.0)); float d=hash(i+vec2(1.0,1.0));',
+    '  vec2 u=f*f*(3.0-2.0*f); return mix(a,b,u.x)+(c-a)*u.y*(1.0-u.x)+(d-b)*u.x*u.y; }',
+    'float fbm(vec2 p, float t){ float v=0.0; float a=0.5; float fi=0.0; mat2 rot=mat2(0.86,0.51,-0.51,0.86);',
+    '  for(int i=0;i<6;i++){ vec2 morph=vec2(sin(t*0.5+fi),cos(t*0.3-fi))*0.05; v+=a*noise(p+morph); p=rot*p*2.0; a*=0.5; fi+=1.0; } return v; }',
+    'void main(){ vec2 uv=gl_FragCoord.xy/u_resolution; float t=u_time*u_speed;',
+    '  vec2 aspect=vec2(u_resolution.x/max(u_resolution.y,1.0),1.0); vec2 p=(uv-0.5)*aspect;',
+    '  vec2 wind=vec2(t*0.1,t*0.02); float pattern=fbm(p*2.2-wind,t);',
+    '  float bandLow=smoothstep(0.3,0.65,pattern); float bandHigh=smoothstep(0.7,0.95,pattern);',
+    '  vec3 color=mix(u_colorBottom,u_colorMid,bandLow); color=mix(color,u_colorTop,bandHigh);',
+    '  gl_FragColor=vec4(color,1.0); }'
+  ].join('\n');
+
+  function compile(type, src){
+    var s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s);
+    if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) { console.error('shader:', gl.getShaderInfoLog(s)); return null; }
+    return s;
+  }
+  var vs = compile(gl.VERTEX_SHADER, VERT), fs = compile(gl.FRAGMENT_SHADER, FRAG);
+  if (!vs || !fs) return;
+  var prog = gl.createProgram(); gl.attachShader(prog, vs); gl.attachShader(prog, fs); gl.linkProgram(prog);
+  if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) { console.error('link:', gl.getProgramInfoLog(prog)); return; }
+  gl.useProgram(prog);
+
+  var posLoc = gl.getAttribLocation(prog, 'position');
+  var buf = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1,1,-1,-1,1,1,1]), gl.STATIC_DRAW);
+  gl.enableVertexAttribArray(posLoc); gl.vertexAttribPointer(posLoc, 2, gl.FLOAT, false, 0, 0);
+
+  var uRes = gl.getUniformLocation(prog,'u_resolution'), uTime = gl.getUniformLocation(prog,'u_time'),
+      uCB = gl.getUniformLocation(prog,'u_colorBottom'), uCM = gl.getUniformLocation(prog,'u_colorMid'),
+      uCT = gl.getUniformLocation(prog,'u_colorTop'), uSpeed = gl.getUniformLocation(prog,'u_speed');
+
+  function hex(h){ h=h.replace('#',''); return [parseInt(h.slice(0,2),16)/255, parseInt(h.slice(2,4),16)/255, parseInt(h.slice(4,6),16)/255]; }
+  var COLOR_BOTTOM = hex('87ceeb'); // 하단(하늘색)
+  var COLOR_MID    = hex('f8f8f8'); // 중간(옅은 회백)
+  var COLOR_TOP    = hex('ffffff'); // 상단(흰색)
+  var SPEED = 1.0;
+
+  // 표시 크기(CSS)에 맞춰 백버퍼를 매 프레임 보정 → 초기 레이아웃 0 너비 문제 자동 해소
+  function resizeIfNeeded(){
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var w = Math.max(1, Math.floor((canvas.clientWidth || host.clientWidth) * dpr));
+    var h = Math.max(1, Math.floor((canvas.clientHeight || host.clientHeight) * dpr));
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width = w; canvas.height = h;
+      gl.viewport(0, 0, w, h);
+      gl.uniform2f(uRes, w, h);
+    }
+  }
+
+  function draw(t){
+    resizeIfNeeded();
+    gl.clearColor(0,0,0,0); gl.clear(gl.COLOR_BUFFER_BIT);
+    gl.uniform1f(uTime, t);
+    gl.uniform3f(uCB, COLOR_BOTTOM[0], COLOR_BOTTOM[1], COLOR_BOTTOM[2]);
+    gl.uniform3f(uCM, COLOR_MID[0], COLOR_MID[1], COLOR_MID[2]);
+    gl.uniform3f(uCT, COLOR_TOP[0], COLOR_TOP[1], COLOR_TOP[2]);
+    gl.uniform1f(uSpeed, SPEED);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+  }
+
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) { // 모션 최소화 설정 시 정지 프레임(레이아웃 확정 시 재렌더)
+    draw(0);
+    window.addEventListener('load', function(){ draw(0); });
+    window.addEventListener('resize', function(){ draw(0); });
+    if (window.ResizeObserver) new ResizeObserver(function(){ draw(0); }).observe(host);
+    return;
+  }
+
+  var start = performance.now();
+  (function loop(now){ draw((now - start) / 1000); requestAnimationFrame(loop); })(start);
+})();
+</script>
 </body></html>
