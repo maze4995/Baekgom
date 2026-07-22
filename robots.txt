@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /complete.html
+
+Sitemap: https://www.bgsolution.co.kr/sitemap.xml
