@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/reviews.html",
+      "destination": "/cases.html",
+      "permanent": true
+    }
+  ]
+}
