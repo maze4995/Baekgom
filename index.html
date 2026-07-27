@@ -23,8 +23,12 @@
 <!-- HERO (PulseFit 스타일 리디자인) -->
 <main>
 <section class="font-inter relative w-full min-h-screen flex flex-col overflow-hidden" style="background:linear-gradient(180deg,#E8F0FF 0%,#F5F9FF 50%,#FFFFFF 100%);" aria-label="Hero">
-<!-- WebGL 클라우드스케이프 배경 (미지원 시 위 CSS 그라데이션 폴백) -->
-<canvas id="hero-bg" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;z-index:0;"></canvas>
+<!-- 배경 동영상 (무한 루프, 음소거 자동재생). 미지원/실패 시 위 CSS 그라데이션 폴백 -->
+<video autoplay muted loop playsinline preload="auto" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover" style="z-index:0;pointer-events:none;">
+<source src="videos/hero-bg.mp4" type="video/mp4">
+</video>
+<!-- 가독성용 오버레이 (밝은 프로스티드 톤 → 짙은 남색 텍스트 유지) -->
+<div aria-hidden="true" class="absolute inset-0" style="z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(244,248,255,0.62) 0%,rgba(244,248,255,0.42) 50%,rgba(255,255,255,0.86) 100%);"></div>
 <!-- Header -->
 <header class="site-nav font-inter fixed top-0 w-full z-50" style="background:rgba(255,255,255,0.85);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid rgba(226,232,240,0.7);">
 <div class="flex justify-between items-center h-20 px-6 lg:px-16">
@@ -166,96 +170,6 @@ const heroReviews = [
   track.innerHTML = heroReviews.concat(heroReviews).map(card).join('');
 })();
 </script>
-<script>
-/* ── 히어로 WebGL 클라우드스케이프 배경 ──
-   색을 바꾸려면 아래 COLOR_BOTTOM/MID/TOP 값(hex)만 수정하세요. */
-(function () {
-  var canvas = document.getElementById('hero-bg');
-  if (!canvas) return;
-  var host = canvas.parentElement;
-  var gl = canvas.getContext('webgl', { antialias: true, alpha: true });
-  if (!gl) return; // 미지원 시 CSS 그라데이션 폴백 유지
 
-  var VERT = 'attribute vec2 position; void main(){ gl_Position = vec4(position,0.0,1.0); }';
-  var FRAG = [
-    'precision highp float;',
-    'uniform vec2 u_resolution; uniform float u_time;',
-    'uniform vec3 u_colorBottom; uniform vec3 u_colorMid; uniform vec3 u_colorTop; uniform float u_speed;',
-    'float hash(vec2 p){ return fract(sin(dot(p, vec2(127.1,311.7)))*43758.5453123); }',
-    'float noise(vec2 p){ vec2 i=floor(p); vec2 f=fract(p);',
-    '  float a=hash(i); float b=hash(i+vec2(1.0,0.0)); float c=hash(i+vec2(0.0,1.0)); float d=hash(i+vec2(1.0,1.0));',
-    '  vec2 u=f*f*(3.0-2.0*f); return mix(a,b,u.x)+(c-a)*u.y*(1.0-u.x)+(d-b)*u.x*u.y; }',
-    'float fbm(vec2 p, float t){ float v=0.0; float a=0.5; float fi=0.0; mat2 rot=mat2(0.86,0.51,-0.51,0.86);',
-    '  for(int i=0;i<6;i++){ vec2 morph=vec2(sin(t*0.5+fi),cos(t*0.3-fi))*0.05; v+=a*noise(p+morph); p=rot*p*2.0; a*=0.5; fi+=1.0; } return v; }',
-    'void main(){ vec2 uv=gl_FragCoord.xy/u_resolution; float t=u_time*u_speed;',
-    '  vec2 aspect=vec2(u_resolution.x/max(u_resolution.y,1.0),1.0); vec2 p=(uv-0.5)*aspect;',
-    '  vec2 wind=vec2(t*0.1,t*0.02); float pattern=fbm(p*2.2-wind,t);',
-    '  float bandLow=smoothstep(0.3,0.65,pattern); float bandHigh=smoothstep(0.7,0.95,pattern);',
-    '  vec3 color=mix(u_colorBottom,u_colorMid,bandLow); color=mix(color,u_colorTop,bandHigh);',
-    '  gl_FragColor=vec4(color,1.0); }'
-  ].join('\n');
-
-  function compile(type, src){
-    var s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s);
-    if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) { console.error('shader:', gl.getShaderInfoLog(s)); return null; }
-    return s;
-  }
-  var vs = compile(gl.VERTEX_SHADER, VERT), fs = compile(gl.FRAGMENT_SHADER, FRAG);
-  if (!vs || !fs) return;
-  var prog = gl.createProgram(); gl.attachShader(prog, vs); gl.attachShader(prog, fs); gl.linkProgram(prog);
-  if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) { console.error('link:', gl.getProgramInfoLog(prog)); return; }
-  gl.useProgram(prog);
-
-  var posLoc = gl.getAttribLocation(prog, 'position');
-  var buf = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, buf);
-  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1,1,-1,-1,1,1,1]), gl.STATIC_DRAW);
-  gl.enableVertexAttribArray(posLoc); gl.vertexAttribPointer(posLoc, 2, gl.FLOAT, false, 0, 0);
-
-  var uRes = gl.getUniformLocation(prog,'u_resolution'), uTime = gl.getUniformLocation(prog,'u_time'),
-      uCB = gl.getUniformLocation(prog,'u_colorBottom'), uCM = gl.getUniformLocation(prog,'u_colorMid'),
-      uCT = gl.getUniformLocation(prog,'u_colorTop'), uSpeed = gl.getUniformLocation(prog,'u_speed');
-
-  function hex(h){ h=h.replace('#',''); return [parseInt(h.slice(0,2),16)/255, parseInt(h.slice(2,4),16)/255, parseInt(h.slice(4,6),16)/255]; }
-  var COLOR_BOTTOM = hex('87ceeb'); // 하단(하늘색)
-  var COLOR_MID    = hex('f8f8f8'); // 중간(옅은 회백)
-  var COLOR_TOP    = hex('ffffff'); // 상단(흰색)
-  var SPEED = 1.0;
-
-  // 표시 크기(CSS)에 맞춰 백버퍼를 매 프레임 보정 → 초기 레이아웃 0 너비 문제 자동 해소
-  function resizeIfNeeded(){
-    var dpr = Math.min(window.devicePixelRatio || 1, 2);
-    var w = Math.max(1, Math.floor((canvas.clientWidth || host.clientWidth) * dpr));
-    var h = Math.max(1, Math.floor((canvas.clientHeight || host.clientHeight) * dpr));
-    if (canvas.width !== w || canvas.height !== h) {
-      canvas.width = w; canvas.height = h;
-      gl.viewport(0, 0, w, h);
-      gl.uniform2f(uRes, w, h);
-    }
-  }
-
-  function draw(t){
-    resizeIfNeeded();
-    gl.clearColor(0,0,0,0); gl.clear(gl.COLOR_BUFFER_BIT);
-    gl.uniform1f(uTime, t);
-    gl.uniform3f(uCB, COLOR_BOTTOM[0], COLOR_BOTTOM[1], COLOR_BOTTOM[2]);
-    gl.uniform3f(uCM, COLOR_MID[0], COLOR_MID[1], COLOR_MID[2]);
-    gl.uniform3f(uCT, COLOR_TOP[0], COLOR_TOP[1], COLOR_TOP[2]);
-    gl.uniform1f(uSpeed, SPEED);
-    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
-  }
-
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduce) { // 모션 최소화 설정 시 정지 프레임(레이아웃 확정 시 재렌더)
-    draw(0);
-    window.addEventListener('load', function(){ draw(0); });
-    window.addEventListener('resize', function(){ draw(0); });
-    if (window.ResizeObserver) new ResizeObserver(function(){ draw(0); }).observe(host);
-    return;
-  }
-
-  var start = performance.now();
-  (function loop(now){ draw((now - start) / 1000); requestAnimationFrame(loop); })(start);
-})();
-</script>
 <script src="assets/fab.js"></script>
 </body></html>
