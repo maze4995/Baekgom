@@ -8,7 +8,7 @@
   wrap.innerHTML =
     '<a href="' + KAKAO + '" target="_blank" rel="noopener" class="bg-fab-btn bg-fab-kakao" aria-label="카카오톡 상담">' +
       '<span class="bg-fab-label">카카오톡 상담</span>' +
-      '<img src="images/kakao.png" alt="" class="bg-fab-img" aria-hidden="true">' +
+      '<img src="/images/kakao.png" alt="" class="bg-fab-img" aria-hidden="true">' +
     '</a>' +
     '<a href="tel:' + PHONE + '" class="bg-fab-btn bg-fab-call" aria-label="전화 상담 ' + PHONE + '">' +
       '<span class="bg-fab-label">전화 상담</span>' +
