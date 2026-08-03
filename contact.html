@@ -16,6 +16,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script src="assets/tailwind-config.js"></script>
+<script src="assets/attribution.js"></script>
 <link rel="stylesheet" href="assets/site.css">
 </head><body class="bg-background text-on-background font-body-md overflow-x-hidden">
 <!-- Top Navigation Bar -->
@@ -352,6 +353,14 @@
             serviceType: val('f-serviceType'), scheduledDate: val('f-scheduledDate'),
             notes: notesVal, leadSource: label('f-leadSource'), company: val('f-company'),
         };
+
+        // 어느 게시물을 보고 오셨는지. 고객이 고르는 '유입 경로'와 달리
+        // 링크 꼬리표에서 자동으로 잡힌 값이라 빠지지 않는다.
+        // (assets/attribution.js 가 방문 시점에 기록해 둔다)
+        try {
+            var attribution = typeof window.bgAttribution === 'function' ? window.bgAttribution() : null;
+            if (attribution) payload.attribution = attribution;
+        } catch (_) { /* 기록이 없어도 접수는 되어야 한다 */ }
 
         btn.disabled = true;
         btn.innerHTML = '<svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg><span>처리 중...</span>';
