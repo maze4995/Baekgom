@@ -136,23 +136,19 @@
         referrer: saved.referrer || '',
       });
 
-      // sendBeacon은 페이지를 떠나도 끝까지 간다. 방문 기록 때문에
-      // 화면이 느려지면 안 되므로 응답도 기다리지 않는다.
-      var sent = false;
-      if (navigator.sendBeacon) {
-        sent = navigator.sendBeacon(
-          VISIT_ENDPOINT,
-          new Blob([payload], { type: 'application/json' })
-        );
-      }
-      if (!sent) {
-        fetch(VISIT_ENDPOINT, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: payload,
-          keepalive: true,
-        }).catch(function () {});
-      }
+      // sendBeacon을 쓰지 않는다. application/json은 CORS 단순 요청이
+      // 아니라서 프리플라이트가 필요한데 sendBeacon은 그걸 못 한다.
+      // 조용히 실패하면서도 true를 돌려줘서(큐에 넣었다는 뜻일 뿐)
+      // 대비 코드가 돌지 않았다 — 실제로 이 함정에 걸렸다.
+      //
+      // keepalive를 준 fetch면 페이지를 떠나도 요청이 살아 있고,
+      // 프리플라이트도 정상적으로 처리된다. 응답은 기다리지 않는다.
+      fetch(VISIT_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: payload,
+        keepalive: true,
+      }).catch(function () {});
 
       sessionStorage.setItem(VISIT_FLAG, '1');
     } catch (e) {
