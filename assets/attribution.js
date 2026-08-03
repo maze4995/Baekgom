@@ -109,7 +109,59 @@
     }
   }
 
+  var VISIT_ENDPOINT = 'https://bgsolution-5df52.web.app/api/visit';
+  var VISIT_FLAG = 'bg_visit_logged';
+
+  /**
+   * 게시물을 타고 온 방문을 한 번 기록한다.
+   *
+   * 한 사람이 여러 페이지를 봐도 방문은 1로 센다. 페이지뷰가 아니라
+   * "몇 명이 왔나"를 알고 싶은 것이라, 세션 단위로 한 번만 보낸다.
+   *
+   * 꼬리표가 없으면 보내지 않는다. 직접 방문·검색 유입은 이 표가
+   * 답하려는 질문이 아니고, 크롤러도 같이 걸러진다.
+   */
+  function logVisit() {
+    try {
+      if (sessionStorage.getItem(VISIT_FLAG)) return;
+      var saved = read();
+      if (!saved || !saved.utm_source) return;
+
+      var payload = JSON.stringify({
+        source: saved.utm_source,
+        medium: saved.utm_medium || '',
+        campaign: saved.utm_campaign || '',
+        content: saved.utm_content || '',
+        landingPage: saved.landingPage || '',
+        referrer: saved.referrer || '',
+      });
+
+      // sendBeacon은 페이지를 떠나도 끝까지 간다. 방문 기록 때문에
+      // 화면이 느려지면 안 되므로 응답도 기다리지 않는다.
+      var sent = false;
+      if (navigator.sendBeacon) {
+        sent = navigator.sendBeacon(
+          VISIT_ENDPOINT,
+          new Blob([payload], { type: 'application/json' })
+        );
+      }
+      if (!sent) {
+        fetch(VISIT_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: payload,
+          keepalive: true,
+        }).catch(function () {});
+      }
+
+      sessionStorage.setItem(VISIT_FLAG, '1');
+    } catch (e) {
+      /* 방문 집계는 부가 기능이다. 실패해도 사이트는 멀쩡해야 한다 */
+    }
+  }
+
   capture();
+  logVisit();
 
   // 상담폼이 제출할 때 읽어 간다.
   window.bgAttribution = function () {
